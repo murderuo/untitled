@@ -1,0 +1,1 @@
+Bu betiði yazmaya, Türkçe metni sesli okuyacak bir uygulama yazmak için baþladým ama daha sonra bunu zaten yapan bir uygulama olduðunu görünce yarým býraktým. Belki bu hali ile birinin iþine yarar. Þu anki hali ile noktalama iþaretlerini henüz deðerlendiremiyor.

@@ -1,0 +1,18 @@
+https://cloud.google.com/translate/docs/quickstart?csw=1  proje oluþtur veya seç
+
+starting-account-rsb6ltidjnjm   --->      json dosyasýný indir.
+
+
+google konsolu aç-->  gcloud init
+
+ready to initten ssonra json dosyasýný göster
+
+$env:GOOGLE_APPLICATION_CREDENTIALS="C:\Users\username\Downloads\[FILE_NAME].json"
+
+$env:GOOGLE_APPLICATION_CREDENTIALS="C:\Users\ugurokur\Desktop\kiþisel bilgilerim\python_uygulama\google_translate\translate-dfddf3c1ac1d.json"
+
+
+
+set GOOGLE_APPLICATION_CREDENTIALS="C:\Users\ugurokur\Desktop\kiþisel bilgilerim\python_uygulama\google_translate\translate-dfddf3c1ac1d.json"
+
+

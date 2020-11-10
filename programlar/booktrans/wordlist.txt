@@ -1,0 +1,448 @@
+﻿KEYWORD                                           =TRANSLATED
+_____________________________________________________________
+özel
+özel
+
+Yazılım geliştirmede, tasarım genellikle programlamadan önce atılan adım olarak kabul edilir. Bu doğru değil; gerçekte, analiz, programlama ve tasarım, üst üste binme, birleştirme ve iç içe geçme eğilimindedir. Bu bölümde aşağıdaki konuları ele alacağız
+
+• Nesne yönelimli ne demektir
+• Nesne yönelimli tasarım ve nesne yönelimli programlama arasındaki fark
+• Nesne yönelimli bir tasarımın temel prensipleri
+• Temel Birleşik Modelleme Dili (UML) ve kötü olmadığında
+
+Nesne yönelimli tanıtım
+
+Herkes bir nesnenin ne olduğunu bilir - hissedebileceğimiz, hissedebileceğimiz ve manipüle edebileceğimiz somut bir şey. Etkileştiğimiz en eski nesneler tipik olarak bebek oyuncaklarıdır. Tahta bloklar, plastik şekiller ve aşırı büyük yapboz parçaları ortak ilk nesnelerdir. Bebekler bazı nesnelerin belli şeyler yaptığını çabucak öğrenir: çanlar, düğmelere basar ve kollar çekilir.
+Yazılım geliştirmedeki bir nesnenin tanımı çok farklı değildir. Yazılım nesneleri tipik olarak toplayabileceğiniz, hissedebileceğiniz veya hissedebileceğiniz somut şeyler değildir, ancak belirli şeyleri yapabilecek ve kendilerine belirli şeyleri yapabilecek şeylerin modelleridir. Resmen, bir nesne veri ve ilgili davranışların bir koleksiyonudur
+Öyleyse, bir nesnenin ne olduğunu bilmek, nesneye yönelik olmak ne demektir? Yönlendirilmiş basitçe doğru yönlendirilmiş demektir. Bu nedenle nesne yönelimli araçlar, işlevsel olarak modelleme nesnelerine yöneliktir. Bu, etkileşimli nesnelerin verilerini ve davranışlarını kullanarak bir koleksiyonunu açıklayarak karmaşık sistemleri modellemek için kullanılan birçok teknikten biridir.
+
+3
+
+Herhangi bir yutturmaca okuduysanız, muhtemelen nesne yönelimli analiz, nesne yönelimli tasarım, nesne yönelimli analiz ve tasarım ve nesnesiz programlama terimleriyle karşılaşırsınız. Bunların hepsi, genel nesne yönelimli şemsiyesi altındaki yüksek derecede ilişkili kavramlardır.
+
+Aslında, analiz, tasarım ve programlama, yazılım geliştirmenin tüm aşamalarıdır. Nesne yönelimli olarak adlandırmak, basitçe hangi yazılım geliştirme tarzının izleneceğini belirler.
+
+Nesneye yönelik analiz (OOA), bir probleme, sisteme veya göreve (birinin uygulamaya geçmek istediği) bakma ve nesneleri ve bu nesneler arasındaki etkileşimleri belirleme sürecidir. Analiz aşaması, yapılması gerekenler ile ilgilidir.
+
+Analiz aşamasının çıktısı bir dizi gereksinimdir. Analiz aşamasını bir adımda tamamlayacak olsaydık, bir web sitesine ihtiyacım olan bir görevi bir takım gereksinimlere çevirirdik. Örneğin:
+
+Web sitesi ziyaretçilerinin şunları yapabilmeleri gerekir (italik eylemleri temsil eder, kalın nesneleri temsil eder):
+
+• geçmişimizi gözden geçirin
+• iş başvurusu
+• ürünlere göz atın, karşılaştırın ve sipariş edin
+
+Bazı açılardan, analiz bir yanlış isimdir. Daha önce tartıştığımız bebek blokları ve yapboz parçalarını analiz etmiyor. Aksine, çevresini keşfedecek, şekilleri değiştirecek ve nereye sığabileceklerini görecek. Daha iyi bir cümle kurumu nesne yönelimli keşif olabilir. Yazılım geliştirmede, analizin ilk aşamaları müşterileriyle röportaj yapmak, süreçlerini incelemek ve olasılıkları ortadan kaldırmaktır.
+
+Nesneye yönelik tasarım (OOD), bu tür gereklilikleri uygulama şartnamesine dönüştürme sürecidir. Tasarımcı, nesneleri adlandırmalı, davranışları tanımlamalı ve hangi nesnelerin diğer nesnelerde belirli davranışları etkinleştirebileceğini resmi olarak belirtmelidir. Tasarım aşaması, işlerin nasıl yapılması gerektiği ile ilgilidir.
+
+Tasarım aşamasının çıktısı bir uygulama özelliğidir. Tasarım aşamasını tek bir adımda tamamlayacak olsaydık, nesne yönelimli analiz sırasında tanımlanan gereklilikleri herhangi bir nesne yönelimli programlama dilinde (ideal olarak) uygulanabilecek bir dizi sınıfa ve ara yüze dönüştürürdük.
+
+Nesneye yönelik programlama (OOP), bu mükemmel tanımlanmış tasarımı, CEO&#39;nun tam olarak istediği şeyi yapan bir çalışma programına dönüştürme işlemidir.
+
+4
+
+Evet, doğru! Eğer dünya bu idealle tanışsaydı ve bu aşamaları tek tek, mükemmel bir sırayla, tüm eski ders kitaplarında anlattığımız gibi izleyebilsek çok hoş olurdu. Her zamanki gibi, gerçek dünya çok daha öldürücüdür. Bu aşamaları ayırmak için ne kadar uğraştığımız önemli değil, tasarlanırken her zaman daha fazla analiz gerektiren şeyler buluruz. Programlama yaparken, tasarımda açıklama gerektiren özellikleri buluruz.
+
+Yirmi birinci yüzyıl gelişiminin çoğu yinelemeli bir gelişme modelinde gerçekleşir. Yinelemeli gelişimde, görevin küçük bir kısmı modellenir, tasarlanır ve programlanır, ardından program her bir özelliği geliştirmek için gözden geçirilir ve genişletilir ve bir dizi kısa geliştirme döngüsüne yeni özellikler eklenir.
+
+Bu kitabın geri kalanı nesne yönelimli programlama ile ilgilidir, ancak bu bölümde tasarım bağlamındaki temel nesne yönelimli ilkeleri ele alacağız. Bu, yazılım sözdizimi veya Python tercümanlarıyla tartışmak zorunda kalmadan bu (oldukça basit) kavramları anlamamızı sağlar.
+
+Nesneler ve sınıflar
+
+Dolayısıyla, bir nesne ilişkili davranışları olan bir veri topluluğudur. Nesne türleri arasında nasıl ayrım yaparız? Elmalar ve portakallar her ikisi de nesnelerdir, ancak karşılaştırılamadıkları ortak bir atasözüdür. Elmalar ve portakallar bilgisayar programlamasında çok sık modellenmez, ama bir meyve çiftliği için envanter uygulaması yapıyormuş gibi yapalım. Örneği kolaylaştırmak için elmanın fıçıya, portakalın da sepete gittiğini varsayabiliriz.
+
+Şimdi dört çeşit nesnemiz var: elmalar, portakallar, sepetler ve fıçılar. Nesne yönelimli modellemede, nesne türü için kullanılan terim sınıftır. Dolayısıyla, teknik anlamda, şimdi dört nesne sınıfımız var.
+
+Bir nesne ve sınıf arasındaki fark nedir? Sınıflar nesneleri tanımlar. Bir nesne yaratma planları gibi. Önünüzdeki masada oturan üç portakalınız olabilir. Her bir portakal ayrı bir nesnedir, ancak her üçünde de bir sınıfla ilgili nitelik ve davranışlar vardır: genel portakal sınıfı.
+
+Envanter sistemimizdeki dört nesne sınıfı arasındaki ilişki, birleştirilmiş bir Modelleme Dili (her zaman UML olarak da adlandırılır, çünkü üç harfli kısaltmalar asla stil dışına çıkmaz) sınıf diyagramı kullanılarak tanımlanabilir. İşte birinci sınıf şemamız:
+
+5
+
+Bu şema bir Portakal&#39;ın bir şekilde bir Sepet ile ilişkili olduğunu ve bir Elmanın da bir şekilde bir Fıçı ile ilişkili olduğunu göstermektedir. İlişki, iki sınıfın birbiriyle ilişkilendirilmesi için en temel yoldur.
+
+UML, yöneticiler arasında çok popülerdir ve zaman zaman programcılar tarafından küçültülür. Bir UML diyagramının sözdizimi genellikle oldukça açıktır; Bir tane gördüğünüzde neler olup bittiğini anlamak için (çoğunlukla) bir öğretici okumak zorunda değilsiniz. UML&#39;nin çizilmesi de oldukça kolaydır ve oldukça sezgiseldir. Sonuçta, birçok kişi sınıfları ve ilişkilerini tanımlarken, doğal olarak aralarında çizgiler olan kutular çizer. Bu sezgisel diyagramlara dayanan bir standarda sahip olmak, programcıların tasarımcılarla, yöneticilerle ve birbirleriyle iletişim kurmasını kolaylaştırır.
+
+Bununla birlikte, bazı programcılar UML&#39;nin zaman kaybı olduğunu düşünüyor. Yinelemeli gelişime dayanarak, fantezi UML diyagramlarında yapılan resmi spesifikasyonların uygulanmadan önce gereksiz olacağını ve bu resmi diyagramların korunmasının sadece zaman kaybettireceğini ve kimseye fayda sağlayamayacağını iddia edeceklerdir.
+
+İlgili kurumsal yapıya bağlı olarak, bu doğru olabilir veya olmayabilir. Bununla birlikte, birden fazla kişiden oluşan her programlama ekibinin ara sıra oturması ve üzerinde çalıştığı alt sistemin detaylarını çıkarması gerekir. UML, bu beyin fırtınası oturumlarında hızlı ve kolay iletişim için son derece faydalıdır. Resmi sınıf diyagramlarından yararlanan organizasyonlar bile, tasarım toplantılarında veya ekip tartışmalarında UML&#39;nin resmi olmayan bir versiyonunu kullanma eğilimindedir.
+
+Ayrıca, iletişim kurmak zorunda kalacağınız en önemli kişi kendinizsiniz. Hepimiz verdiğimiz tasarım kararlarını hatırlayabileceğimizi düşünüyoruz, ama her zaman neden bunu yaptım? geleceğimizde saklanan anlar. Bir tasarıma başladığımızda ilk şemalarımızı yaptığımız kağıt parçalarını tutarsak, sonunda yararlı bir referans bulacağız.
+
+Bununla birlikte, bu bölüm UML&#39;de bir ders niteliğinde değildir. İnternette mevcut olanların birçoğu ve konuyla ilgili çok sayıda kitap vardır. UML, sınıf ve nesne diyagramlarından çok daha fazlasını kapsar; ayrıca kullanım durumları, dağıtım, durum değişiklikleri ve etkinlikler için bir sözdizimine sahiptir. Nesne yönelimli tasarım tartışmasında bazı ortak sınıf şeması sözdizimi ile ilgileneceğiz. Yapıyı örnek olarak alabileceğinizi göreceksiniz ve bilinçli bir şekilde UML&#39;den ilham alan sözdizimini kendi ekibinizde veya kişisel tasarım oturumlarınızda seçeceksiniz.
+
+Başlangıçtaki şemamız doğru olsa da, elmanın fıçıya girdiğini veya tek bir elmanın kaç fıçıya girebileceğini hatırlatmıyor. Sadece bize elmaların bir şekilde fıçılarla ilişkili olduğunu söylüyor. Sınıflar arasındaki ilişki açıktır ve daha fazla açıklama gerektirmez, ancak gerektiğinde daha fazla açıklama ekleme seçeneğine sahibiz.
+
+6
+
+UML&#39;nin güzelliği çoğu şeyin isteğe bağlı olmasıdır. Bir şemada yalnızca mevcut durum için anlamlı olduğu kadar bilgi belirtmemiz gerekir. Hızlı bir beyaz tahta oturumunda, kutular arasında hızlıca çizgiler çizebiliriz. Resmi bir belgede daha fazla ayrıntıya girebiliriz. Elmalar ve fıçılar söz konusu olduğunda, birliğin bir fıçıya girdiğinden emin olacağımızdan emin olabiliriz, ancak sadece kimseyle karıştırılmadığından emin olmak için, bir elma bir fıçıyı bozar, şemayı gösterildiği gibi geliştirebiliriz:
+
+Bu şema bize portakalların neyin içinde olduğunu gösteren küçük bir okla sepete girdiğini söylemektedir. Ayrıca, ilişkinin her iki tarafındaki dernekte kullanılabilecek olan nesnenin sayısını da gösterir. Bir Sepet çok (bir * ile temsil edilen) Turuncu nesneleri tutabilir. Herhangi bir Portakal tam olarak bir Sepet içinde gidebilir. Bu sayı, nesnenin çokluğu olarak adlandırılır. Kardinalite olarak nitelendirildiğini de duyabilirsiniz. Bunlar aslında biraz farklı terimlerdir. Kardinalite, kümedeki gerçek öğe sayısını belirtirken, çokluk bu sayının ne kadar küçük veya büyük olabileceğini belirtir.
+
+Çokluğun hangi ilişkinin devam ettiğini sık sık unutuyorum. Bir sınıfa en yakın çokluk, o sınıfın ilişkinin diğer ucundaki herhangi bir nesneyle ilişkilendirilebilecek nesne sayısıdır. Elmanın namlu birleşimine girmesi için, soldan sağa okuma, Apple sınıfının birçok örneği (bir çok Apple nesnesidir) herhangi bir Namluda gidebilir. Sağdan sola okuma, tam olarak bir Varil, herhangi bir Apple ile ilişkilendirilebilir.
+
+Nitelik ve davranış belirtme
+
+Artık bazı temel nesne yönelimli terminolojiyi kavradık. Nesneler, birbirleriyle ilişkilendirilebilecek sınıf örnekleridir. Bir nesne örneği, kendi veri ve davranış kümesine sahip belirli bir nesnedir; önümüzde bulunan masadaki belirli bir portakalın genel portakal sınıfının bir örneği olduğu söylenir. Bu yeterince basit, ancak her nesneyle ilişkili bu veriler ve davranışlar nelerdir?
+
+7
+
+Veri nesneleri açıklar
+
+Veri ile başlayalım. Veri tipik olarak belirli bir nesnenin bireysel özelliklerini temsil eder. Bir sınıf, o sınıfın tüm nesneleri tarafından paylaşılan özel karakter kümelerini tanımlayabilir. Herhangi bir spesifik nesne, verilen özellikler için farklı veri değerlerine sahip olabilir. Örneğin, masadaki üç portakalımız (eğer hiç yemedik), her biri farklı bir ağırlıkta olabilir. Turuncu sınıf daha sonra ağırlık özelliğine sahip olabilir. Turuncu sınıfın tüm örnekleri bir ağırlık özelliğine sahiptir, ancak her turuncu bu özellik için farklı bir değere sahiptir. Nitelikler, benzersiz olmak zorunda değildir; herhangi iki portakal aynı miktarda olabilir. Daha gerçekçi bir örnek olarak, farklı müşterileri temsil eden iki nesne, bir ilk ad özelliği için aynı değere sahip olabilir.
+
+Özniteliklere genellikle üye veya mülk denir. Bazı yazarlar, özelliklerin salt okunur olduğu halde, terimlerin farklı anlamlara sahip olduğunu, genellikle bu niteliklerin ayarlanabildiğini öne sürmektedir. Python&#39;da &quot;salt okunur&quot; kavramı oldukça anlamsızdır, bu yüzden bu kitap boyunca birbirlerinin yerine kullanılan iki terim göreceğiz. Ek olarak, Bölüm 5, Nesneye Yönelik Programlamanın Ne Zaman Kullanılacağı bölümünde tartışacağımız gibi, property anahtar kelimenin Python&#39;da belirli bir nitelik için özel bir anlamı vardır.
+
+Meyve envanteri uygulamamızla, meyve üreticisi portakalın hangi bahçesinden geldiğini, ne zaman toplandığını ve ne kadar ağır olduğunu bilmek isteyebilir. Ayrıca her sepetin nerede saklandığını takip etmek isteyebilirler. Elmalar bir renk özelliğine sahip olabilir ve variller farklı boyutlarda olabilir. Bu özelliklerin bazıları birden fazla sınıfa da ait olabilir (elmaların ne zaman toplandığını bilmek isteyebiliriz), ancak bu ilk örnek için sınıf diyagramımıza birkaç farklı özellik ekleyelim:
+
+8
+
+Tasarımımızın ne kadar ayrıntılı olması gerektiğine bağlı olarak, her bir özellik için türü de belirtebiliriz. Öznitelik türleri genellikle tam sayı, kayan nokta sayısı, dize, bayt veya Boolean gibi çoğu programlama dili için standart olan ilkellerdir. Ancak, listeler, ağaçlar veya grafikler veya en önemlisi diğer sınıflar gibi veri yapılarını temsil edebilirler. Bu, tasarım aşamasının programlama aşaması ile üst üste gelebileceği bir alandır. Bir programlama dilinde mevcut olan çeşitli ilkel nesneler veya nesneler, diğer dillerde bulunanlardan biraz farklı olabilir.
+
+Genellikle, tasarım aşamasında veri türleri ile fazla ilgilenmemize gerek yoktur, çünkü programlama aşamasında uygulamaya özel detaylar seçilmektedir. Genel isimler normal olarak tasarım için yeterlidir. Tasarımımız bir liste kapsayıcı türünü çağırıyorsa, Java programcıları uygularken bir LinkedList veya ArrayList&#39;i seçebilirken, Python programcıları (biziz!) Listedeki yerleşik ve bir tuple arasında seçim yapabilir.
+
+Şimdiye kadar meyve yetiştirme örneğimizde, niteliklerimizin tümü temel ilkellerdir. Ancak, açık bir şekilde yapabileceğimiz bazı nitelikler var - dernekler. Belirli bir portakal için, bu portakalı tutan sepeti içeren bir özelliğe sahip olabiliriz.
+
+Davranışlar eylemlerdir
+
+Şimdi verinin ne olduğunu biliyoruz, fakat davranış nedir? Davranışlar, bir nesnede meydana gelebilecek eylemlerdir. Belirli bir nesne sınıfında gerçekleştirilebilecek davranışlara yöntem denir. Programlama seviyesinde, metotlar yapısal programlamadaki fonksiyonlara benzer, ancak sihirli bir şekilde bu nesneyle ilişkili tüm verilere erişebilirler. İşlevler gibi, yöntemler de parametreleri kabul edebilir ve değerleri döndürür.
+
+9
+
+Bir yönteme ilişkin parametreler, çağrılan yönteme aktarılması gereken nesnelerin bir listesidir (çağıran nesneden iletilen nesnelere genellikle argüman olarak adlandırılır). Bu nesneler yöntem tarafından yapılması gereken davranış veya görevi yerine getirmek için kullanılır. Dönen değerler bu görevin sonuçlarıdır.
+
+&quot;Elmaları ve portakalları karşılaştırmak&quot; örneğimizi temel (eğer uygulandıysa) envanter uygulamasına genişlettik. Biraz daha uzatalım ve kırılıp kırılmadığına bakalım. Portakal ile ilişkilendirilebilecek bir eylem, toplama eylemidir. Uygulama hakkında düşünürseniz, seçim, portakalın sepet özelliğini güncelleyerek ve portakalı Sepet üzerindeki portakallar listesine ekleyerek portakalı sepete yerleştirir. Öyleyse, toplama hangi sepetle uğraştığını bilmeli Bunu pick metoduna basket parametresi vererek yapıyoruz. Meyve çiftçimiz de meyve suyu sattığından, Portakal’a sıkma yöntemi ekleyebiliriz. Sıkıldığında, sıkma elde edilen meyve suyunun miktarını geri getirebilir, Portakal&#39;ı da içinde bulunduğu sepetten çıkarabilir.
+
+Sepet satış işlemi yapabilir. Bir sepet satıldığında, envanter sistemimiz muhasebe ve kar hesaplamaları için henüz belirtilmemiş nesneler hakkındaki bazı verileri güncelleyebilir. Alternatif olarak, portakal sepetimiz satmadan önce kötüye gidebilir, bu yüzden bir atma yöntemi ekleriz. Bu yöntemleri diyagramımıza ekleyelim:
+
+Tek tek nesnelere model ve yöntem eklemek, etkileşimli nesneler sistemi oluşturmamızı sağlar. Sistemdeki her nesne, belirli bir sınıfın üyesidir. Bu sınıflar, nesnenin hangi tür verileri tutabildiğini ve üzerinde hangi yöntemlerin çağrılabileceğini belirler. Her nesnedeki veriler, aynı sınıftaki diğer nesnelerden farklı bir durumda olabilir ve her nesne, durumdaki farklılıklar nedeniyle yöntem çağrılarına farklı tepki verebilir.
+
+Nesneye yönelik analiz ve tasarım, bu nesnelerin ne olduğunu ve nasıl etkileşime girmeleri gerektiğini bulmakla ilgilidir. Bir sonraki bölümde, bu etkileşimleri olabildiğince basit ve sezgisel hale getirmek için kullanılabilecek prensipler açıklanmaktadır.
+
+10
+
+Ayrıntıları gizleme ve ortak arayüz oluşturma
+
+Bir nesneyi nesne yönelimli tasarımda modellemenin temel amacı, o nesnenin ortak arabiriminin ne olacağını belirlemektir. Arayüz, diğer nesnelerin o nesneyle etkileşimde bulunmak için kullanabileceği nitelik ve yöntemlerin toplamıdır. Nesnenin iç çalışmalarına erişmek için ihtiyaç duymazlar ve çoğu zaman izin verilmezler. Yaygın bir gerçek dünya örneği televizyondur. Televizyona arayüzümüz uzaktan kumanda. Uzaktan kumandadaki her düğme, televizyon nesnesinde çağrılabilecek bir yöntemi temsil eder. Çağıran nesne olarak bu yöntemlere eriştiğimizde, televizyonun sinyalini bir antenden, kablo bağlantısından veya bir uydu çanağından alıp almadığını bilmiyoruz veya umursamıyoruz. Ses seviyesini ayarlamak için hangi elektronik sinyallerin gönderileceğini veya sesin hoparlörlere mi yoksa kulaklıklara mı yönlendirileceğini umursamıyoruz. Televizyonu, dahili çalışmalara erişmek için, örneğin çıkış sinyalini hem harici hoparlörlere hem de bir kulaklık setine bölmek üzere açarsak, garantiyi geçersiz kılacaktır.
+
+Bir nesnenin uygulanmasını veya işlevsel ayrıntılarını gizleme işlemine uygun şekilde bilgi gizleme denir. Ayrıca bazen kapsülleme olarak da adlandırılır, ancak kapsülleme aslında daha kapsamlı bir terimdir. Kapsüllenmiş veriler mutlaka gizli değildir. Kapsülleme, kelimenin tam anlamıyla, bir kapsül oluşturmaktır ve bu nedenle bir zaman kapsülü oluşturmayı düşünün. Bir zaman kapsülü içine bir sürü bilgi koyarsanız, kilitleyin ve gömün, her ikisi de kapsüllenir ve bilgiler gizlenir. Öte yandan, eğer zaman kapsülü gömülmediyse ve kilidi açılmadıysa veya şeffaf plastikten yapılmışsa, içindeki öğeler hala kapsüllenmiş durumdadır, ancak hiçbir bilgi gizleme yoktur.
+
+Kapsülleme ve bilgi gizleme arasındaki ayrım, özellikle tasarım düzeyinde, büyük ölçüde önemsizdir. Birçok pratik referans bu terimleri birbirinin yerine kullanır. Python programcıları olarak, gerçekten saklanmakta olan gerçek bilgiye sahip değiliz ya da ihtiyacımız var, (bunun nedenlerini Bölüm 2, Python&#39;daki Nesneler&#39;de tartışacağız), böylece kapsülleme için daha kapsamlı bir tanım uygun olacaktır.
+
+Ancak, halkın arayüzü çok önemlidir. Gelecekte onu değiştirmek zor olduğu için dikkatlice tasarlanması gerekir. Arabirimi değiştirmek, onu çağıran tüm istemci nesnelerini kıracak. Örneğin, daha verimli hale getirmek veya ağ üzerinden yerel olarak olduğu gibi verilere erişmek için istediğimiz tüm içselleri değiştirebiliriz ve istemci nesneleri ortak arabirim kullanarak, değiştirilmemiş olarak konuşabilir. Öte yandan, genel olarak erişilen özellik adlarını değiştirerek veya bir yöntemin kabul edebileceği argümanların sırasını veya türlerini değiştirerek arayüzü değiştirirsek, tüm istemci nesnelerinin de değiştirilmesi gerekir. Genel arayüzler konusunda, basit olsun. Bir nesnenin arayüzünü, kodlamanın ne kadar zor olduğuna değil, kullanım kolaylığına bağlı olarak daima tasarlayın (bu tavsiye, kullanıcı arayüzleri için de geçerlidir).
+
+11
+
+#
+__
+#
+#
+Unutmayın, program nesneleri gerçek nesneleri temsil edebilir, ancak bu onları gerçek nesneler yapmaz. Onlar model. Modellemenin en büyük armağanlarından biri alakasız ayrıntıları görmezden gelebilme yeteneğidir. Çocukken inşa ettiğim model araba dışarıdan gerçek bir 1956 Thunderbird gibi görünebilir, ancak çalışmaz ve tahrik mili dönmez. Bu ayrıntılar sürmeye başlamadan önce aşırı karmaşık ve ilgisizdi. Model, gerçek bir konseptin soyutlanmasıdır.
+#
+#
+Soyutlama, kapsülleme ve bilgi gizleme ile ilgili başka bir nesne yönelimli bir kavramdır. Basitçe söylemek gerekirse, soyutlama, verilen bir göreve en uygun ayrıntı düzeyiyle ilgilenmek anlamına gelir. Bu, halka açık bir ara yüzün iç detaylardan çıkarılması işlemidir. Bir otomobilin sürücüsünün direksiyon, gaz pedalı ve frenlerle etkileşime girmesi gerekir. Motorun, aktarma organının ve fren alt sisteminin çalışması sürücü için önemli değil. Öte yandan bir tamirci, farklı bir soyutlama seviyesinde çalışır, motoru ayarlar ve molaları keser. İşte bir araba için iki soyutlama seviyesine bir örnek:
+#
+#
+Şimdi, benzer kavramları ifade eden birkaç yeni terim var. Tüm bu jargonu birkaç cümleye yoğunlaştırmak: soyutlama, bilgiyi ayrı kamusal ve özel arayüzlerle kapsülleme sürecidir. Özel arayüzler bilgi gizlemeye maruz kalabilir.
+#
+#
+Tüm bu tanımlardan alınacak önemli ders, modellerimizin kendisiyle etkileşime girmesi gereken diğer nesneler için anlaşılabilir hale getirilmesidir. Bu, küçük ayrıntılara dikkat etmek anlamına gelir. Yöntem ve özelliklerin makul adlara sahip olduğundan emin olun. Bir sistemi analiz ederken, nesneler tipik olarak orijinal problemdeki isimleri temsil ederken, metotlar normalde fiillerdir. Öznitelikler genellikle sıfatlar olarak alınabilir, ancak öznitelik geçerli nesnenin parçası olan başka bir nesneye atıfta bulunsa da, yine de bir isim olacaktır. Sınıfları, özellikleri ve buna göre yöntemleri adlandırın.
+#
+#
+12
+#
+#
+Gelecekte faydalı olabilecek nesneleri veya eylemleri modellemeye çalışmayın. Sistemin gerçekleştirmesi gereken görevleri tam olarak modelleyin ve tasarım doğal olarak uygun bir soyutlama seviyesine sahip olana yönelecektir. Bu gelecekteki olası tasarım değişiklikleri hakkında düşünmememiz gerektiği anlamına gelmez. Gelecekteki gereksinimlerin karşılanabilmesi için tasarımlarımızın açık uçlu olması gerekir. Ancak, arabirimleri soyutlarken, neyin modellenmesi gerektiğini ve daha fazlasını değil, tam olarak modellemeye çalışın.
+#
+#
+Arabirimi tasarlarken, kendinizi nesnenin ayakkabısına yerleştirmeyi deneyin ve nesnenin gizlilik için güçlü bir tercihi olduğunu hayal edin. Diğer nesnelerin, sizin için en çok ilgi duyduğunu hissetmediğiniz sürece, sizinle ilgili verilere erişmesine izin vermeyin. Onlara, size yapmalarını istediğinizden emin olmadığınız sürece, belirli bir görevi yerine getirmeniz için bir arayüz vermeyin.
+#
+#
+bileştirme, kompozisyon
+#
+#
+Şimdiye kadar, sistemleri her bir etkileşimin nesneleri uygun bir soyutlama düzeyinde görmeyi içerdiği bir etkileşim nesnesi grubu olarak tasarlamayı öğrendik. Ancak henüz bu soyutlama seviyelerini nasıl yaratacağımızı bilmiyoruz. Bunu yapmanın çeşitli yolları vardır; Bölüm 8, Dizeler ve Serileştirme ve Bölüm 9, İteratör Deseni bölümündeki bazı gelişmiş tasarım modellerini tartışacağız. Ancak çoğu tasarım deseni bile kompozisyon ve kalıtım olarak bilinen iki temel nesne yönelimli ilkeye dayanır. Kompozisyon daha basittir, öyleyse başlayalım.
+#
+#
+Kompozisyon, yeni bir tane oluşturmak için birlikte birkaç nesneyi toplama eylemidir. Bir nesne başka bir nesnenin parçası olduğunda kompozisyon genellikle iyi bir seçimdir. Mekanik örnekte bir ilk kompozisyon ipucu gördük. Otomobil, diğer birçok parça arasında motor, şanzıman, marş, far ve ön camdan oluşur. Motor sırayla pistonlar, krank mili ve valflerden oluşur. Bu örnekte, kompozisyon soyutlama seviyelerini sağlamak için iyi bir yoldur. Otomobil nesnesi bir sürücünün ihtiyaç duyduğu arayüzü sağlayabilir ve aynı zamanda bir tamirciye uygun daha derin bir soyutlama seviyesi sunan bileşen parçalarına erişim sağlar. Elbette, tamirci bir sorunu teşhis etmek veya motoru ayarlamak için daha fazla bilgiye ihtiyaç duyuyorsa, bu parça parçaları elbette daha da bozulabilir.
+#
+#
+Bu ortak bir kompozisyon örneğidir, ancak bilgisayar sistemleri tasarlamak söz konusu olduğunda aşırı derecede kullanışlı değildir. Fiziksel nesnelerin bileşen nesnelere ayrılması kolaydır. İnsanlar bunu en azından eski Yunanlıların başlangıçta atomların en küçük madde birimleri olduğunu varsaydığı için yapıyorlar (elbette, parçacık hızlandırıcılarına erişimi yoktu). Bilgisayar sistemleri genellikle fiziksel nesnelerden daha az karmaşıktır, ancak bu tür sistemlerdeki bileşen nesnelerin tanımlanması doğal olarak gerçekleşmez.
+#
+#
+13
+#
+#
+Nesne yönelimli bir sistemdeki nesneler bazen insanlar, kitaplar veya telefonlar gibi fiziksel nesneleri temsil eder. Daha sık, ancak, soyut fikirleri temsil eder. İnsanların adları, kitaplarının başlıkları vardır ve telefon görüşmeleri yapmak için kullanılır. Aramalar, başlıklar, hesaplar, adlar, randevular ve ödemeler genellikle fiziksel dünyadaki nesneler olarak kabul edilmez, ancak hepsi bilgisayar sistemlerinde sıkça modellenen bileşenlerdir.
+#
+#
+Kompozisyonu çalışırken görmek için daha bilgisayarlı bir örnekleme modellemeyi deneyelim. Bilgisayarlı bir satranç oyununun tasarımına bakıyor olacağız. Bu, 80&#39;li ve 90&#39;lı yıllarda akademisyenler arasında çok popüler bir eğlenceydi. İnsanlar bilgisayarların bir gün bir insan satranç ustasını yenebileceklerini tahmin ediyorlardı. Bu 1997&#39;de gerçekleştiğinde (IBM&#39;in Deep Blue, dünya satranç şampiyonu Gary Kasparov&#39;u mağlup etti), soruna ilgi, bilgisayar ve insan satranç oyuncuları arasında hala yarışmalar olmasına rağmen azaldı. (Bilgisayarlar genellikle kazanır.)
+#
+#
+Temel, üst düzey bir analiz olarak, iki oyuncu arasında 8 x 8&#39;lik bir ızgarada altmış dört pozisyon içeren bir tahta seti içeren bir satranç takımı kullanılarak oynanır. Tahtanın iki oyuncu tarafından farklı şekillerde dönüşümlü olarak hareket ettirilebilen on altı adet iki takımı olabilir. Her parça başka parçaları alabilir. Her dönüşten sonra kartın kendisini bilgisayar ekranında çekmesi gerekecektir.
+#
+#
+Tanımdaki olası nesnelerden bazılarını italik kullanarak, kalın kullanarak birkaç anahtar yöntem tanımladım. Bu, nesne yönelimli bir analizi tasarıma dönüştürmede yaygın bir ilk adımdır. Bu noktada, kompozisyonu vurgulamak için, oyuncular veya farklı parça türleri hakkında çok fazla endişelenmeden tahtaya odaklanacağız.
+#
+#
+Mümkün olan en yüksek soyutlama seviyesinden başlayalım. Sırayla hamle yaparak bir satranç takımıyla etkileşime giren iki oyuncumuz var:
+#
+#
+14
+#
+#
+Bu nedir? Daha önceki sınıf diyagramlarımıza pek benzemiyor. Çünkü bu bir sınıf diyagramı değil! Bu, bir örnek şema olarak da adlandırılan bir nesne şemasıdır. Sistemi zaman içinde belirli bir durumda tanımlar ve sınıflar arasındaki etkileşimi değil, belirli nesnelerin örneklerini açıklar. Unutmayın, her iki oyuncu da aynı sınıfın üyeleridir, bu yüzden sınıf şeması biraz farklı görünüyor:
+#
+#
+Diyagram, tam olarak iki oyuncunun bir satranç takımıyla etkileşime girebileceğini göstermektedir. Ayrıca, bir oyuncunun aynı anda yalnızca bir satrançla oynayabileceğini de gösterir.
+#
+#
+Bununla birlikte, UML&#39;yi değil kompozisyonu tartışıyoruz, o yüzden Satranç Setinin neyin oluştuğunu düşünelim. Bu zamanda oyuncunun neyden oluştuğunu umursamıyoruz. Oyuncunun diğer organların arasında kalbi ve beyni olduğunu varsayabiliriz, ancak bunlar modelimizle ilgili değil. Gerçekten de, söz konusu oyuncunun ne kalbe ne de beyne sahip olan Deep Blue&#39;nun kendisini durduracak hiçbir şeyi yoktur.
+#
+#
+Satranç takımı o zaman bir tahta ve 32 parçadan oluşuyor. Tahta ayrıca 64 pozisyon içerir. Parçaların satranç setinin bir parçası olmadığını iddia edebilirsiniz çünkü satranç setindeki parçaları farklı parçalarla değiştirebilirsiniz. Bilgisayarlı bir satranç versiyonunda bu pek mümkün olmamakla birlikte imkansız olsa da, bizi bir araya getirmektedir.
+#
+#
+Birleştirme neredeyse aynen bileşim gibidir. Fark, toplu nesnelerin bağımsız olarak var olabileceğidir. Bir pozisyonun farklı bir satranç tahtasına bağlanması imkansız olurdu, bu yüzden tahtanın pozisyonlardan oluştuğunu söylüyoruz. Ancak satranç setinden bağımsız olarak bulunabilecek eserlerin, bu setle toplu bir ilişki içinde olduğu söylenir.
+#
+#
+Birleştirme ve kompozisyon arasında ayrım yapmanın başka bir yolu, nesnenin ömrü hakkında düşünmektir. Kompozit (dış) nesne, ilişkili (iç) nesnelerin ne zaman oluşturulduğunu ve imha edildiğini kontrol ederse, kompozisyon en uygun olanıdır. İlgili nesne, bileşik nesneden bağımsız olarak oluşturulmuşsa veya bu nesnenin dışına çıkarsa, toplu bir ilişki daha anlamlı olur. Ayrıca, bileşimin toplanma olduğunu unutmayın; toplanma sadece daha genel bir bileşim şeklidir. Herhangi bir bileşik ilişki aynı zamanda toplu bir ilişkidir ancak tersi de geçerli değildir.
+#
+#
+15
+#
+#
+Mevcut satranç takımı kompozisyonumuzu tanımlayalım ve bileşik ilişkileri sürdürmek için nesnelere bazı özellikler ekleyelim:
+#
+#
+Kompozisyon ilişkisi UML&#39;de katı bir elmas olarak temsil edilir. İçi boş elmas, toplam ilişkiyi temsil eder. Tahtanın ve parçaların satranç setinin bir parçası olarak saklandığını göreceksiniz, aynı şekilde kendilerine bir referans satranç setinde bir özellik olarak saklanır. Bu, bir kez daha pratikte, toplama ve kompozisyon arasındaki farkın, tasarım aşamasını geçtiğinizde genellikle önemsiz olduğunu göstermektedir. Uygulandığında, aynı şekilde davranırlar. Bununla birlikte, ekibiniz farklı nesnelerin nasıl etkileşime girdiğini tartışırken ikisi arasında farklılaşmaya yardımcı olabilir. Çoğunlukla, onlara aynı şey olarak davranabilirsiniz, ancak aralarında ayrım yapmanız gerektiğinde, farkı bilmek harikadır (işte bu soyutlamadır).
+#
+#
+miras
+#
+#
+Nesneler arasındaki üç tür ilişkiyi tartıştık: ilişkilendirme, kompozisyon ve toplama. Ancak, satranç setimizi tam olarak belirlemedik ve bu araçlar bize ihtiyacımız olan tüm gücü vermedi. Bir oyuncunun bir insan olabileceği veya yapay zekaya sahip bir yazılım parçası olabileceği olasılığını tartıştık. Bir oyuncunun bir insanla ilişkili olduğunu veya yapay zeka uygulamasının oyuncu nesnesinin bir parçası olduğunu söylemek doğru görünmüyor. Gerçekten ihtiyacımız olan şey &quot;Deep Blue bir oyuncu&quot; ya da &quot;Gary Kasparov bir oyuncu&quot; deme yeteneği.
+#
+#
+Mirastan oluşan bir ilişkidir. Kalıtım, nesne yönelimli programlamada en ünlü, iyi bilinen ve aşırı kullanılan ilişkidir. Kalıtım bir tür soy ağacı gibidir. Büyükbabamın soyadı Phillips&#39;ti ve babam bu adı devralmıştı. Ondan miras aldım (mavi gözler ve yazı için bir tutku ile birlikte). Nesne yönelimli programlamada, bir kişinin özellik ve davranışlarını miras almak yerine, bir sınıf başka bir sınıftan nitelik ve yöntemleri miras alabilir.
+#
+#
+16
+#
+#
+Örneğin, satranç setimizde 32 satranç taşı var, ancak her biri taşındığında farklı davranan sadece altı farklı parça türü (piyonlar, kaleler, piskoposlar, şövalyeler, kral ve kraliçe) var. Bu parça sınıflarının tümü, renk ve parçası oldukları satranç takımı gibi özelliklere sahiptir, ancak satranç tahtasına çizildiğinde benzersiz şekilleri vardır ve farklı hareketler yaparlar. Altı tip parçanın bir Piece sınıfından nasıl miras alabildiğini görelim:
+#
+#
+İçi boş oklar, ayrı ayrı parça sınıflarının Parça sınıfından miras aldığını gösterir. Tüm alt türler otomatik olarak temel sınıftan miras alınan bir chess_set ve color niteliğine sahiptir. Her parça farklı bir şekil özelliği (tahta oluştururken ekranda çizilecek) ve parçayı her turda tahta üzerinde yeni bir konuma taşımak için farklı bir hareket yöntemi sunar.
+#
+#
+Aslında, Piece sınıfının tüm alt sınıflarının bir hareket yöntemine sahip olması gerektiğini biliyoruz; Aksi takdirde, tahta parçayı hareket ettirmeye çalıştığında, kafası karışır. Ek bir parçaya (sihirbaz) sahip olan satranç oyununun yeni bir versiyonunu oluşturmak isteyebiliriz. Mevcut tasarımımız, bu parçayı hareket etme yöntemi olmadan tasarlamamıza izin veriyor. Tahta daha sonra parçanın kendisinin hareket etmesini istediğinde boğulacaktır.
+#
+#
+Bunu, Piece sınıfında yapay bir hareket yöntemi oluşturarak uygulayabiliriz. Alt sınıflar daha sonra daha spesifik bir uygulama ile bu metodu geçersiz kılabilir. Varsayılan uygulama, örneğin şunu söyleyen bir hata mesajı çıkarabilir: Bu parça taşınamıyor.
+#
+#
+17
+#
+#
+Alt tiplerdeki geçersiz kılma yöntemleri, çok güçlü nesne yönelimli sistemlerin geliştirilmesine izin verir. Örneğin, yapay zekaya sahip bir oyuncu sınıfı uygulamak istiyorsak, bir Board nesnesini alan ve hangi parçanın nereye taşınacağına karar veren bir hesapla. Çok temel bir sınıf rastgele bir parça ve yön seçip uygun şekilde hareket ettirebilir. Daha sonra Deep Blue uygulamasıyla bir alt sınıfta bu yöntemi geçersiz kılabilirdik. Birinci sınıf ham bir acemiye karşı oynamaya uygun olur, ikincisi büyük bir efendiye meydan okurdu. Önemli olan, yönetim kuruluna hangi hareketi seçtiği konusunda bilgi verenler gibi sınıftaki diğer yöntemlerin de değiştirilmemesidir; bu uygulama iki sınıf arasında paylaşılabilir.
+#
+#
+Satranç taşları söz konusu olduğunda, taşıma yönteminin varsayılan bir uygulamasını sağlamak pek mantıklı gelmiyor. Tek yapmamız gereken hareket yönteminin herhangi bir alt sınıfta gerekli olduğunu belirtmektir. Bu, Parçanın soyut ilan ettiği hareket yöntemi ile soyut bir sınıf haline getirilerek yapılabilir. Soyut yöntemler temel olarak, “Bu yöntemin soyut olmayan bir alt sınıfta var olmasını talep ediyoruz, ancak bu sınıfta bir uygulama belirtmeyi reddediyoruz” diyor.
+#
+#
+Gerçekten de, hiçbir yöntemi uygulamayan bir sınıf oluşturmak mümkündür. Böyle bir sınıf bize sadece sınıfın ne yapması gerektiğini söyler, fakat nasıl yapılacağı konusunda kesinlikle hiçbir öneride bulunmaz. Nesneye yönelik bakışta, bu sınıflara arayüz denir.
+#
+#
+Kalıtım soyutlama sağlar
+#
+#
+En uzun kelimeyi nesne yönelimli argotda keşfedelim. Polimorfizm, bir sınıfı, hangi alt sınıfın uygulandığına bağlı olarak farklı şekilde ele alma becerisidir. Bunu zaten tarif ettiğimiz parça sistemi ile eylem halinde gördük. Eğer tasarımı biraz daha ileri götürürsek, büyük olasılıkla Board nesnesinin oyuncudan bir hamle kabul edebileceğini ve parçadaki hamle işlevini çağırabileceğini görürüz. Tahtanın ne tür bir parça ile uğraştığını bilmesi gerekmez. Tek yapması gereken hareket yöntemini çağırmak ve uygun alt sınıf bir Şövalye ya da Piyon olarak hareket ettirmekle ilgilenecek.
+#
+#
+Polimorfizm oldukça havalıdır, ancak Python programlamasında nadiren kullanılan bir kelimedir. Python, bir nesnenin alt sınıfının üst sınıf gibi muamele görmesine izin veren fazladan bir adım atmaktadır. Python&#39;da uygulanan bir pano, ister bir piskopos parçası, ister araba, ister ördek olsun, hareket yöntemi olan herhangi bir nesneyi alabilir. Hareket çağrıldığında, Piskopos tahta üzerinde çapraz olarak hareket edecek, araba bir yere varacak ve ruh haline bağlı olarak ördek yüzecek ya da uçacak.
+#
+#
+18
+#
+#
+Python&#39;daki bu tür polimorfizm tipik olarak ördek tiplemesi olarak adlandırılır: &quot;Bir ördek gibi yürür veya bir ördek gibi yüzerse, o bir ördek&quot;. Gerçekten bir ördek (kalıtım) olup olmadığını, sadece yüzdüğünü ya da yürüdüğünü umursamıyoruz. Kazlar ve kuğular, aradığımız ördek benzeri davranışı kolayca sağlayabilirler. Bu, gelecekteki tasarımcıların, sucul kuşlar için bir kalıtım hiyerarşisi belirtmeden yeni kuş türleri oluşturmalarını sağlar. Ayrıca, orijinal tasarımcıların asla planlamadığı tamamen farklı bırakma davranışları oluşturmalarına olanak tanır. Örneğin, gelecekteki tasarımcılar, aynı arayüzle çalışan, penguenlerin ördek olduğunu düşünmeden yürüyen bir penguen yapabilirler.
+#
+#
+Çoklu kalıtım
+#
+#
+Kendi soyağacımızdaki mirası düşündüğümüzde, birden fazla ebeveyne ait özellikleri miras aldığımızı görebiliriz. Yabancılar gururlu bir annesine, oğlunun “babalarının gözleri” olduğunu söylerken, genellikle “evet, ama burnumu tuttu” çizgileri boyunca cevap verir.
+#
+#
+Nesneye yönelik tasarım ayrıca, bir alt sınıfın birden fazla üst sınıftan işlevselliği miras almasını sağlayan çoklu kalıtım özelliği de içerebilir. Uygulamada, çoklu miras zor bir iş olabilir ve bazı programlama dilleri (en önemlisi, Java) bunu kesinlikle yasaklar. Bununla birlikte, çoklu mirasın kullanımları olabilir. Çoğu zaman, iki farklı davranış grubuna sahip nesneler oluşturmak için kullanılabilir. Örneğin, bir tarayıcıya bağlanmak ve taranan belgenin bir faksını göndermek için tasarlanmış bir nesne iki ayrı tarayıcı ve faks nesnesinden miras alınarak oluşturulabilir.
+#
+#
+İki sınıfın farklı arayüzleri olduğu sürece, bir alt sınıfın her ikisinden de miras alması normalde zararlı değildir. Bununla birlikte, birbiriyle örtüşen arayüzler sağlayan iki sınıftan miras alırsak dağınık hale gelir. Örneğin, bir taşıma yöntemine sahip bir motosiklet sınıfına ve ayrıca bir taşıma yöntemine sahip bir tekne sınıfına sahipsek ve bunları nihai amfibi araca birleştirmek istiyorsak, sonuçta ortaya çıkan sınıf, hareket dendiğinde ne yapmamız gerektiğini nasıl bilir? ? Tasarım düzeyinde, bunun açıklanması gerekir ve uygulama düzeyinde, her bir programlama dilinin, hangi ebeveyn sınıfının yönteminin çağrıldığına veya hangi sırayla karar verdiğine karar vermenin farklı yolları vardır.
+#
+#
+Çoğu zaman, onunla başa çıkmanın en iyi yolu, bundan kaçınmaktır. Böyle görünen bir tasarımınız varsa, muhtemelen yanlış yapıyorsunuzdur. Geri bir adım atın, sistemi tekrar analiz edin ve çoklu devralma ilişkisini başka bir birleşme veya birleşik tasarım lehine kaldırabiliyor musunuz bir bakın.
+#
+#
+19
+#
+#
+Kalıtım, davranışı genişletmek için çok güçlü bir araçtır. Aynı zamanda, nesne yönelimli tasarımın önceki paradigmalara göre en dikkat çekici gelişmelerinden biridir. Bu nedenle, genellikle nesne yönelimli programcıların ulaşabileceği ilk araçtır. Bununla birlikte, bir çekiçe sahip olmanın vidaları çiviye çevirmediğini bilmek önemlidir. Kalıtım, bariz bir çözüm olduğu için mükemmel bir çözümdür, ancak kötüye kullanılabilir. Programcılar, yalnızca uzak ilişkili olan iki tür nesne arasındaki kodu paylaşmak için genellikle miras kullanırlar; Bu mutlaka kötü bir tasarım olmasa da, neden sadece bu şekilde tasarlamaya karar verdiklerini ve farklı bir ilişki veya tasarım modelinin daha uygun olup olmadığını sormak için müthiş bir fırsat.
+#
+#
+Vaka Analizi
+#
+#
+Nesne yönelimli tasarımdaki birkaç yinelemeden geçerek biraz yeni bir dünya örneğinde tüm yeni nesne yönelimli bilgilerimizi bir araya getirelim. Modelleyeceğimiz sistem bir kütüphane kataloğu. Kütüphaneler, envanterlerini aslen kart kataloglarını ve daha yakın zamanda elektronik envanterleri kullanarak yüzyıllardır takip ediyorlar. Modern kütüphaneler, evlerimizden sorgulayabileceğimiz web tabanlı kataloglara sahiptir.
+#
+#
+Bir analizle başlayalım. Yerel kütüphaneci bizden yeni bir kart katalog programı yazmamızı istedi çünkü eski DOS tabanlı programları çirkin ve güncel değil. Bu bize fazla ayrıntı vermez, ancak daha fazla bilgi istemeye başlamadan önce, kütüphane katalogları hakkında zaten bildiklerimizi düşünelim.
+#
+#
+Kataloglar kitapların listesini içerir. İnsanlar belirli konulardaki kitapları, belirli başlıkları olan veya belirli bir yazar tarafından bulmak için onları arar. Kitaplar, Uluslararası Standart Kitap Numarası (ISBN) ile benzersiz şekilde tanımlanabilir. Her kitabın belirli bir rafta bulunmasına yardımcı olmak için tayin edilen bir Dewey Ondalık Sistem (DDS) numarası vardır.
+#
+#
+Bu basit analiz bize sistemdeki bariz nesnelerden bazılarını anlatıyor. Kitabı en önemli nesne olarak hızlı bir şekilde tanımlıyoruz; yazar, unvan, konu, ISBN ve DDS numarası gibi bazı özellikler ve kataloglar için bir tür yönetici olarak katalog.
+#
+#
+Ayrıca, sistemde modellenmesi gerekebilecek veya gerekmeyebilecek birkaç başka nesne görüyoruz. Kataloglama amacıyla, bir kitabı yazar tarafından aramak için gereken tek şey kitaptaki bir yazar_adı niteliğidir. Bununla birlikte, yazarlar aynı zamanda nesnelerdir ve yazar hakkında diğer bazı verileri depolamak isteyebiliriz. Bunu düşündüğümüzde, bazı kitapların birden fazla yazarı olduğunu hatırlayabiliriz. Birdenbire, nesneler üzerinde tek bir yazar_adı özelliğine sahip olma fikri biraz saçma görünüyor. Her kitapla ilişkilendirilen yazarların listesi açıkça daha iyi bir fikirdir.
+#
+#
+20
+#
+#
+Yazar ve kitap arasındaki ilişki açıkça bir ilişkidir, çünkü “bir kitap bir yazardır” (miras değildir) ve “bir kitabın bir yazarı vardır” derken, gramer olarak doğru olsa da yazarların bir parçası olduğu anlamına gelmez. kitapların (toplanma değil). Aslında, herhangi bir yazar birden fazla kitapla ilişkilendirilebilir.
+#
+#
+Ayrıca isme dikkat etmeliyiz (isimler nesneler için daima iyi adaylar) raf. Bir raf, kataloglama sisteminde modellenmesi gereken bir nesne midir? Bireysel rafı nasıl belirleriz? Bir kitap bir rafın sonunda saklanırsa ve daha sonra bir önceki rafa yerleştirildiği için bir sonraki rafın başına taşınırsa ne olur?
+#
+#
+DDS, fiziksel kitapların bir kütüphanede bulunmasına yardımcı olmak için tasarlandı. Dolayısıyla, bir DDS niteliğini kitapla birlikte saklamak, hangi rafta depolandığına bakılmaksızın, onu bulmak için yeterli olmalıdır. Böylece, en azından şimdilik, rakip nesneler listemizdeki rafları kaldırabiliriz.
+#
+#
+Sistemdeki şüpheli başka bir nesne kullanıcıdır. Belirli bir kullanıcı hakkında, adı, adresi veya gecikmiş kitapların listesi gibi bir şey bilmemize gerek var mı? Şimdiye kadar, kütüphaneci bize sadece bir katalog istediklerini söyledi; abonelikleri takip etme veya gecikme bildirimleri hakkında hiçbir şey söylemediler. Aklımızın arkasında, yazarların ve kullanıcıların her ikisinin de kendine özgü insan olduğunu; Gelecekte burada yararlı bir miras ilişkisi olabilir.
+#
+#
+Kataloglama amacıyla, kullanıcıyı şimdilik tanımlamamız gerekmediğine karar veriyoruz. Bir kullanıcının kataloğu arayacağını varsayabiliriz, ancak aramalarını sağlayan bir arabirim sağlamanın ötesinde, bunları sistemde aktif olarak modellememiz gerekmez.
+#
+#
+Kitapta birkaç özellik tanımladık, ancak bir katalog hangi özelliklere sahip? Herhangi bir kütüphanede birden fazla katalog var mı? Onları benzersiz bir şekilde tanımlamamız gerekiyor mu? Açıkçası, kataloğun bir şekilde içerdiği kitapların bir koleksiyonuna sahip olması gerekiyor, ancak bu liste muhtemelen genel arayüzün bir parçası değil.
+#
+#
+Peki ya davranışlar? Katalog açıkça yazarlar, başlıklar ve konular için ayrı olan bir arama yöntemine ihtiyaç duyar. Kitaplarda davranış var mı? Önizleme yöntemine ihtiyacı olur mu? Veya önizleme, bir yöntem yerine ilk sayfalar özniteliği ile tanımlanabilir mi?
+#
+#
+Yukarıdaki tartışmadaki soruların tümü nesne yönelimli analiz aşamasının bir parçasıdır. Ancak sorulara karışarak, tasarımın bir parçası olan birkaç anahtar nesne belirledik. Aslında, az önce gördüğünüz şey, analiz ve tasarım arasındaki birkaç mikroitrasyondur.
+#
+#
+21
+#
+#
+Muhtemelen, bu yinelemelerin tümü kütüphaneci ile yapılan ilk toplantıda gerçekleşecektir. Bununla birlikte, bu toplantıdan önce, somut bir şekilde tanımladığımız nesneler için en temel bir tasarımı çizebiliriz:
+#
+#
+Bu temel şema ve etkileşimli olarak onu geliştirmek için bir kalemle donanmış, kütüphaneci ile buluştuk. Bize bunun iyi bir başlangıç olduğunu söylüyorlar, ancak kütüphaneler yalnızca kitaplara hizmet etmiyor, ayrıca hiçbiri ISBN veya DDS numarasına sahip olmayan DVD, dergi ve CD&#39;leri de var. Bu tür öğelerin tümü, bir UPC numarasıyla benzersiz bir şekilde tanımlanabilir. Kütüphaneciye raftaki eşyaları bulmaları gerektiğini ve bu eşyaların muhtemelen UPC tarafından organize edilmediğini hatırlatırız. Kütüphaneci, her türün farklı bir şekilde düzenlendiğini açıklıyor. CD&#39;ler çoğunlukla sesli kitaplardır ve stokta sadece birkaç düzine vardır, bu yüzden yazarın soyadı tarafından düzenlenirler. DVD&#39;ler türe ayrılır ve başlıklara göre düzenlenir. Dergiler başlığa göre düzenlenir ve daha sonra cilt ve sayı sayısına göre düzenlenir. Kitaplar, tahmin ettiğimiz gibi, DDS sayısına göre düzenlenmiştir.
+#
+#
+Daha önce nesne yönelimli tasarım deneyimi olmadan, kataloğumuza ayrı DVD, CD, dergi ve kitap listesi eklemeyi düşünebilir ve her birini sırasıyla arayabiliriz. Sorun, bazı genişletilmiş öznitelikler dışında ve öğenin fiziksel konumunu tanımlamak dışında, bu öğelerin hepsinin aynı şekilde davranmasıdır. Bu miras için bir iş! UML diyagramımızı hızla güncelliyoruz:
+#
+#
+22
+#
+#
+Kütüphaneci, kabataslak diyagramımızın özünü anlıyor, ancak yerini bulma işleviyle biraz karıştı. Kullanıcının &quot;bunnies&quot; kelimesini aradığı belirli bir kullanım durumunu kullanarak açıklıyoruz. Kullanıcı önce kataloğa bir arama isteği gönderir. Katalog, dahili ürün listelerini sorgular ve bir kitap ve &quot;bunnies&quot; içeren bir DVD başlığında bulunur. Bu noktada, katalog DVD, kitap, CD veya dergi tutuyor olması umrunda değil; katalog ile ilgili olarak tüm ürünler aynıdır. Bununla birlikte, kullanıcı fiziksel öğelerin nasıl bulunacağını bilmek ister, bu nedenle sadece bir başlık listesi döndürdüğü takdirde katalog yeniden düzenlenir. Bu nedenle, ortaya çıkardığı iki öğe üzerindeki locate yöntemini çağırır. Kitabın yerleştirme yöntemi, kitabı tutan rafı bulmak için kullanılabilecek bir DDS numarası döndürür. DVD, tür ve başlığın DVD&#39;sini döndürerek bulunur. Kullanıcı daha sonra DVD bölümünü ziyaret edebilir, bu türü içeren bölümü bulabilir ve başlıklara göre sıralanmış belirli DVD&#39;yi bulabilir.
+#
+#
+Açıkladığımız gibi, çeşitli nesnelerin nasıl iletişim kurduğunu açıklayan bir UML dizi diyagramı çiziyoruz:
+#
+#
+Sınıf diyagramları sınıflar arasındaki ilişkileri tanımlarken, sıralama diyagramları nesneler arasında iletilen belirli mesaj dizilerini açıklar. Her nesneden asılı kesik çizgili, nesnenin ömrünü açıklayan bir yaşam çizgisidir. Her yaşam hattındaki daha geniş kutular, o nesnede aktif işlemi temsil eder (burada hiçbir kutunun olmadığı yerde, nesne temelde boşta durur, bir şeyin olmasını bekler). Yaşam çizgileri arasındaki yatay oklar belirli mesajları gösterir. Düz oklar, çağrılan yöntemleri temsil ederken, katı kafalı kesikli oklar, yöntem dönüş değerlerini temsil eder.
+#
+#
+23
+#
+#
+Yarım ok uçları, bir nesneye veya bir nesneden gönderilen asenkron mesajları gösterir. Eşzamansız bir mesaj tipik olarak, birinci nesnenin, ikinci nesnede hemen dönen bir yöntemi çağırdığı anlamına gelir. Bazı işlemlerden sonra, ikinci nesne ilk nesnede bir değer vermek için bir yöntem çağırır. Bu, yöntemdeki işlemi yapan ve hemen bir değer döndüren normal yöntem çağrılarının aksinedir.
+#
+#
+Dizi diyagramları, tüm UML diyagramları gibi, en iyi şekilde yalnızca ihtiyaç duyulduğunda kullanılır. Bir diyagram çizmek için UML diyagramı çizmenin bir anlamı yoktur. Bununla birlikte, iki nesne arasında bir dizi etkileşimi iletmeniz gerektiğinde, dizi diyagramı çok kullanışlı bir araçtır.
+#
+#
+
+#
+#
+Ne yazık ki, şu ana kadarki sınıf diyagramımız hala dağınık bir tasarım. DVD’deki aktörlerin ve CD’deki sanatçıların her tür insan olduğunu, ancak kitap yazarlarından farklı şekilde davranıldığını fark ettik. Kütüphaneci ayrıca, CD&#39;lerinin çoğunun, sanatçılar yerine yazarları olan sesli kitaplar olduğunu hatırlatıyor.
+#
+#
+Başlığa katkıda bulunan farklı insanlarla nasıl başa çıkabiliriz? Açık bir uygulama, kişinin adı ve diğer ilgili ayrıntıları içeren bir Kişi sınıfı oluşturmak ve ardından sanatçılar, yazarlar ve aktörler için bunun alt sınıflarını oluşturmaktır. Ancak miras burada gerçekten gerekli mi? Arama ve kataloglama amacıyla, oyunculuk ve yazmanın iki farklı aktivite olduğu umrunda değil. Ekonomik bir simülasyon yapıyor olsaydık, ayrı aktör ve yazar sınıfları, farklı hesapla-kazan ve gerçekleştir-ver yöntemlerini vermemiz mantıklı olurdu, ama kataloglama için, kişinin öğeye nasıl katkıda bulunduğunu bilmek muhtemelen yeterlidir. Tüm öğelerin bir veya daha fazla katılımcı nesnesi olduğunu biliyoruz, bu nedenle yazar ilişkisini kitaptan üst sınıfa taşırız:
+#
+#
+24
+#
+#
+Katkıda Bulunan / Libraryltem ilişkisinin çokluğu, bir ilişkinin her iki ucundaki * karakteri ile belirtildiği gibi, çoktan çoğadır. Bir kütüphane öğesinin birden fazla katılımcısı olabilir (örneğin, birkaç oyuncu ve bir DVD&#39;deki yönetmen). Ve birçok yazar birçok kitap yazar, bu yüzden birden fazla kütüphane öğesine eklenirler.
+#
+#
+Bu küçük değişiklik, biraz daha temiz ve basit görünmesine rağmen, bazı hayati bilgileri kaybetti. Belirli bir kütüphane öğesine kimin katkıda bulunduğunu hala söyleyebiliriz, ancak bunların nasıl katkıda bulunduğunu bilmiyoruz. Yönetmen mi yoksa oyuncu mu? Sesli kitabı yazdılar mı, yoksa kitabı anlatan ses miydi?
+#
+#
+Katılımcı sınıfına bir contr ibutor_type niteliği ekleyebilseydik daha iyi olurdu, ancak hem kitap hem de film yöneten çok yetenekli insanlarla uğraşırken bu ayrılacak.
+#
+#
+Bir seçenek, Kitaptaki Yazar veya CD&#39;deki Sanatçı gibi ihtiyaç duyduğumuz bilgileri içeren Kütüphane Öğe alt sınıflarımızın her birine nitelikler eklemek ve ardından bu özelliklerle ilişkisini Katılımcı sınıfına işaret etmektedir. Bununla ilgili sorun, çok sayıda polimorfik zarafeti kaybetmemizdir. Katkıda bulunanları bir öğeye listelemek istiyorsak, bu öğenin Yazarlar veya Aktörler gibi belirli özelliklerini aramalıyız. Bunu, alt sınıfların geçersiz kılabileceği Libraryltem sınıfında bir GetContributors yöntemi ekleyerek azaltabiliriz. O zaman katalog hiçbir zaman nesnelerin hangi özellikleri sorguladığını bilmek zorunda değildir; ortak arayüzü soyutladık:
+#
+#
+25
+#
+#
+Sadece bu sınıf şemasına bakarsak, yanlış bir şey yaptığımızı hissediyor. Hacimli ve kırılgan. İhtiyacımız olan her şeyi yapabilir, ancak bakımı ya da uzatılması zor olacak gibi hissediyor. Çok fazla ilişki var ve çok fazla sınıf herhangi bir sınıftaki değişikliklerden etkilenecek. Spagetti ve köfte gibi görünüyor.
+#
+#
+Şimdi mirası bir seçenek olarak araştırdık ve istediğimizi gördükten sonra, Katılımcı&#39;nın doğrudan Libraryltem&#39;e eklendiği önceki kompozisyona dayalı diyagramımıza bakabiliriz. Bazı düşüncelerle, katkıda bulunanın türünü tanımlamak için yepyeni bir sınıfa yalnızca bir ilişki daha eklememiz gerektiğini görebiliriz. Bu, nesne yönelimli tasarımda önemli bir adımdır. Şimdi, ilk gereksinimlerin herhangi bir bölümünü modellemek yerine, diğer nesneleri desteklemesi amaçlanan tasarıma bir sınıf ekliyoruz. Gerçek hayatta nesneler yerine, sistemdeki nesneleri kolaylaştırmak için tasarımı yeniden düzenliyoruz. Yeniden düzenleme, bir programın veya tasarımın bakımında önemli bir süreçtir. Yeniden yapılanmanın amacı, kodun etrafını dolaştırarak, yinelenen kodu veya karmaşık ilişkileri daha basit ve daha zarif tasarımlar lehine kaldırarak tasarımı geliştirmek.
+#
+#
+Bu yeni sınıf bir Katkıda Bulunan ve kişinin verilen Libraryltem&#39;e yaptığı katkı türünü tanımlayan ekstra bir nitelikten oluşur. Belirli bir Libraryltem&#39;e bu tür katkılar olabilir ve bir katılımcı aynı şekilde farklı öğelere katkıda bulunabilir. Diyagram bu tasarımı çok iyi iletir:
+#
+#
+26
+#
+#
+İlk başta, bu kompozisyon ilişkisi kalıtım temelli ilişkilerden daha az doğal görünüyor. Ancak, tasarıma yeni bir sınıf eklemeden yeni tür katkılar eklememize izin verme avantajına sahiptir. Kalıtım en alt sınıfların bir tür uzmanlığa sahip olması durumunda faydalıdır. Uzmanlık, alt sınıftaki öznitelikleri veya davranışları, üst sınıftan bir şekilde farklı kılmak için oluşturmak veya değiştirmektir. Yalnızca farklı nesne türlerini tanımlamak için bir sürü boş sınıf oluşturmak aptalca görünüyor (bu tutum Java ile diğer &quot;her şey bir nesnedir&quot; programcıları arasında daha az görülüyor, ancak daha pratik Python tasarımcıları arasında yaygındır). Diyagramın kalıtım versiyonuna bakarsak, aslında hiçbir şey yapmayan bir sürü alt sınıfı görebiliriz:
+#
+#
+Bazen nesne yönelimli ilkelerin ne zaman kullanılmayacağını bilmek önemlidir. Mirasın ne zaman kullanılmayacağına dair bu örnek, nesnelerin kural değil sadece araç olduğunu iyi hatırlatır.
+#
+#
+Egzersizler
+#
+#
+Bu pratik bir kitaptır, ders kitabı değil. Bu nedenle, analiz etmek ve tasarlamak için sahte nesne yönelimli sorunlar demetine yönelik tasarımlar oluşturmak için size bir dizi sahte nesne yönelimli analiz problemi atamak üzere değilim. Bunun yerine, kendi projelerinize uygulayabileceğiniz bazı düşünceler vermek istiyorum. Daha önce nesnel bir deneyime sahipseniz, bunlara fazla çaba harcamanıza gerek kalmayacak. Bununla birlikte, bir süredir Python kullanıyorsanız, ancak bu derslerle ilgili hiç bir zaman umursamıyorsanız, faydalı zihinsel egzersizlerdir.
+#
+#
+27
+#
+#
+İlk önce, tamamladığınız yeni bir programlama projesini düşünün. Tasarımdaki en belirgin nesneyi tanımlayın. Bu nesne için mümkün olduğunca çok özellik düşünmeye çalışın. Vardı: Renkli? Ağırlık? Boyut? Kar? Maliyet? Ad? Kimlik Numarası? Fiyat? Stil? Özellik türlerini düşünün. İlkel mi yoksa sınıf mı? Bu niteliklerin bazıları aslında kılık değiştirmiş davranışlar mıydı? Bazen verilere benzeyen şey aslında nesnedeki diğer verilerden hesaplanır ve bu hesaplamaları yapmak için bir yöntem kullanabilirsiniz. Nesnenin başka hangi yöntemleri veya davranışları vardı? Hangi yöntemleri bu yöntemleri çağırdı? Bu nesneyle ne tür ilişkileri vardı?
+#
+#
+Şimdi, yaklaşan bir projeyi düşünün. Projenin ne olduğu önemli değil; eğlenceli bir serbest zaman projesi veya milyonlarca dolarlık bir sözleşme olabilir. Tam bir uygulama olmak zorunda değildir; sadece bir alt sistem olabilir. Temel bir nesne yönelimli analiz gerçekleştirin. Gereksinimleri ve etkileşime giren nesneleri tanımlayın. Bu sistemde en yüksek soyutlama seviyesini içeren bir sınıf şeması oluşturun. Başlıca etkileşime giren nesneleri tanımlayın. Küçük destekleyici nesneleri tanımlayın. En ilginç olanların bazılarının nitelikleri ve yöntemleri için ayrıntılara göz atın. Farklı nesneleri farklı soyutlama seviyelerine götürün. Kalıtım veya kompozisyon kullanabileceğiniz yerleri arayın. Mirastan kaçınmanız gereken yerleri arayın.
+#
+#
+Amaç, bir sistem tasarlamak değildir (eğer eğim hem tutkuyu hem de uygun zamanı karşılıyorsa, bunu kesinlikle yapabiliriz). Amaç, objektif tasarımları düşünmektir. Üzerinde çalıştığınız veya gelecekte çalışmayı umduğunuz projelere odaklanmak, onu gerçek kılar.
+#
+#
+Şimdi, en sevdiğiniz arama motorunu ziyaret edin ve UML&#39;de bazı dersleri arayın. Onlarca var, o yüzden tercih ettiğiniz çalışma yöntemine uygun olanı bulun. Daha önce tanımladığınız nesneler için bazı sınıf diyagramlarını veya bir dizi diyagramını çizin. Sözdizimini ezberlemeye çok fazla kapılmayın (sonuçta, eğer önemliyse, her zaman tekrar bakabilirsiniz), sadece dil için bir fikir edin. Beyninizde bir şeyler kalmış olacak ve bir sonraki OOP tartışmanız için hızlıca bir diyagram çizebilmeniz iletişim kurmayı biraz daha kolaylaştırabilir.
+#
+#
+özet
+#
+#
+Bu bölümde, nesneye yönelik tasarıma odaklanarak objektif paradigmanın terminolojisi boyunca bir kasırga gezisine çıktık. Farklı nesneleri farklı sınıfların bir taksonomisine ayırabiliriz ve bu nesnelerin niteliklerini ve davranışlarını sınıf arayüzü aracılığıyla tanımlayabiliriz. Sınıflar nesneleri, soyutlamayı, kapsülleme ve bilgiyi saklamayı yüksek derecede ilgili kavramlardır. Birleşme, kompozisyon ve kalıtım dahil olmak üzere nesneler arasında birçok farklı türde ilişki vardır. UML sözdizimi eğlence ve iletişim için faydalı olabilir.
+#
+#
+Bir sonraki bölümde, Python&#39;da sınıfların ve yöntemlerin nasıl uygulanacağını keşfedeceğiz.
+#
+#
+2 8
+#

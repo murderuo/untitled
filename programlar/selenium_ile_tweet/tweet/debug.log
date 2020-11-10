@@ -1,0 +1,3 @@
+[0604/152655.120:ERROR:process_reader_win.cc(123)] NtOpenThread: {Eriþim Yok} Bir iþlem bir nesneye eriþmek istedi, ancak istediði eriþimin haklarý kendisine verilmiþ deðil. (0xc0000022)
+[0604/152655.165:ERROR:exception_snapshot_win.cc(88)] thread ID 51352 not found in process
+[0604/152655.165:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed

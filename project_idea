@@ -1,0 +1,12 @@
+memurlar.net üzerindeki yorumlar çekilebilir
+
+https://www.memurlar.net/haber/yorum/?id=500000&type=popular  #populer yorumları getiriyor
+
+id kısmı haberin id sini gösteriyor.
+
+
+ürünlerle alakalı yorumları çekme işi
+web sitelerinde bulunan ürünlerin kullanıcı yorumlarını bir çatı altında toplama işi
+
+
+mouse ve keybord kütüphanesi:  https://pyautogui.readthedocs.io/en/latest/index.html

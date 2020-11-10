@@ -1,0 +1,3 @@
+Ýmla Kýlavuzu ve Sözlük
+Türk Dil Kurumu web sitesinde yer alan imla kýlavuzu ve sözlük kullanýlarak oluþturulmuþtur. Ýmla kýlavuzu, düz metin formatýnda; sözlük, XML formatýndadýr.
+

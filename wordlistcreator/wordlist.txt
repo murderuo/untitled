@@ -1,0 +1,18 @@
+KEYWORD                                           =TRANSLATED
+_____________________________________________________________
+wordlist                                                    =kelime listesi,en
+About                                                    =hakkında,en
+results                                                     =Sonuçlar,en
+No results matched your search                                                    =Aramanızla eşleşen sonuç bulunamadı,en
+hello                                                    =Merhaba,en
+                                                    =,en
+You have now safely backed up
+your precious, precious 
+bacon
+                                                    =Artık kıymetli ve kıymetli domuz pastırmasını güvenli bir şekilde yedeklediniz,en
+original                                                    =orijinal,en
+content                                                    =içerik,en
+https://www.ntv.com.tr/video/turkiye/cumhurbaskani-erdo
+gan-borclulara-ziraat-bankasi-kredi-verecek,wkn4YhQGxUe
+hxa0KuCyQqQ                                                    =https://www.ntv.com.tr/video/turkiye/cumhurbaskani-erdogan-borclulara-ziraat-bankasi-kredi-verecek,wkn4YhQGxUehxa0KuCyQqQ,en
+                                                    =,en

@@ -1,0 +1,11 @@
+KEYWORD                                           =TRANSLATED
+_____________________________________________________________
+google.auth.exceptions.RefreshError: ('invalid_grant: I
+nvalid JWT: Token must be a short-lived token (60 minut
+es) and in a reasonable timeframe. Check your iat and exp values and use a clock with skew to account for clock differences between systems.', '{\n  "error": "invalid_grant",\n  "error_description": "Invalid JWT: Token must be a short-lived token (60 minutes) and in a reasonable timeframe. Check your iat and exp values and use a clock with skew to account for clock differences between systems."\n}')
+                                                    =google.auth.exceptions.RefreshError: (&#39;invalid_grant: Invalid JWT: Token kısa ömürlü bir belirteç olmalı (60 dakika) ve makul bir zaman diliminde olmalıdır. sistemler arasında. &#39;,&#39; {\ n &quot;hata&quot;: &quot;invalid_grant&quot;, \ n &quot;error_description&quot;: &quot;Geçersiz JWT: Jeton kısa ömürlü bir belirteç olmalı (60 dakika) ve makul bir süre içinde. değerleri ve sistemler arasındaki saat farklarını hesaba katan bir saat kullanın. &quot;\ n} &#39;),en
+sleep                                                    =uyku,en
+time.sleep(1)                                                    =time.sleep (1),en
+mean                                                    =anlamına gelmek,en
+flaws                                                    =kusurları,en
+demands                                                     =talepler,en

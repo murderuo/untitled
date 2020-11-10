@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a07ad1c4-622f-4bd1-90d7-324557b12610" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/PythonRep/anagrams/anagram_class.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/anagrams/anagram_odevi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/bilesik_faiz_hesaplama/bilesik_faiz.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/booktrans/file_save_class.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/booktrans/gui.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/booktrans/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/booktrans/temp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/booktrans/tkinterornek.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/booktrans/wordlist.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/booktranslate/file_save_class.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/booktranslate/gui.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/booktranslate/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/booktranslate/temp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/booktranslate/tkinterornek.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/booktranslate/wordlist.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/class_orneks/class10.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/class_orneks/class11.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/class_orneks/class12.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/class_orneks/class13.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/class_orneks/class14.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/class_orneks/class15.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/class_orneks/class17.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/class_orneks/class18.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/class_orneks/class_ornek1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/class_orneks/class_ornek2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/class_orneks/class_ornek3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/class_orneks/class_ornek4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/class_orneks/class_ornek5.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/class_orneks/class_ornek6.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/class_orneks/class_ornek9.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/class_orneks/classorn.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/class_orneks/classornek.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/class_orneks/kedi_class.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/class_orneks/nesne_tabanli/s1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/class_orneks/ornek_class7.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/class_orneks/ornek_class8.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/10-sum different list sampls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/11-Keep Hydrated.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/12-Array.diff.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/13.vowel count.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/14-accum.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/15.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/16.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/17.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/18.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/19.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/20.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/21.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/22.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/23.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/24.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/25.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/26.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/3-pin_sample.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/4-retrn-tre false.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/5-isogram.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/6-tickets.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/7-Sum of odd numbers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/8-sum of positive list membes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/9-basic maths.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/romennumbersToArabicNumbers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/temp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/temp2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/codewars/temp3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/db_doviztakip/db.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/db_doviztakip/db_doviztakip.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/db_doviztakip/kurlar.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/dbm_test/CS101_Odev_Telafi.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/dbm_test/dbm_db.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/dbm_test/imdb.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/dbm_test/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/dbm_test/moviedb.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/dbm_test/moviedb.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/dbm_test/moviedb.dir" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/dbm_test/new_data_file.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/dbm_test/new_imdb.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/dbm_test/temp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/doviztakip/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/doviztakip/db.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/doviztakip/db_doviztakip.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/doviztakip/dovizcom.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/doviztakip/doviztakip.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/doviztakip/enpara.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/doviztakip/enpara2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/doviztakip/kurlar.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/doviztakip/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/faiz_programı/15.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/functions_sample_ornekler/1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/functions_sample_ornekler/10.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/functions_sample_ornekler/11.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/functions_sample_ornekler/12.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/functions_sample_ornekler/13.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/functions_sample_ornekler/14.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/functions_sample_ornekler/15.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/functions_sample_ornekler/16.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/functions_sample_ornekler/18.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/functions_sample_ornekler/19.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/functions_sample_ornekler/2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/functions_sample_ornekler/20_asal.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/functions_sample_ornekler/3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/functions_sample_ornekler/4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/functions_sample_ornekler/5.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/functions_sample_ornekler/6.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/functions_sample_ornekler/7.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/functions_sample_ornekler/8.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/functions_sample_ornekler/9.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/get_data_txt_file/dosya_ac_class.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/get_data_txt_file/haziran.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/google_translate/key.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/google_translate/translate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/google_translate/translate_exam.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/ilk_endeks_son_endeks/ilk_endeks-son_endeks.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/istihza.org.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/kernel.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/matbaa_makinesi/matbaa_makinesi_class.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/ogrenci/database.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/ogrenci/ogrenci.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/ogrenci/ogrenci_bilgi_sistemi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/ogrenci_oto/database.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/ogrenci_oto/ogrenci_bilgi_sistemi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/opentxtfileandupperallwords/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/opentxtfileandupperallwords/sample.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/ort_maas_zammi_hesaplama/maas.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/others/14.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/others/wordchecker/wordchecker_sample2-in/book.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/others/wordchecker/wordchecker_sample2-in/check_words.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/others/wordchecker/wordchecker_sample2-in/words.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/others/wordchecker/wordchecker_sample3-notin/book.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/others/wordchecker/wordchecker_sample3-notin/check_words.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/others/wordchecker/wordchecker_sample3-notin/words.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/personel/db.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/personel/db_class.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/personel/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/personel/main_cls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/personel/personel.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/personel/test.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/personel/ödev.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/programlar/odev1/class11.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/programlar/odev1/odev1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/programlar/python_enflasyon data/Kitap1.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/programlar/python_enflasyon data/all_data_1.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/programlar/python_enflasyon data/data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/programlar/python_enflasyon data/enf_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/programlar/translate/translate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/programlar/İmla Kılavuzu ve Sözlük/aciklama.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/programlar/İmla Kılavuzu ve Sözlük/tdk.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/programlar/İmla Kılavuzu ve Sözlük/tdk/tdk_imla_kilavuzu.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/programlar/İmla Kılavuzu ve Sözlük/tdk/tdk_sozluk.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/python_kitabi/ 9.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/python_kitabi/1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/python_kitabi/10.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/python_kitabi/11.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/python_kitabi/12.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/python_kitabi/13.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/python_kitabi/2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/python_kitabi/3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/python_kitabi/4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/python_kitabi/5.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/python_kitabi/6.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/python_kitabi/7.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/python_kitabi/8.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/pythondevrik_cumle/devrik_cumle.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/readmenumber/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/readmenumber/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/readmenumber/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/readmenumber/main_clss.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/rep_sample_sc/test file.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/selenium_ile_tweet/selenium_chrome_drvier/chromedriver_win32.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/selenium_ile_tweet/selenium_chrome_drvier/chromedriver_win32/chromedriver.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/selenium_ile_tweet/selenium_firefox_driver/geckodriver-v0.20.1-win32.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/selenium_ile_tweet/selenium_firefox_driver/geckodriver-v0.20.1-win32/geckodriver.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/selenium_ile_tweet/selenium_firefox_driver/geckodriver-v0.20.1-win64.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/selenium_ile_tweet/selenium_firefox_driver/geckodriver-v0.20.1-win64/geckodriver.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/selenium_ile_tweet/tweet/chromedriver.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/selenium_ile_tweet/tweet/debug.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/selenium_ile_tweet/tweet/geckodriver.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/selenium_ile_tweet/tweet/geckodriver.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/selenium_ile_tweet/tweet/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/send_sms/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/send_sms/doviz.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/send_sms/sedemo_sms" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/send_sms/twilio_send_sms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/tkinter/temp.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonRep/tkinter/temp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/translate_and_save/file_save_class.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/translate_and_save/key.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/translate_and_save/main_cls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/translate_and_save/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/translate_and_save/wordlist.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/translateandsave/file_save_class.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/translateandsave/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/translateandsave/wordlist.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/tweet_app/manualy_send_tweet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/tweet_app/tweet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/tweet_app/tweet.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/tweet_app/tweet_s.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/twitter_hashtag_listener/listener.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/wordlistcreator/file_save_class.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/wordlistcreator/key.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/wordlistcreator/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/wordlistcreator/otherfils/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/wordlistcreator/otherfils/clipboard_control.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/wordlistcreator/otherfils/clipboard_control_class.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/wordlistcreator/otherfils/file_saver.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/wordlistcreator/otherfils/mouse_listener.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/wordlistcreator/otherfils/translater.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/wordlistcreator/wordlist.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/writeme_numbers_1-999/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/youtube/doc/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/youtube/doc/changelog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/youtube/doc/default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/youtube/doc/ffmpeg-bitstream-filters.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/youtube/doc/ffmpeg-codecs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/youtube/doc/ffmpeg-devices.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/youtube/doc/ffmpeg-filters.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/youtube/doc/ffmpeg-formats.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/youtube/doc/ffmpeg-protocols.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/youtube/doc/ffmpeg-resampler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/youtube/doc/ffmpeg-scaler.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/youtube/doc/ffmpeg-utils.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/youtube/doc/input.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/youtube/doc/mplayer-input.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/youtube/doc/mpv.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/youtube/doc/mpv.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/youtube/doc/restore-old-bindings.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/youtube/doc/style.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/youtube/libaacs.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/youtube/libbdplus.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/youtube/mpv.com" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/youtube/mpv.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/youtube/yputube_mpsyt-0.2.8.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/Twilio - SMS Prices.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/anonymous_func.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/asalsayi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/asalsayiuzun.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/binaryprint.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/devrik_cumle.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/devrik_kelime.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/dizi_carpim.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/flexible_args_fonk.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/func.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/heceleyici.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/k.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/kutuphane.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/lambda_func.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/list_comprehension.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/list_comprehensions2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/list_comprehensions3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/list_exam.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/list_f.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/matris_odevi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/meal2.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/metin.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/AUTHORS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/CHANGELOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/CONTRIBUTING" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/GPLv3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/doc/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/doc/_static/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/doc/conf.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/doc/index.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/pafy/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/pafy/backend_internal.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/pafy/backend_shared.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/pafy/backend_youtube_dl.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/pafy/channel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/pafy/g.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/pafy/jsinterp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/pafy/pafy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/pafy/playlist.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/pafy/util.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/scripts/ytdl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/setup.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/tests/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/mps-youtube source code/pafy-develop/pafy-develop/tox.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/nested.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/next_iterators.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/opencv/o_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/opencv/o_3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/opencv/o_4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/opencv/opencv.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/opencv/opencv_main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/opencv/sw.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/opencv/test.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/opencv/test.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/other_else.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/proje.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/rand_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/regex_sample.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/sorted.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/sozluk.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/sozluk_matematik.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/sql test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/temp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/tkinterornek.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/try-except.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/unzip_func.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/whatistheregex.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/while.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/wordchecker.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/xrange_func.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/youtube.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/youtube_sample/py_player.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/youtube_sample/py_player/python-player-master/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/youtube_sample/py_player/python-player-master/beta/player-2.5-beta1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/youtube_sample/py_player/python-player-master/beta/player-2.5-beta2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/youtube_sample/py_player/python-player-master/beta/player.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/youtube_sample/py_player/python-player-master/player.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/zargan_ceviri.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonRep/örnekler/zip_function.py" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/untitled$test.coverage" NAME="test Coverage Results" MODIFIED="1603265336857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tkinter/tkinter_icisleri/tmp" />
+    <SUITE FILE_PATH="coverage/untitled$test5.coverage" NAME="test5 Coverage Results" MODIFIED="1601900224708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gmail" />
+    <SUITE FILE_PATH="coverage/untitled$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1601556050194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gmail" />
+    <SUITE FILE_PATH="coverage/untitled$crop_picture.coverage" NAME="crop_picture Coverage Results" MODIFIED="1601041836668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PythonRep/tkinter/tkinder_crop_captcha" />
+    <SUITE FILE_PATH="coverage/untitled$test6.coverage" NAME="test6 Coverage Results" MODIFIED="1601900620266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gmail" />
+    <SUITE FILE_PATH="coverage/untitled$test3.coverage" NAME="test3 Coverage Results" MODIFIED="1604666865320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gmail" />
+    <SUITE FILE_PATH="coverage/untitled$twitter_video_downloader.coverage" NAME="twitter_video_downloader Coverage Results" MODIFIED="1602150827718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/kişisel bilgilerim/python_uygulama/PythonRep/programlar/twetter_video_download" />
+    <SUITE FILE_PATH="coverage/untitled$main_window.coverage" NAME="main_window Coverage Results" MODIFIED="1603266704136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tkinter/tkinter_icisleri" />
+    <SUITE FILE_PATH="coverage/untitled$twitter_video_downloader__1_.coverage" NAME="twitter_video_downloader (1) Coverage Results" MODIFIED="1602666195898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/programlar/twetter_video_download" />
+    <SUITE FILE_PATH="coverage/untitled$login_script.coverage" NAME="login_script Coverage Results" MODIFIED="1603266694385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tkinter/tkinter_icisleri" />
+    <SUITE FILE_PATH="coverage/untitled$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1604668477823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gmail/reg" />
+    <SUITE FILE_PATH="coverage/untitled$test__1_.coverage" NAME="test (1) Coverage Results" MODIFIED="1603266565525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tkinter/tkinter_icisleri" />
+    <SUITE FILE_PATH="coverage/untitled$test4.coverage" NAME="test4 Coverage Results" MODIFIED="1604663759073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gmail" />
+    <SUITE FILE_PATH="coverage/untitled$twitter_video_downloader__2_.coverage" NAME="twitter_video_downloader (2) Coverage Results" MODIFIED="1602667261912" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/twetter_video_download" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="387268691">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="10" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.2" value="3" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.5" value="7" />
+          <entry key="project.open.time.6" value="5" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="20" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="36" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="36" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="2417" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="2417" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gmail/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gmail/test2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="458">
+              <caret line="37" column="38" lean-forward="true" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gmail/test5.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="17" column="35" lean-forward="true" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gmail/reg/test1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="278">
+              <caret line="214" column="26" lean-forward="true" selection-start-line="214" selection-start-column="26" selection-end-line="214" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/PythonRep" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/PythonRep/tkinter/tkinder_crop_captcha/crop_picture.py" />
+        <option value="$PROJECT_DIR$/PythonRep/tkinter/tkinter_icisleri/login_script.py" />
+        <option value="$PROJECT_DIR$/PythonRep/tkinter/tkinter_icisleri/main_window.py" />
+        <option value="$PROJECT_DIR$/PythonRep/cevirici/cevir.py" />
+        <option value="$PROJECT_DIR$/gmail/test.py" />
+        <option value="$PROJECT_DIR$/gmail/test2.py" />
+        <option value="$PROJECT_DIR$/gmail/test4.py" />
+        <option value="$PROJECT_DIR$/gmail/test5.py" />
+        <option value="$PROJECT_DIR$/gmail/test6.py" />
+        <option value="$PROJECT_DIR$/programlar/twetter_video_download/twitter_video_downloader.py" />
+        <option value="$PROJECT_DIR$/tkinter/tkinter_icisleri/tmp/test.py" />
+        <option value="$PROJECT_DIR$/tkinter/tkinter_icisleri/test.py" />
+        <option value="$PROJECT_DIR$/tkinter/tkinter_icisleri/main_window.py" />
+        <option value="$PROJECT_DIR$/tkinter/tkinter_icisleri/login_script.py" />
+        <option value="$PROJECT_DIR$/gmail/test3.py" />
+        <option value="$PROJECT_DIR$/gmail/reg/test1.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/messages_app/django-socket-io-messaging-master/django-socket-io-messaging-master/nodejs/node_modules" />
+    <handled-path value="$PROJECT_DIR$/programlar/messages_app/django-socket-io-messaging-master/django-socket-io-messaging-master/nodejs/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/messages_app/django-socket-io-messaging-master/django-socket-io-messaging-master/nodejs/package.json" />
+      <path value="$PROJECT_DIR$/programlar/messages_app/django-socket-io-messaging-master/django-socket-io-messaging-master/nodejs/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="width" value="1324" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Python</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PyCompatibilityInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="untitled" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untitled" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="untitled" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untitled" type="462c0819:PsiDirectoryNode" />
+              <item name="gmail" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="untitled" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untitled" type="462c0819:PsiDirectoryNode" />
+              <item name="gmail" type="462c0819:PsiDirectoryNode" />
+              <item name="reg" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ugurokur\PycharmProjects\untitled\tkinter\tkinter_icisleri" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.test1">
+    <configuration name="login_script" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tkinter/tkinter_icisleri" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tkinter/tkinter_icisleri/login_script.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main_window" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tkinter/tkinter_icisleri" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tkinter/tkinter_icisleri/main_window.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gmail/reg" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gmail/reg/test1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gmail" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gmail/test3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test4" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gmail" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gmail/test4.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.main_window" />
+      <item itemvalue="Python.login_script" />
+      <item itemvalue="Python.test3" />
+      <item itemvalue="Python.test4" />
+      <item itemvalue="Python.test1" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test1" />
+        <item itemvalue="Python.test3" />
+        <item itemvalue="Python.test4" />
+        <item itemvalue="Python.main_window" />
+        <item itemvalue="Python.login_script" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a07ad1c4-622f-4bd1-90d7-324557b12610" name="Default Changelist" comment="" />
+      <created>1601041438164</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601041438164</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14552239" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.1691974" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/programlar/twetter_video_download/twitter_video_downloader.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/PythonRep/tkinter/tkinder_crop_captcha/crop_picture.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonRep/tkinter/tkinter_icisleri/main_window.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="68" column="102" selection-start-line="68" selection-start-column="102" selection-end-line="68" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonRep/cevirici/cevir.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python38/Lib/imaplib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="538" selection-start-line="538" selection-end-line="538" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmail/test6.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/kişisel bilgilerim/python_uygulama/PythonRep/programlar/twetter_video_download/twitter_video_downloader.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/programlar/twetter_video_download/twitter_video_downloader.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python38/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1386">
+          <caret line="320" selection-start-line="320" selection-end-line="320" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonRep/tkinter/tkinter_icisleri/excel_creator.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/berk_tunga_proje/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/twetter_video_download/twitter_video_downloader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tkinter/tkinter_icisleri/evrak_postala.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tkinter/tkinter_icisleri/main_window2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1707" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tkinter/tkinter_icisleri/tk_icisleri_temp_postala_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1173" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tkinter/tkinter_icisleri/tk_icisleri_temp.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tkinter/tkinter_icisleri/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="2067" column="154" lean-forward="true" selection-start-line="2067" selection-end-line="2068" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tkinter/tkinter_icisleri/login_script.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonRep/tkinter/tkinter_icisleri/login_script.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2618">
+          <caret line="158" column="4" selection-start-line="158" selection-start-column="4" selection-end-line="158" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tkinter/tkinter_icisleri/main_window.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="126" lean-forward="true" selection-start-line="126" selection-end-line="126" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmail/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmail/test4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmail/test3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+          <folding>
+            <element signature="e#2#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmail/test2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="37" column="38" lean-forward="true" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmail/test5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="17" column="35" lean-forward="true" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmail/reg/test1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="214" column="26" lean-forward="true" selection-start-line="214" selection-start-column="26" selection-end-line="214" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

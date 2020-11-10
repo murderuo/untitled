@@ -1,0 +1,18 @@
+*.py[cod]
+otherstuff/
+pafy.py
+pafy
+vi.py
+MANIFEST
+.dev
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+tags
+.env

@@ -1,0 +1,2534 @@
+"C:\Program Files\Python36\python.exe" "C:/Users/ugurokur/Desktop/kişisel bilgilerim/python_uygulama/PythonRep/tkinter/tkinter_icisleri/evrak_postala.py"
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head id="ctl00_ctl00_headMain">
+  <title>
+   e-İÇİŞLERİ PROJESİ
+  </title>
+  <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible"/>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="progid:DXImageTransform.Microsoft.Fade(duration=.5)" http-equiv="Page-Exit"/>
+  <link href="../../App_Themes/Main/master2011.css" rel="stylesheet" type="text/css"/>
+  <link href="../../App_Themes/Main/Main.css" rel="stylesheet" type="text/css"/>
+  <link href="../../App_Themes/Main/Images/Genel/icislerilogo.ico" rel="shortcut icon" type="image/x-icon"/>
+  <script type="text/javascript">
+   function RunOnPageLoad() {
+            try {//Yeni Yetki Master'i etkin ise footer kapatilir
+               // HideMainMasterFooter();
+            }
+            catch (exception) { }
+        }
+  </script>
+  <style type="text/css">
+   .SelectedCssClass .rpText
+        {
+            background-color: Silver;
+            text-decoration: underline;
+        }
+        .SelectedCssClass
+        {
+            background-color: Silver;
+        }
+  </style>
+  <link href="../XMLEditor/CSS/ImzaSurecBilgisiTablo.css" rel="stylesheet" type="text/css"/>
+  <script language="javascript" type="text/javascript">
+   //Bu master'ı kullanan sayfanın içinde "PrintDiv" isminde bir Div tanımlandığında ve master üzerindeki bir butona tıklandığında
+        //tanımlanan Div'in altı HiddenFieldInnerHtml'e aktarılır. Bu hidden field'den InnerHtml alınıp Utils Class'ı altındaki
+        //ConvertHtmlToPdf methoduna parametre olarak gönderilir ve PrintDiv altındaki içerik Pdf'e çevrilir, buradan da istenirse yazıcıya gönderilir
+
+        function onGuvenlikSozlesmesi() {
+            document.getElementById("overlay").style.display = "block";
+            var element = document.getElementById('ctl00_ctl00_divMainMenu');
+            element.style.display = "none";
+        }
+
+        function offGuvenlikSozlesmesi() {
+            document.getElementById("overlay").style.display = "none";
+            var element = document.getElementById('ctl00_ctl00_divMainMenu');
+            element.style.zIndex = "100";
+        }
+
+        function GetInnerHtmlOfPrintDiv() {
+            var objDiv = document.getElementById('ctl00_cph1_PrintDiv');
+            var objDivY = document.getElementById('ctl00_cph1_PrintDivYatay');
+
+            var objHfld = document.getElementById('ctl00$HiddenFieldInnerHtml');
+            var objHfldPgOr = document.getElementById('ctl00$HiddenFieldPageOrientation');
+
+            if (objDiv != null) {
+                objHfld.value = objDiv.innerHTML;
+                objHfldPgOr.value = "Portrait";
+            }
+            else if (objDivY != null) {
+                objHfldPgOr.value = "Landscape";
+                objHfld.value = objDivY.innerHTML;
+            }
+        }
+        //function btnkapatveKaydetVisableTureFalseYap() {
+        //    var checkBox =      document.getElementById('ctl00_chbbtnVisible');
+        //    var btn = document.getElementById("onaybuttondiv");
+        //    if (checkBox.checked == true) {
+        //        btn.style.display = "block";
+        //    } else {
+        //        btn.style.display = "none";
+        //    }
+        //}
+  </script>
+  <style type="text/css">
+   .YetkiMenuDiv2011 {
+            position: fixed;
+            top: 3px;
+            padding-top: 33px;
+            padding-left: 5px;
+            z-index: 100;
+        }
+
+
+        #aa {
+            font-weight: bold;
+            position: fixed;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 20%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            height: auto;
+            padding: 17px;
+            background-color: #eeeeee;
+            text-align: center;
+            box-sizing: content-box;
+            border: 2px solid black;
+            margin: 1px 25% 0px 25%;
+        }
+
+        .guvenlikBaslikdiv {
+            float: left;
+            width: 100%;
+            display: inline-block;
+            word-break: break-all;
+            text-align: center;
+            margin-top: 3px;
+            margin-bottom: 23px;
+        }
+
+        .guvenlikAciklamadiv {
+            float: left;
+            width: 100%;
+            display: inline-block;
+            word-break: break-all;
+            text-align: justify;
+            margin-top: 3px;
+            margin-bottom: 23px;
+        }
+
+        #guvenlikChkboxdiv {
+            float: left;
+        }
+
+        #onaybuttondiv {
+               text-align: center;
+                
+        }
+
+        #overlay {
+            position: fixed;
+            display: none;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#0000000,endColorstr=#0000000);
+            z-index: 2;
+            cursor: pointer;
+            background-color:rgba(8, 7, 7, 0.9);
+        }
+
+        #text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 50px;
+            color: white;
+            transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+        }
+
+        /* The container */
+        .container {
+            /*display: block;*/
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 14px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+            /* Hide the browser's default checkbox */
+            .container input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+            }
+
+        /* Create a custom checkbox */
+        .checkmark {
+            position: absolute;
+            top: 2px;
+            left: 0;
+            height: 13px;
+            width: 13px;
+            background-color: #fff;
+            border: 1px solid;
+        }
+
+        .btnOnay {
+            /*display: none;*/
+            height: 25px;
+            border: 1px solid;
+            border-radius: 6px;
+            font-size: 11pt;
+            background-color:rgba(0, 187, 255, 1);
+        }
+        /* On mouse-over, add a grey background color */
+        .container:hover input ~ .checkmark {
+            background-color: #ccc;
+        }
+
+        /* When the checkbox is checked, add a blue background */
+        .container input:checked ~ .checkmark {
+            background-color: #2196F3;
+        }
+
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .lblGuvelikOzlesmesi {
+            margin: 40%;
+            font-size: 11pt;
+        }
+
+        /* Show the checkmark when checked */
+        .container input:checked ~ .checkmark:after {
+            display: block;
+        }
+
+        /* Style the checkmark/indicator */
+        .container .checkmark:after {
+            left: 4px;
+            top: 0px;
+            width: 4px;
+            height: 7px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+  </style>
+  <link href="../../App_Themes/Main/HataSayfasi/hatamain.css" rel="stylesheet" type="text/css"/>
+  <link href="../../App_Themes/Main/highslide/highslide.css" rel="stylesheet" type="text/css"/>
+  <link href="../../App_Themes/Main/highslide/highslide-ie6.css" rel="stylesheet" type="text/css"/>
+  <link href="../../App_Themes/Main/Images/Login/2011/Login2011.css" rel="stylesheet" type="text/css"/>
+  <link href="../../App_Themes/Main/InsanHaklari.css" rel="stylesheet" type="text/css"/>
+  <link href="../../App_Themes/Main/Main.css" rel="stylesheet" type="text/css"/>
+  <link href="../../App_Themes/Main/MainMobile.css" rel="stylesheet" type="text/css"/>
+  <link href="../../App_Themes/Main/master2011.css" rel="stylesheet" type="text/css"/>
+  <link href="../../App_Themes/Main/Modul/Evrak/visoft__tab_xpie7.css" rel="stylesheet" type="text/css"/>
+  <link href="../../App_Themes/Main/Modul/MulkiIdareBolumleri/IllerIdaresi.css" rel="stylesheet" type="text/css"/>
+  <script language="javascript" src="../../Javascript/SessionControl.js" type="text/javascript">
+  </script>
+  <link class="Telerik_stylesheet" href="/WebResource.axd?d=9FBPq6ZMdyYvKMIIRnR_-o8DrEyNEck-21LHH59d68llPDGuMtUOHiJf9iwGP2cRIc5YyHQij4qm8qVNvwuv0HZ9pwixpr4AUZF-t3YAbok7Vi3EdvWF4EXiGSq_uJjPy0MKRQ2&amp;t=637088508720000000" rel="stylesheet" type="text/css"/>
+  <link class="Telerik_stylesheet" href="/WebResource.axd?d=0Y4q-QLpZcne3OG0-sjjaYmyD8h97Zywjuz_OszKzVpCXcNTSsOYeQj_i1LAYZwyhmTKmZxo0RMro8nZHNRHafUhWaTjVOX2WwyX99IoRe1hlO61gmPHQg76k6wdMe-wikmYBA2&amp;t=637088508720000000" rel="stylesheet" type="text/css"/>
+  <script>
+   NS_CSM_td=2293683464;NS_CSM_pd=275116667;NS_CSM_u="/clm10";NS_CSM_col="af_collector_10.0.100.85";
+  </script>
+  <script type="text/javascript">
+   function sendTimingInfoInit(){setTimeout(sendTimingInfo,0)}function sendTimingInfo(){var wp=window.performance;if(wp){var c1,c2,t;c1=wp.timing;if(c1){var cm={};cm.ns=c1.navigationStart;if((t=c1.unloadEventStart)>0)cm.us=t;if((t=c1.unloadEventEnd)>0)cm.ue=t;if((t=c1.redirectStart)>0)cm.rs=t;if((t=c1.redirectEnd)>0)cm.re=t;cm.fs=c1.fetchStart;cm.dls=c1.domainLookupStart;cm.dle=c1.domainLookupEnd;cm.cs=c1.connectStart;cm.ce=c1.connectEnd;if((t=c1.secureConnectionStart)>0)cm.scs=t;cm.rqs=c1.requestStart;cm.rss=c1.responseStart;cm.rse=c1.responseEnd;cm.dl=c1.domLoading;cm.di=c1.domInteractive;cm.dcls=c1.domContentLoadedEventStart;cm.dcle=c1.domContentLoadedEventEnd;cm.dc=c1.domComplete;if((t=c1.loadEventStart)>0)cm.ls=t;if((t=c1.loadEventEnd)>0)cm.le=t;cm.tid=NS_CSM_td;cm.pid=NS_CSM_pd;cm.ac=NS_CSM_col;var xhttp=new XMLHttpRequest();if(xhttp){var JSON=JSON||{};JSON.stringify=JSON.stringify||function(ob){var t=typeof(ob);if(t!="object"||ob===null){if(t=="string")ob='"'+ob+'"';return String(ob);}else{var n,v,json=[],arr=(ob&&ob.constructor==Array);for(n in ob){v=ob[n];t=typeof(v);if(t=="string")v='"'+v+'"';else if(t=="object"&&v!==null)v=JSON.stringify(v);json.push((arr?"":'"'+n+'":')+String(v));}return(arr?"[":"{")+String(json)+(arr?"]":"}");}};xhttp.open("POST",NS_CSM_u,true);xhttp.send(JSON.stringify(cm));}}}}if(window.addEventListener)window.addEventListener("load",sendTimingInfoInit,false);else if(window.attachEvent)window.attachEvent("onload",sendTimingInfoInit);else window.onload=sendTimingInfoInit;
+  </script>
+  <style type="text/css">
+   .highslide img {cursor: url(/App_Themes/Main/highslide/graphics/zoomin.cur), pointer !important;}.highslide-viewport-size {position: fixed; width: 100%; height: 100%; left: 0; top: 0}
+  </style>
+ </head>
+ <body id="ctl00_ctl00_masterBody" onkeyup="SessionUzat();" onmousedown="SessionUzat();" onunload="CarpidanCikisYap();" style="margin: 0px; padding: 0px; font-family: Tahoma, Geneva, sans-serif; font-size: 12px; color: rgb(51, 51, 51);">
+  <form action="./PostalanmayiBekleyen.aspx" disabled="disabled" id="aspnetForm" method="post" name="aspnetForm" onsubmit="javascript:return WebForm_OnSubmit();">
+   <div>
+    <input id="__EVENTTARGET" name="__EVENTTARGET" type="hidden" value=""/>
+    <input id="__EVENTARGUMENT" name="__EVENTARGUMENT" type="hidden" value=""/>
+    <input id="__LASTFOCUS" name="__LASTFOCUS" type="hidden" value=""/>
+    <input id="__VIEWSTATE" name="__VIEWSTATE" type="hidden" value="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"/>
+   </div>
+   <script type="text/javascript">
+    //<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+   </script>
+   <script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZJSNQQPB4p4mqMsF8MSWLBAr5t1b7mfaZCK3fCBjweh4qYIkMQ2&amp;t=636776833224055265" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=1HpV3OVB0CaEXoaafcqmhq9__dBpzyVfZEIRB8-46u6fWX-xGMAIPioncwX8iKfJm495uj--VOoyTKUaf6ZBTGUl_wPGasKmTab8OAeTL7jW0Y9EHP7g_gl6OkqdtCKYXkrO3w2&amp;t=29665526" type="text/javascript">
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+var __cultureInfo = {"name":"tr-TR","numberFormat":{"CurrencyDecimalDigits":2,"CurrencyDecimalSeparator":",","IsReadOnly":true,"CurrencyGroupSizes":[3],"NumberGroupSizes":[3],"PercentGroupSizes":[3],"CurrencyGroupSeparator":".","CurrencySymbol":"₺","NaNSymbol":"NaN","CurrencyNegativePattern":8,"NumberNegativePattern":1,"PercentPositivePattern":2,"PercentNegativePattern":2,"NegativeInfinitySymbol":"-∞","NegativeSign":"-","NumberDecimalDigits":2,"NumberDecimalSeparator":",","NumberGroupSeparator":".","CurrencyPositivePattern":3,"PositiveInfinitySymbol":"∞","PositiveSign":"+","PercentDecimalDigits":2,"PercentDecimalSeparator":",","PercentGroupSeparator":".","PercentSymbol":"%","PerMilleSymbol":"‰","NativeDigits":["0","1","2","3","4","5","6","7","8","9"],"DigitSubstitution":1},"dateTimeFormat":{"AMDesignator":"ÖÖ","Calendar":{"MinSupportedDateTime":"\/Date(-62135596800000)\/","MaxSupportedDateTime":"\/Date(253402289999999)\/","AlgorithmType":1,"CalendarType":1,"Eras":[1],"TwoDigitYearMax":2029,"IsReadOnly":true},"DateSeparator":".","FirstDayOfWeek":1,"CalendarWeekRule":0,"FullDateTimePattern":"d MMMM yyyy dddd HH:mm:ss","LongDatePattern":"d MMMM yyyy dddd","LongTimePattern":"HH:mm:ss","MonthDayPattern":"dd MMMM","PMDesignator":"ÖS","RFC1123Pattern":"ddd, dd MMM yyyy HH\u0027:\u0027mm\u0027:\u0027ss \u0027GMT\u0027","ShortDatePattern":"d.MM.yyyy","ShortTimePattern":"HH:mm","SortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd\u0027T\u0027HH\u0027:\u0027mm\u0027:\u0027ss","TimeSeparator":":","UniversalSortableDateTimePattern":"yyyy\u0027-\u0027MM\u0027-\u0027dd HH\u0027:\u0027mm\u0027:\u0027ss\u0027Z\u0027","YearMonthPattern":"MMMM yyyy","AbbreviatedDayNames":["Paz","Pzt","Sal","Çar","Per","Cum","Cmt"],"ShortestDayNames":["Pa","Pt","Sa","Ça","Pe","Cu","Ct"],"DayNames":["Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi"],"AbbreviatedMonthNames":["Oca","Şub","Mar","Nis","May","Haz","Tem","Ağu","Eyl","Eki","Kas","Ara",""],"MonthNames":["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık",""],"IsReadOnly":true,"NativeCalendarName":"Miladi Takvim","AbbreviatedMonthGenitiveNames":["Oca","Şub","Mar","Nis","May","Haz","Tem","Ağu","Eyl","Eki","Kas","Ara",""],"MonthGenitiveNames":["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık",""]},"eras":[1,"MS",null,0]};//]]>
+   </script>
+   <script src="/ScriptResource.axd?d=uHIkleVeDJf4xS50Krz-yBCrNRY_FYLzyIqABUxKKoUtVOWpeTCBZdkfgQpyOXShBaAAkuf1dcWfPmexpZnPIhvmt_jY0Bvdh6gALFWqpHLVHbN8ZtN0DuuNRgUD44R2E3C9t5Rkp7-Y7jUcKdsRreb33fo1&amp;t=ffffffff999c3159" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=Jw6tUGWnA15YEa3ai3FadKtGf-RtKqKlSKXsEOcjfgUiN0ZJPJ1gpuKxTCrEpcVDArdWlSR-h5LqdZlyHfqdIHI027QmbkE1xhvGVzvp7UNjGnloAj3g0Qtbi2p6WlLyLr5DN45LKqodf2WcMl51xgmelAM1&amp;t=ffffffff999c3159" type="text/javascript">
+   </script>
+   <script src="../../Javascript/jquery-1.10.2.min.js" type="text/javascript">
+   </script>
+   <script src="../../Javascript/GenelYeni.js" type="text/javascript">
+   </script>
+   <script src="../../Javascript/PopUp.js" type="text/javascript">
+   </script>
+   <script src="../../Javascript/TabStrip.js" type="text/javascript">
+   </script>
+   <script src="../../Javascript/UyariGoruntule.js" type="text/javascript">
+   </script>
+   <script src="../../Javascript/UserControlTextBox.js" type="text/javascript">
+   </script>
+   <script src="../../Javascript/Tarih.js" type="text/javascript">
+   </script>
+   <script src="../../Javascript/TarihIkili.js" type="text/javascript">
+   </script>
+   <script src="../../Javascript/GenelTextBox.js" type="text/javascript">
+   </script>
+   <script src="../../Javascript/json.js" type="text/javascript">
+   </script>
+   <script src="../../Javascript/jqueryPlugins/jquery.tmpl.min.js" type="text/javascript">
+   </script>
+   <script src="../../Javascript/jqueryPlugins/JqueryAutoComplete/jquery.autocomplete.js" type="text/javascript">
+   </script>
+   <script src="../../Javascript/jqueryPlugins/JqueryAutoComplete/AutoCompleteFormat.js" type="text/javascript">
+   </script>
+   <script src="../../Javascript/UserControlAutoComplete.js" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=8u3ngCqoRB16IXgFyG-fdgjNp10DQaSKkjTSscTLZiq32OqFBf9Xubka18Ipz5Ei9JZ6bvX3M3TcBR6zcCPUZ1M7V3wYZUQ66kvtZYANQztmNrHa0&amp;t=ffffffffae8a8857" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=pL5wgiwL1GpmyqMwhkDjFy0U5k8Ppcvk6GwihoGtDC1Hw9F6PfLlgwuxqIHCGQjuFuZvjwPkPK8AYNNufRt3A2s_h-lce-hXviiGCfQ45HDjdhFO64kt3kjRY5TW4wonZ4xwmw2&amp;t=ffffffffae8a8857" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=dnHi0nMgDDe1Bo6v1KTdpMq0OtJcQNhtRmHhmfz16ySX5OUh_hhjG5UeQ946D05PKClXbdvSSH8KsP_FHTn4cHfK3MiPT0NTRxYinUucNZM7mXsivS0r7Z3OkDPFL6imovMdEQ2&amp;t=ffffffffae8a8857" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=fXuWcQwzGDZIk7t9UCjetZoAw7lzIz2ECawl0HqAzVUsrV73Kg6iqpiEZUpssNzaK8qsR93olHCM5E_W3aL_WVRZL5s17qImKXUJ5IsnPgUbKUKz9yAiUmgMaUNekUgmV5E-IchrwGunH3jxpBP1ovDz7wQ1&amp;t=ffffffffae8a8857" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=Bj-7Nu7LrruNTcLQ-JV4TAI-v8qYX0oEgIFWwarj_Gf6-li4iE95BD1_JYeZpQh58xBzf6_N6cL7LEkMr2_KkIEqh28RuypvZ-bK73Pd9DWm91p4u3tetCZyKQoaOgeNKwnULg2&amp;t=ffffffffae8a8857" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=rlicvrbMGEB1GFbgiKVbMEzxlwUI2DRhJ26kdP8OuERulnEjI-TNPfsjhi7J40UxCBh5Nnay2WQQPfRFRe1Xn36nCZ5m9nAVo4iWPLoQkcRc2RkU47bgXnEY_WhKOYcUZ2mZXQ2&amp;t=1f6c9a90" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=5h0NtxUlQa8Df2oWXPhULyDzPIXaBnqXie6AYW3xjcHR-BEfkfdQj5-CjppwKtT5_cykpUIPzWA_60usUQ6N1zGmM2MTVUaUQrBGpiJhd173qjoE5kb5yGCIgKKvJlGyxskgNA2&amp;t=1f6c9a90" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=CqwIbZAUnW7FSFSzLAcom0uuPRwDccgMU8wAqobXnmdJJGCXgTVel1HnGZZVt3UVMVFEuOFN9UKa5iiHq5adpHSr-N38t_31oZuJ_O2bqRjHi7NrDuFdKxibZRyqY9C4fG8weA2&amp;t=1f6c9a90" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=I5r_uwF_kmHq3vRnqwJ1ARFkRBZfALvciy5yKtdenpGEgn1cZ1GdW7hr6E77zULdE6JL60LQV0nfbuRgYO7QTfzL-Dx7Q3sDewlw5f7gP_SbETPuISEh2HwnZq0iLx8qiovhyd7Z2n5YRJNH2W1dSlRThX41&amp;t=1f6c9a90" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=lCgaAwKchW3Jed4tyDtHQ1WnvmlxJXOnw7m6C3-hnsAeoVdpCL6RxbgZbqJcu4cXcwjQvAUwzSCgJqn-wt_JxaBY1XryOUMOX8iEaoETidXSWpG8-R5zzYX0FL64xNiWUaiCghlvl6DYLO1eJNrlTDGa7EtmY_HUACxBC-syi75OyI540&amp;t=1f6c9a90" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=MTsmToC5EJty-MffSTJg9zDTBTPgIFQHRk9XoD7mm75ePQVVZLZtRHL-qvlJ7doJPrA6WyaCGptZqQ4Z-HHp6I-gSDPcVSYzJJU8zUZvQu8FxR1fIKhnFM5QNPQ5ld9SpNL4uav63tVNd22yT_ZMgkDUqX01&amp;t=1f6c9a90" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=6wa3I55aEUG9Dm2RoAuxyHVNPf8tFx-c-t8VrMb7Sc2cs4wwdpfLEmKkIWYgH8HDJ4dQshGFSaIEoWwFym1vWD-2sZm_IX2MGUNkfcaJ_9CoXlrM7dtxh0tKOm19rcPCLz2mqyhJoO9y7VwearuBJgiyoPykB4mQ86TOpPorKoSPLWp10&amp;t=1f6c9a90" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=iJc5GC8IP03yL3OMTkjySvcIrPeDLA4eLT6bqJjYRLchlEIWn_RxCCnolXwijyd54WPv9SvxPO0usO7UY4Wie9qI04_3h2N1YS8R2okulbO3HvVQ0e1qBj7MEsfS-g0DjwlnOcwzkX-b1InkhOERYx-9GnU1&amp;t=1f6c9a90" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=8atfSV1JXUIsloAr70CRL6HPoYXQ1t4j4AS6a5ZpQWnyEtgZ5zulUq5262c_UByZ0zNxQ58mopkrgO55zUpLeCRYbLuu5SplWzQ6UQ7-vyabINYIATs20R1pOUqx7xTMJk8Gz2Pu64cqQfsfLRGKCenkaSU1&amp;t=1f6c9a90" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=1_HN8NE_aonX90W5kRPrGWi16Xb3hUNeNds-BmoXp4SmQKj4EdLiIOILfUYwDqhIqlNXKDJr8G_7JvjaKC0az1kIpRWfWfbgk5BCK7horE9HPVszEDdfXx3Hg5B1iyMyiAM1BUWU1SkwPFiXjTU1OdAvJbI1&amp;t=1f6c9a90" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=a8-5fblyF_ztGy9t8kO_wIfSoz89Mr95-EwE6yTrHYPuNbs7X9Yp-2ctC7KMixpm5Og2mw2pME6LlecJSA5qIjevEcY0wGSt-LN5LwMil-yrbbV75GNXHPtPZX5BYMsMLO6qKpG4-bmbaB7-huvKl23CHheEt-tU6tfCorVzA2Ki3ZXc0&amp;t=1f6c9a90" type="text/javascript">
+   </script>
+   <script src="/ScriptResource.axd?d=u2luSl1xdo5oVvzd8PiF7e4aRrP2cZhQp7MCvqK_B_pIHsUV5jSg6lNXAVf0A442J2lhtG1tSgWAO8l910dh8VRhUEeJnefH9L81KZuguEWQKLJUOOt4N_mFIoeaFWHi66Ad8aKV49m-96mhDktHuTtR-lg1&amp;t=1f6c9a90" type="text/javascript">
+   </script>
+   <script src="../../WebServices/MasterPageWS.asmx/js" type="text/javascript">
+   </script>
+   <script src="../../WebServices/FillCascadeDdlViaJs.asmx/js" type="text/javascript">
+   </script>
+   <script src="../../WebServices/BilgiYardimMetni.asmx/js" type="text/javascript">
+   </script>
+   <script src="../../WebServices/UserControls.asmx/js" type="text/javascript">
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+function WebForm_OnSubmit() {
+LoadAfterAjaxHandler();null;if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+   </script>
+   <div>
+    <input id="__VIEWSTATEGENERATOR" name="__VIEWSTATEGENERATOR" type="hidden" value="49506B89"/>
+    <input id="__VIEWSTATEENCRYPTED" name="__VIEWSTATEENCRYPTED" type="hidden" value=""/>
+    <input id="__EVENTVALIDATION" name="__EVENTVALIDATION" type="hidden" value="D+xq3NZl/0KaRTbrJk4dmcsSua0Bdc4ToR/HAc3BHi5EKhUMF7ZKWoAkSc3CThLNQMjz1w1U2YfHK+NhKgw2t7JFG2AhoZrLk5gz7WsFNdd/K8YtknpMsoP3+80mIEenTO93n6txIcXXL/57yq6chxRqCuNMFcRJ+cT55mzdjTwsH7yZNbVhGEeoBq8o0qztO80cFXB1PA5Bq+U6p6gWHoo2kOzRr7dmVNGkBquT5wDfTg4od/YNVJAIQSU8RpHRtNk1s85wr3y6HefPDXZTdVEx5c/OrSsiToPVlkOq1MBlJbNsBrEiGEo52DWqvbmAkTvM5UlRTcxX9niKuU3Ze1LfMbS1cfOpt06qA1q4RlxrKJHLJmy3yGpxsAP7kZAOZA7fqxTTEdIqGcrx/OKTkE3l/OhDtRLdvw2Cp99UPwGUy4U8hQkf2IWdSDABb4vdhB5EDyRhtNQ0r9zLT/EDd+GJVn2I8X05PfYMJBmqdmv2F/csnVJKjUk9ht6fIsPb0buUnbvH/ymxElIXxmfOhIQJT2uZx9Q4hEIZstEn3xbMK+V/5ScxTLqR/rS7klvZaD1lEP7pdc41te68QUXHvwJsZ+JZ3SPCYfgDLpQ5XsABYxgOtTJVKgJPJzA2WYcI/wAWEtOqxBtrSYdbftpiDnrhwK6NZNw8cAJEI5bah4hDk4PcAd3qkGoATe4KaMrsp0C40RftXGOdt3CO+hDW2ICywA46JvFvwlxV4pP5sfvX0Pwbw4aRG0mXu3CZbm7cv4Tqj9FM9ewCRbFI6rzPjGxnQU7IUey1QPbOlvLcpooqPAWpdXSNwZ0OyyVjNaWUDS3GtRh7kgSGOGrYXS4jQ8V8OwbV1KRWJkA6hBLxu7SCQMn7KUs04UFPczObIpgMcV3kkWsIJskSLonFOoWjk8+j7V86wfmP6Dlx9Wws1K3nXEgRtDUOjFlhSwV4r3t9ome9xMJiyPDwf2ncg9kJExtvHpdUNH5JcsIxoGFDuCj6+L+aDiM9I4ZDpAxKE1a92BnL8rAarXp1oVZ/5Bm+lXrfsM8Wu01T1vDC5hWL9KcPT2XgWTG45zCD/8Awj3ihYEYOgCo3v5L5NNU2a7jgE4O35Oq/QJ63m/qKjCJ4pbQ5TP3CHnHZOzNSM+w7ZyrXsAV7bYnhqLKKftVqKgxKH+g1B7yfJCnlz7o2f2jzyWo40avWuKCLCl6cPtLzxUCBkafWHPm7MmX7Wtxd9q6IWduBFDev5WYuW3iG2EkurRRXIB6uyI0C4aKo/ofi+fakdXadh5D8E14eLlSRoQA4COtpNZMnEtEZQoCGN7ye6dmXk7g9Vwrkp4a7ZgcXDo+bYrtsFS1/lcnWhP5J+AZvBGwkmVdDnhPVnM6fOzijEo1ywTgXsl7SJ8RS+eA9qsjfbDSIKguRfF+VwlheQEBYmaLUgBSNABPdGw0CpDCyWmmme0bAPeuY42aUQcHzSD7vyPiNTJSES/hf7QhVrZSJiwSSBCGqCGlBQWbQ5/7b5I+NObcJG+dnXloevdq5U9hEk0XjOrxbBjNYOt81RUYZhY93WXM4tM41iBN4M/0g4Bw9nKwErRAp/gbBEn59hbw2Yg7IJ6ruWYfVEYcB6OGoaUasTn3IUne/Xs+NHs0YHOcC9UBW55/MnMrK75tgVhzva38nYaD5OOCk+jwZ0H6P0g3OunbQsXNSYtxueaxcbgxVHR78W7kDVMGpMPmKpOjHsFQgaLlC/GUysITgHAIyAD0bz4MWmMw9Rl6wD2hVTjcIGNOb6FWk72bS/zcJTrP0f5zu5MRBF3bDm2ARKhrqx2JLe2R/6nnoZYONZCf4T3PxQX+y"/>
+   </div>
+   <script type="text/javascript">
+    //<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ScriptManager', 'aspnetForm', ['tctl00$ctl00$DropDownSayfaAra$UpdatePanelGenelDropDown','','tctl00$ctl00$UpdatePanelMsgBox','','tctl00$ctl00$SayiKontrolPanel',''], [], [], 90, 'ctl00$ctl00');
+//]]>
+   </script>
+   <script language="javascript" type="text/javascript">
+    document.onkeydown = DistributeKeydownEventsToRelatedMethods;
+            function DistributeKeydownEventsToRelatedMethods(event) {
+                //Olmayan bir method çağrıldığında sorun olmaması için, method try-catch içinde çağrılmalı
+                try { CallUserControlsKeydownEventMethods(event); } catch (exception) { }
+                try { SayfayaOzelKeydownEventDagitici(event); } catch (exception) { }
+            }
+   </script>
+   <div id="ctl00_ctl00_divMainMaster">
+    <div class="YetkiMenuDiv2011" id="ctl00_ctl00_divMainMenu">
+     <style type="text/css">
+      #sddm
+    {
+        margin: 0;
+        padding: 0;
+        z-index: 30;
+    }
+    #sddm li
+    {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        float: left;
+        font: bold 11px arial;
+    }
+    #sddm li a, #sddm li a.TopMenuItem, #sddm li a.TopMenuItem:hover
+    {
+        display: block;
+        margin: 3px 3px 3px 3px;
+        color: #FFF;
+        vertical-align: middle;
+        text-decoration: none;
+    }
+    #sddm li a.TopMenuItem
+    {
+        margin: 8px 0 0 15px;
+        background: #363636;
+    }
+    #sddm li a.TopMenuItem:hover
+    {
+        margin: 8px 0 0 15px;
+        background: #363636;
+        font: bold 11px arial;
+    }
+    #sddm li a:hover
+    {
+        color: #00fffc;
+    }
+    #sddm div
+    {
+        position: absolute;
+        visibility: hidden;
+        width: 300px;
+        margin: 0 0 0 5px;
+        padding: 0;
+        background: #ffffff;
+        border: 0px solid #000;
+    }
+     </style>
+     <script language="javascript" type="text/javascript">
+      var timeout = 500;
+    var closetimer = 0;
+    var ddmenuitem = 0;
+
+    function mopen(id) {
+        mcancelclosetime();
+
+        if (ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+
+        ddmenuitem = document.getElementById(id);
+        ddmenuitem.style.visibility = 'visible';
+
+    }
+
+    function mclose() {
+        if (ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+    }
+
+    function mclosetime() {
+        closetimer = window.setTimeout(mclose, timeout);
+    }
+
+    function mcancelclosetime() {
+        if (closetimer) {
+            window.clearTimeout(closetimer);
+            closetimer = null;
+        }
+    }
+
+    document.onclick = mclose;
+     </script>
+     <ul id="sddm">
+      <li>
+       <a class="TopMenuItem" href="#" onmouseout="mclosetime()" onmouseover="mopen('m1')">
+        Modüller
+       </a>
+       <div id="m1" onmouseout="mclosetime()" onmouseover="mcancelclosetime()">
+        <span id="ctl00_ctl00_MenuMainMaster1_LabelMenuItems" style="font-size: 13;">
+         <table id="tableHtmlData" style="height:20px;" width="100%">
+          <tbody>
+           <tr>
+            <td style="background-color:#363636">
+             <a href="/Anasayfa/IBYetkiAnaSayfa.aspx" title="">
+              e-İçişleri Anasayfa
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td style="background-color:#000">
+             <a href="/IdariMaliIsler/HukumetKonagi/HukumetKonagiAnaSayfa.aspx" title="">
+              Hükümet Konağı Anasayfa
+             </a>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </span>
+       </div>
+      </li>
+     </ul>
+     <div style="clear: both">
+     </div>
+    </div>
+    <div class="MasterHeader" id="ctl00_ctl00_divMasterHeader" style="z-index: 99; left: 0px; top: 0px; position: fixed;">
+     <div class="MasterUstMenu">
+      <table cellpadding="0" cellspacing="0" width="100%">
+       <tbody>
+        <tr>
+         <td style="padding-top: 1px;" valign="top" width="175">
+          <input alt="E-İçişleri" id="ctl00_ctl00_ImageButton1" name="ctl00$ctl00$ImageButton1" onclick='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$ImageButton1", "", true, "", "", false, false))' src="../../App_Themes/Main/Images/Master/2011/logo.jpg" style="border-width:0px;" type="image"/>
+         </td>
+         <td align="center">
+          <table cellpadding="3" cellspacing="0">
+           <tbody>
+            <tr>
+             <td>
+              <input id="ctl00_ctl00_ImageAnaSayfa" name="ctl00$ctl00$ImageAnaSayfa" src="../../App_Themes/Main/Images/Master/2011/btnanasayfa.jpg" style="border-width:0px;" type="image"/>
+             </td>
+             <td>
+              <input id="ctl00_ctl00_ImageAjanda" name="ctl00$ctl00$ImageAjanda" src="../../App_Themes/Main/Images/Master/2011/btnajanda.jpg" style="border-width:0px;" type="image"/>
+             </td>
+             <!--<td>
+                                        <input type="image" name="ctl00$ctl00$ImageGorevler" id="ctl00_ctl00_ImageGorevler" src="../../App_Themes/Main/Images/Master/2011/btngorvler.jpg" style="border-width:0px;" />
+                                    </td>-->
+             <td>
+              <a href="javascript:CreateWnd('https://www.e-icisleri.gov.tr/Posta/postaSayfasi.aspx', 1024, 768, true);" id="ctl00_ctl00_HyperLinkEmail" style="cursor: pointer;">
+               <img alt="" src="../../App_Themes/Main/Images/Master/2011/btneposta.jpg" style="border-width:0px;"/>
+              </a>
+             </td>
+             <td>
+              <input id="ctl00_ctl00_ImageEvrak" name="ctl00$ctl00$ImageEvrak" src="../../App_Themes/Main/Images/Master/2011/btnevrak.jpg" style="border-width:0px;" type="image"/>
+             </td>
+             <td>
+             </td>
+             <td>
+              <div id="overlay">
+               <div id="aa">
+                <div class="guvenlikBaslikdiv" id="ctl00_ctl00_guvenlikBaslikdiv">
+                </div>
+                <br/>
+                <div class="guvenlikAciklamadiv" id="ctl00_ctl00_guvenlikAciklamadiv">
+                </div>
+                <br/>
+                <hr style="border: 1px solid #cecdcd;"/>
+                <br/>
+                <div id="guvenlikChkboxdiv">
+                </div>
+                <div id="onaybuttondiv">
+                 <input class="btnOnay BtnSuccess" id="ctl00_ctl00_btnkapatveKaydet" name="ctl00$ctl00$btnkapatveKaydet" onclick='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$btnkapatveKaydet", "", true, "", "", false, false))' type="submit" value="Okudum Ve Onaylıyorum"/>
+                </div>
+               </div>
+              </div>
+             </td>
+            </tr>
+           </tbody>
+          </table>
+         </td>
+         <td align="left" width="25">
+          <script src="/Javascript/highslide/highslide-full.js" type="text/javascript">
+          </script>
+          <link href="/App_Themes/Main/highslide/highslide.css" rel="stylesheet" type="text/css"/>
+          <script type="text/javascript">
+           hs.graphicsDir = '/App_Themes/Main/highslide/graphics/';
+    hs.outlineType = 'rounded-white';
+    hs.wrapperClassName = 'draggable-header';
+
+    function BilgiYardimMetniniWebMethodIleAl(sender, primaryKey) {
+        var dizin = ObjeDizini(sender.id);
+        var lblMetin = getObj(dizin + 'LabelMetin');
+        if (lblMetin.innerText == '') {
+            ShowProgress();
+            PageMethods.BilgiYardimMetniniWebMethodIleAl(primaryKey, sender.id, OnBilgiYardimMetniAlindi, OnBilgiYardimMetniAlinirkenHataOlustu, sender.id);
+        }
+        else
+            return hs.htmlExpand(sender);
+    }
+    
+    function BilgiYardimMetniniWebServiceIleAl(sender, primaryKey, modulAdi) {
+        var dizin = ObjeDizini(sender.id);
+        var lblMetin = getObj(dizin + 'LabelMetin');
+        if (lblMetin.innerText == '') {
+            ShowProgress();
+            BilgiYardimMetni.BilgiYardimMetniniWebServiceIleAl(primaryKey, sender.id, modulAdi, OnBilgiYardimMetniAlindi, OnBilgiYardimMetniAlinirkenHataOlustu, sender.id);
+        }
+        else
+            return hs.htmlExpand(sender);
+    }
+    function OnBilgiYardimMetniAlindi(result, userContext, methodName) {
+        var dizin = ObjeDizini(userContext);
+        var lblMetin = getObj(dizin + 'LabelMetin');
+        lblMetin.innerHTML = result;
+        var imgButton = getObj(userContext);
+        HideProgress();
+        return hs.htmlExpand(imgButton);
+    }
+    function OnBilgiYardimMetniAlinirkenHataOlustu(error, userContext, methodName) {
+        HideProgress();
+        var errMsg = "Bilgi yardım metni alınırken hata oluştu !";
+        var hdnObj = getObj(ObjeDizini(userContext) + 'HiddenFieldHataMesaji');
+        if (hdnObj.value != '') errMsg = hdnObj.value;
+        alert(errMsg);
+    }
+
+    function ShowProgress() {
+        $("#spanBilgiYardimYukleniyorGif").css("display", "block");
+    }
+
+    function HideProgress() {
+        $("#spanBilgiYardimYukleniyorGif").css("display", "none");
+    }
+          </script>
+          <input id="ctl00_ctl00_BilgiYardimKullaniciBilgileri_HiddenFieldHataMesaji" name="ctl00$ctl00$BilgiYardimKullaniciBilgileri$HiddenFieldHataMesaji" type="hidden" value="Kullanıcı bilgileri alınırken hata oluştu !"/>
+          <span id="spanBilgiYardimYukleniyorGif" style="display: none; text-align: center;
+    position: absolute; margin-top: 2px;">
+           <img alt="Yukleniyor" src="../../App_Themes/Main/Images/Ortak/yukleniyor.gif"/>
+          </span>
+          <img align="absmiddle" id="ctl00_ctl00_BilgiYardimKullaniciBilgileri_ImageBilgiYardim" onclick="BilgiYardimMetniniWebServiceIleAl(this,'0','MasterPage'); return false;" src="../../App_Themes/Main/Images/Genel/kullanici.ico" style="border-width:0px;cursor: pointer;" title="Kullanıcı Bilgilerinizi Görmek İçin Tıklayınız"/>
+          <div class="highslide-maincontent" style="display: none;">
+           <table id="ctl00_ctl00_BilgiYardimKullaniciBilgileri_tableBilgiYardim">
+            <tbody>
+             <tr>
+              <td>
+               <img id="ctl00_ctl00_BilgiYardimKullaniciBilgileri_ImageBaslik" src="../../App_Themes/Main/Images/MessageBox/basari.gif" style="border-width:0px;"/>
+               <span id="ctl00_ctl00_BilgiYardimKullaniciBilgileri_LabelBaslik" style="font-size:Medium;font-weight:bold;">
+                Kullanıcı Bilgileriniz...
+               </span>
+               <br/>
+               <br/>
+               <span id="ctl00_ctl00_BilgiYardimKullaniciBilgileri_LabelMetin">
+               </span>
+               <br/>
+               <br/>
+              </td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+         </td>
+         <td align="center" style="padding: 0px 0px 0px;" valign="top" width="150">
+          <span id="ctl00_ctl00_LabelKullaniciAdi" style="color:White;font-size:10px;font-weight:bold;">
+           Uğur OKUR
+          </span>
+          <br/>
+          <span id="ctl00_ctl00_LabelAktifBirim" style="color:White;font-size:9px;font-weight:normal;" title="Aktif Birim: İstanbul Bilgi İşlem Şube Müdürlüğü">
+           İstanbul Bilgi İşlem Şube Mü..
+          </span>
+          <br/>
+          <span id="ctl00_ctl00_LabelKalanSureMetin" style="color: #fff; font-size: smaller;" title="Oturumunuzun Kapanması İçin Kalan Süre">
+           Kalan Oturum Süreniz (dk.):
+          </span>
+          <a id="LabelOturumIcinKalanSure" style="color: #fff; font-size: small;" title="Oturumunuzun Kapanması İçin Kalan Süre" type="text/plain">
+           30
+          </a>
+          <a id="LabelMaksimumOturumSuresi" style="display: none;" type="text/plain">
+           30
+          </a>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+      <table cellpadding="0" cellspacing="0" width="100%">
+       <tbody>
+        <tr>
+         <td valign="top" width="490">
+          <div class="MasterHeaderSolArac">
+           <a id="ctl00_ctl00_HyperLinkSikKullanilanlar" style="cursor: pointer;" title="Sık Kullanılanlar">
+            Sık Kullanılanlar
+           </a>
+           <a href="javascript:CreateWnd('https://www.e-icisleri.gov.tr/YardimMasasi/BildirimKayit.aspx?SayfaURL=/Evrak/Posta/PostalanmayiBekleyen.aspx', 1280, 800, true);" id="ctl00_ctl00_HyperLinkIstekBildir" title="Hata-İstek Bildir">
+            Hata-İstek Bildir
+           </a>
+           <img id="ctl00_ctl00_ImageResizePage" onclick="ResizeScreenWidth(this);" src="../../App_Themes/Main/Images/Genel/resizepage.ico" style="border-width:0px;position: absolute; margin-left: 1px; margin-top: 2px; cursor: pointer; top: 40px; left: 350px;" title="Sayfa genişliğini ayarlamak için tıklayın"/>
+          </div>
+         </td>
+         <td align="center">
+          <table style="margin-top: -10px;">
+           <tbody>
+            <tr>
+             <td style="text-align: left;">
+              <div id="ctl00_ctl00_searhcPanel" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_ctl00_defaultSearchButton')">
+               <link href="/App_Themes/Main/Main.css" rel="stylesheet" type="text/css"/>
+               <script type="text/javascript">
+                var DizinGenelDropDown = '';
+    function SetDizinGenelDropDown(sender) {
+        var ucAdi = sender.id;
+        var parca = ucAdi.split('_');
+        var kntrl = parca[parca.length - 1];
+        //DizinGenelDropDown = ucAdi.replace(kntrl, "");
+        DizinGenelDropDown = ReplaceEnd(ucAdi, kntrl, '');
+        GenelDropDownTimerIptal();
+        DegiskenleriBosaltGDD();
+    }
+
+    function TextBoxFocusGenelDropDown(sender) {
+        SetDizinGenelDropDown(sender);
+        SetCursorPosition(sender, sender.value.length);
+
+        var txt = getObj(KontrolAdiniDuzenleGenelDropDown('TextBoxGenelDropDown')).value;
+        if (txt.substring(0, 1) == '-') CleanTxtBoxOnGotFocus(sender);
+        if (getObj(KontrolAdiniDuzenleGenelDropDown('HiddenFieldTextBoxModundaCalis')).value == '1') return;
+
+        var objTr = document.getElementById(DizinGenelDropDown + 'tdGenelDropDown');
+        var yazarakAra = getObj(KontrolAdiniDuzenleGenelDropDown('HiddenFieldYazarakArama')).value
+        var kayitSayisi = getObj(KontrolAdiniDuzenleGenelDropDown('HiddenFieldKayitSayisi')).value;
+        var btnTemizle = getObj(KontrolAdiniDuzenleGenelDropDown('ImageButtonTemizle'));
+
+        if (objTr.style.display == 'none' && yazarakAra == '1') {
+            if (kayitSayisi == '0' || kayitSayisi == '') ZamanlayiciIleAraGDD();
+            else {
+                objTr.style.display = 'block';
+                btnTemizle.focus();
+            }
+        }
+        else {
+            objTr.style.display = 'none';
+            if (yazarakAra == '1') {
+                sender.value = SetTextBoxGenelDropDown();
+                btnTemizle.focus();
+            }
+        }
+    }
+
+    function KontrolAdiniDuzenleGenelDropDown(kontrol) {
+        kontrol = DizinGenelDropDown + kontrol;
+        kontrol = kontrol.replace(/_/g, '$');
+        return kontrol;
+    }
+
+    function SetTextBoxGenelDropDown() {
+        FillValidationTextBox();
+        return getObj(KontrolAdiniDuzenleGenelDropDown('HiddenFieldText')).value
+    }
+
+    function ItemSelected(indx) {
+        var kontrol = 'ButtonItemSelected';
+        getObj(KontrolAdiniDuzenleGenelDropDown('HiddenFieldKayitSayisi')).value = '0';
+        kontrol = KontrolAdiniDuzenleGenelDropDown(kontrol);
+        __doPostBack('' + kontrol + '', indx);
+    }
+
+    function ItemsSelectedByCheckBoxes() {
+        var kontrol = 'ButtonCheckedItemsSelected';
+        getObj(KontrolAdiniDuzenleGenelDropDown('HiddenFieldKayitSayisi')).value = '0';
+        var kontrol = KontrolAdiniDuzenleGenelDropDown(kontrol);
+        __doPostBack('' + kontrol + '', '');
+    }
+
+    function AramaYapGenelDropDown(event) {
+        var charCode = GetKeyCode(event);
+        var doNotSubmit = getObj(KontrolAdiniDuzenleGenelDropDown('HiddenFieldDoNotSubmit')).value;
+
+        var objUrlCalled = getObj(KontrolAdiniDuzenleGenelDropDown('HiddenFieldUrlCalled'));
+        objUrlCalled.value = 'false';
+
+        if (charCode == mBackSpace) { SetTimerGenelDropDown(event); return; }
+
+        if (charCode == mRightArrow) {
+            CloseGenelDropDownList();
+            return;
+        }
+
+        if (charCode == mDownArrow) {
+            GenelDropDownTimerIptal();
+            if (getObj(KontrolAdiniDuzenleGenelDropDown('HiddenFieldTextBoxModundaCalis')).value == '1') {
+                window.focus();
+                return;
+            }
+            var kontrol = 'ImageButtonGenelDropDown';
+            kontrol = KontrolAdiniDuzenleGenelDropDown(kontrol);
+            getObj(KontrolAdiniDuzenleGenelDropDown('HiddenFieldKayitSayisi')).value = '0';
+            __doPostBack('' + kontrol + '', '');
+        }
+        else if (charCode == mEnter) {
+            var url = getObj(KontrolAdiniDuzenleGenelDropDown('HiddenFieldUrl')).value;
+            if (url != null && url != '') {
+                var arananText = getObj(KontrolAdiniDuzenleGenelDropDown('TextBoxGenelDropDown')).value;
+                var iW = 380;
+                var iH = 500;
+                var iL = (screen.width - iW) / 2;
+                var iT = (screen.height - iH) / 2;
+                var sURL = url + "?SayfaAd=" + arananText;
+                var sAd = "SayfaAra";
+                var oPopUpWin = window.open(sURL, sAd, 'scrollbars=1,toolbar=0,status=1,menubar=0,location=0,resizable=1,left=' + iL + ',top=' + iT + ',width=' + iW + ',height=' + iH);
+                oPopUpWin.focus();
+                objUrlCalled.value = 'true';
+            }
+        }
+        if (doNotSubmit) {
+            return false;
+        }
+    }
+
+    var zamanlayiciGDD;
+    function SetTimerGenelDropDown(event) {
+        GenelDropDownTimerIptal();
+
+        var charCode = GetKeyCode(event);
+        if (isOtherValidKey(charCode)) return;
+
+        var tmrInterval = getObj(KontrolAdiniDuzenleGenelDropDown('HiddenFieldTimerInterval')).value
+        if (tmrInterval == null || tmrInterval == '') tmrInterval = '2000';   //Default değer 2 sn.
+        if (tmrInterval == '0') return; //interval değeri 0 girilmiş ise zamanlayici ile arama iptal edilmiş demektir.
+        zamanlayiciGDD = setTimeout(ZamanlayiciIleAraGDD, parseInt(tmrInterval, 10));
+    }
+
+    function FillValidationTextBox() {
+        if (getObj(KontrolAdiniDuzenleGenelDropDown('HiddenFieldTextBoxModundaCalis')).value == '1') {
+            var txtValidation = getObj(KontrolAdiniDuzenleGenelDropDown('TextBoxValidationGDD'));
+            var txtDropDown = getObj(KontrolAdiniDuzenleGenelDropDown('TextBoxGenelDropDown'));
+            txtValidation.value = txtDropDown.value;
+        }
+    }
+
+    function ZamanlayiciIleAraGDD() {
+        GenelDropDownTimerIptal();
+        var kontrol = 'ImageButtonGenelDropDown';
+        kontrol = KontrolAdiniDuzenleGenelDropDown(kontrol);
+        __doPostBack('' + kontrol + '', '');
+    }
+
+    function GenelDropDownTimerIptal() {
+        DegiskenleriBosaltGDD();
+        clearTimeout(zamanlayiciGDD);
+    }
+
+    function ChkBoxIsaretle(tblRw) {
+        if (getObj(KontrolAdiniDuzenleGenelDropDown('HiddenFieldShowCheckBox')).value == "1") {
+            var cell = tblRw.cells[0];
+            var chk = cell.childNodes[0].childNodes[0].checked;
+            if (chk == false) chk = true; else chk = false;
+            cell.childNodes[0].childNodes[0].checked = chk;
+        }
+    }
+
+    var rwMarkedGDD = false;
+    var currentRowIdGDD = 0;
+
+    function KayitSecDropDown(charCode) {
+        if (DizinGenelDropDown == '') return;
+        var sKSayisi = getObj(KontrolAdiniDuzenleGenelDropDown('HiddenFieldKayitSayisi')).value;
+        if (sKSayisi == '') return;
+        var iKSayisi = parseInt(sKSayisi, 10);
+        var rwID = 0;
+
+        if (iKSayisi > 0) {
+            if (charCode == mDownArrow || charCode == mUpArrow) {
+                if (charCode == mDownArrow) {
+                    rwID = currentRowIdGDD + 1;
+                    if (rwID > iKSayisi) { rwID = iKSayisi; currentRowIdGDD -= 1; }
+                }
+                else if (charCode == mUpArrow) {
+                    rwID = currentRowIdGDD - 1;
+                    if (rwID < 1) { rwID = 1; currentRowIdGDD += 1; }
+                }
+
+                var tableRow1 = document.getElementById(currentRowIdGDD);
+                var tableRow2 = document.getElementById(rwID);
+
+                if (tableRow1 != null) Highlight(tableRow1, false, currentRowIdGDD);
+                if (tableRow2 != null) Highlight(tableRow2, true, rwID);
+                if (tableRow1 != null || tableRow2 != null) {
+                    if (charCode == mDownArrow) currentRowIdGDD += 1;
+                    else if (charCode == mUpArrow) currentRowIdGDD -= 1;
+
+                    rwMarkedGDD = true;
+                    $('#' + DizinGenelDropDown + 'PanelGenelDropDown').animate({ scrollTop: (currentRowIdGDD - 1) * (20) }, 'fast');
+                }
+            }
+            if (charCode == mEnter) if (rwMarkedGDD) ItemSelected(currentRowIdGDD);
+            if (charCode == mSpace) ChkBoxIsaretle(document.getElementById(currentRowIdGDD));
+        }
+    }
+
+    function TemizleGDD() {
+        if (DizinGenelDropDown != '') {
+            DegiskenleriBosaltGDD();
+            var temizle = KontrolAdiniDuzenleGenelDropDown('ImageButtonTemizle');
+            __doPostBack('' + temizle + '', '');
+        }
+    }
+    function DegiskenleriBosaltGDD() {
+        currentRowIdGDD = 0;
+        rwMarkedGDD = false;
+    }
+
+    function CloseGenelDropDownList() {
+        var objPanel = getObj(DizinGenelDropDown + 'tdGenelDropDown')
+        objPanel.style.display = 'none';
+        return false;
+    }
+               </script>
+               <div id="ctl00_ctl00_DropDownSayfaAra_UpdatePanelGenelDropDown">
+                <table id="ctl00_ctl00_DropDownSayfaAra_tableGenelDropDown">
+                 <tbody>
+                  <tr>
+                   <td>
+                    <div aria-hidden="true" id="ctl00_ctl00_DropDownSayfaAra_UpdateProgressGenelDropDown" role="status" style="display:none;">
+                     <img id="ctl00_ctl00_DropDownSayfaAra_ImageProgress" src="../../Resim/Ortak/progress.gif" style="border-width:0px;position: absolute; margin-top: 3px; margin-left: 2px"/>
+                    </div>
+                    <input id="ctl00_ctl00_DropDownSayfaAra_TextBoxValidationGDD" name="ctl00$ctl00$DropDownSayfaAra$TextBoxValidationGDD" style="height:10px;width:100px;display: none;" type="text"/>
+                    <input autocomplete="off" id="ctl00_ctl00_DropDownSayfaAra_TextBoxGenelDropDown" name="ctl00$ctl00$DropDownSayfaAra$TextBoxGenelDropDown" onblur="FillTxtBoxOnLostFocus(this,SetTextBoxGenelDropDown());" onfocus="TextBoxFocusGenelDropDown(this);" onkeydown="AramaYapGenelDropDown(event);" onkeypress="SetTimerGenelDropDown(event);" onmouseout="RenkDegistir(this, '#FFFFFF');" onmouseover="RenkDegistir(this, '#F7F6F3');" style="border-color:LightSteelBlue;border-width:1px;border-style:None;font-family:Verdana;font-size:Smaller;width:150px;margin-left:10px;margin-top:5px;" type="text" value="-Sayfa Ara..."/>
+                   </td>
+                   <td style="width: 20px;">
+                    <input align="absmiddle" id="ctl00_ctl00_DropDownSayfaAra_ImageButtonGenelDropDown" name="ctl00$ctl00$DropDownSayfaAra$ImageButtonGenelDropDown" onclick="SetDizinGenelDropDown(this);" src="../../App_Themes/Main/Images/Ikonlar/asagi.gif" style="border-width:0px;display:none;" title="Listele" type="image"/>
+                   </td>
+                   <td style="width: 20px;">
+                    <input align="absmiddle" id="ctl00_ctl00_DropDownSayfaAra_ImageButtonTemizle" name="ctl00$ctl00$DropDownSayfaAra$ImageButtonTemizle" onclick="DegiskenleriBosaltGDD();" src="../../App_Themes/Main/Images/Ikonlar/temizle.gif" style="border-width:0px;display:none;" title="Temizle" type="image"/>
+                   </td>
+                   <td>
+                    <input align="absmiddle" id="ctl00_ctl00_DropDownSayfaAra_ImageButtonListeyiKapat" name="ctl00$ctl00$DropDownSayfaAra$ImageButtonListeyiKapat" onclick="return CloseGenelDropDownList();" src="../../App_Themes/Main/Images/Ikonlar/yukari.gif" style="border-width:0px;display: none;" title="Listeyi Kapat" type="image"/>
+                   </td>
+                  </tr>
+                  <tr>
+                   <td colspan="4" style="height: 3px;">
+                   </td>
+                  </tr>
+                  <tr>
+                   <td colspan="4" id="ctl00_ctl00_DropDownSayfaAra_tdGenelDropDown" style="position: absolute; z-index: 99;
+					margin-top: -3px; display: none; padding-top: 30px; padding-left: 3px;">
+                    <div id="ctl00_ctl00_DropDownSayfaAra_PanelGenelDropDown" style="background-color:White;border-color:LightSteelBlue;border-width:1px;border-style:Solid;height:300px;overflow:auto;">
+                     <table id="ctl00_ctl00_DropDownSayfaAra_tableLnkBtnSec" style="width:100%;background-color:#d5e9fb;display:none;">
+                      <tbody>
+                       <tr>
+                        <td style="text-align: left; width: 10px;">
+                         <span style="cursor: pointer;" title="Tümünü işaretle/kaldır">
+                          <input id="ctl00_ctl00_DropDownSayfaAra_CheckBoxSelectAll" name="ctl00$ctl00$DropDownSayfaAra$CheckBoxSelectAll" type="checkbox"/>
+                         </span>
+                        </td>
+                        <td style="text-align: left; width: 20px;">
+                         <a class="LinkButtonCss4" id="Sec" onclick="ItemsSelectedByCheckBoxes();" style="cursor: pointer" title="İşaretli kayıtları seç">
+                          Seç
+                         </a>
+                        </td>
+                        <td style="text-align: left">
+                         <a class="LinkButtonCss4" href="javascript:__doPostBack('ctl00$ctl00$DropDownSayfaAra$LinkButtonKapat','')" id="ctl00_ctl00_DropDownSayfaAra_LinkButtonKapat" jqueryclass="jLinkButton" style="color:Brown;" title="Listeyi Kapat">
+                          Kapat
+                         </a>
+                        </td>
+                       </tr>
+                      </tbody>
+                     </table>
+                     <div>
+                     </div>
+                    </div>
+                   </td>
+                  </tr>
+                  <tr>
+                   <td colspan="4">
+                    <input id="ctl00_ctl00_DropDownSayfaAra_HiddenFieldText" name="ctl00$ctl00$DropDownSayfaAra$HiddenFieldText" type="hidden" value="-Sayfa Ara..."/>
+                    <input id="ctl00_ctl00_DropDownSayfaAra_HiddenFieldKayitSayisi" name="ctl00$ctl00$DropDownSayfaAra$HiddenFieldKayitSayisi" type="hidden"/>
+                    <input id="ctl00_ctl00_DropDownSayfaAra_HiddenFieldYazarakArama" name="ctl00$ctl00$DropDownSayfaAra$HiddenFieldYazarakArama" type="hidden"/>
+                    <input id="ctl00_ctl00_DropDownSayfaAra_HiddenFieldUrl" name="ctl00$ctl00$DropDownSayfaAra$HiddenFieldUrl" type="hidden"/>
+                    <input id="ctl00_ctl00_DropDownSayfaAra_HiddenFieldUrlCalled" name="ctl00$ctl00$DropDownSayfaAra$HiddenFieldUrlCalled" type="hidden"/>
+                    <input id="ctl00_ctl00_DropDownSayfaAra_HiddenFieldTextBoxModundaCalis" name="ctl00$ctl00$DropDownSayfaAra$HiddenFieldTextBoxModundaCalis" type="hidden" value="1"/>
+                    <input id="ctl00_ctl00_DropDownSayfaAra_HiddenFieldTimerInterval" name="ctl00$ctl00$DropDownSayfaAra$HiddenFieldTimerInterval" type="hidden" value="3000"/>
+                    <input id="ctl00_ctl00_DropDownSayfaAra_HiddenFieldShowCheckBox" name="ctl00$ctl00$DropDownSayfaAra$HiddenFieldShowCheckBox" type="hidden"/>
+                    <input id="ctl00_ctl00_DropDownSayfaAra_HiddenFieldDoNotSubmit" name="ctl00$ctl00$DropDownSayfaAra$HiddenFieldDoNotSubmit" type="hidden" value="1"/>
+                    <input id="ctl00_ctl00_DropDownSayfaAra_ButtonItemSelected" name="ctl00$ctl00$DropDownSayfaAra$ButtonItemSelected" onclick="javascript:__doPostBack('ctl00$ctl00$DropDownSayfaAra$ButtonItemSelected','')" style="display: none;" type="button" value=""/>
+                    <input id="ctl00_ctl00_DropDownSayfaAra_ButtonCheckedItemsSelected" name="ctl00$ctl00$DropDownSayfaAra$ButtonCheckedItemsSelected" onclick="javascript:__doPostBack('ctl00$ctl00$DropDownSayfaAra$ButtonCheckedItemsSelected','')" style="display: none;" type="button" value=""/>
+                   </td>
+                  </tr>
+                 </tbody>
+                </table>
+               </div>
+               <input id="ctl00_ctl00_defaultSearchButton" name="ctl00$ctl00$defaultSearchButton" onclick='return false;WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$defaultSearchButton", "", true, "", "", false, false))' style="display: none" type="submit" value=""/>
+              </div>
+             </td>
+             <td>
+              <input align="absmiddle" id="ctl00_ctl00_ButtonSayfaAraTemizle" name="ctl00$ctl00$ButtonSayfaAraTemizle" onclick='TemizleGDD(); return false;WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$ButtonSayfaAraTemizle", "", true, "", "", false, false))' src="../../App_Themes/Main/Images/Ikonlar/temizle2.gif" style="border-width:0px;" title="Temizle ve Kapat (Kısayolu: 'Delete' tuşu)" type="image"/>
+             </td>
+            </tr>
+           </tbody>
+          </table>
+         </td>
+         <td align="right" valign="top" width="346">
+          <div class="MasterHeaderSagArac">
+           <a class="GuvenliCikis" href="javascript:__doPostBack('ctl00$ctl00$ButtonCikis','')" id="ctl00_ctl00_ButtonCikis" jqueryclass="jLinkButton" title="Çıkış">
+            Güvenli Çıkış
+           </a>
+           <span id="ctl00_ctl00_LabelTarih" style="position: relative; left: -15px" title="13 Kasım 2019 Çarşamba - IP=10.0.4.252 - IBS04EBKNW04">
+            13 Kasım 2019 Çarşamba
+           </span>
+           <a href="javascript:CreateWnd('/Yardim/YeniYardim/YeniPopUpYardim.aspx', 985, 600, true);" id="ctl00_ctl00_HyperLinkYardim" style="position: relative; left: -30px; margin-top: 5px" title="Yardım Belgeleri">
+            Yardım Belgeleri
+           </a>
+           <span class="labelKullaniciSonGiris" id="ctl00_ctl00_labelKullaniciSonGiris" title="Son Giriş Tarihiniz">
+            13.11.2019 11:52:45
+           </span>
+          </div>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div style="padding-top: 60px;">
+    </div>
+    <div class="MasterContainer">
+     <div class="MasterContent">
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+       <tbody>
+        <tr>
+         <td align="center" colspan="3">
+          <div id="ctl00_ctl00_UpdatePanelMsgBox">
+           <div aria-hidden="true" id="ctl00_ctl00_UpdateProgressMain" role="status" style="display:none;">
+            <div id="ctl00_ctl00_PanelProgressMain" style="position: fixed; z-index: 99; left: 391px; top: 291px;">
+             <img id="ctl00_ctl00_ImageProgress" src="../../Resim/Ortak/loading.gif" style="border-width:0px;margin-left: 2px; margin-top: 7px"/>
+            </div>
+           </div>
+           <link href="/App_Themes/Main/Main.css" rel="stylesheet" type="text/css"/>
+           <script language="javascript" src="/Javascript/UserControlTextBox.js" type="text/javascript">
+           </script>
+           <script language="javascript" type="text/javascript">
+            function MsgBoxKapat(sender) {
+        var objTable = getObj("ctl00_ctl00_MessageBox1_tableMsgBox");
+        var objDiv = getObj("ctl00_ctl00_MessageBox1_divMsgBox");
+        objTable.style.display = 'none';
+        objDiv.style.display = 'none';
+
+        if (typeof window.onMessageBoxClose === "function") { 
+            window.onMessageBoxClose();
+        }
+        
+        return false;
+    }
+
+    $(document).ready(function() { ResizeDivMsgBox(); })
+    window.onresize = function() { ResizeDivMsgBox(); }
+    function ResizeDivMsgBox() {
+        var objDiv = getObj("ctl00_ctl00_MessageBox1_divMsgBox");
+        if (objDiv.style.display == 'block') {
+            objDiv.style.width = GetPageWidth();
+            objDiv.style.height = GetPageHeight();
+        }
+    }
+           </script>
+           <div id="ctl00_ctl00_MessageBox1_divMsgBox" style="left:0;opacity:0.2;z-index:110;position:absolute;background-color:#000;display:none;top:0;filter:alpha(opacity=20);">
+           </div>
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td>
+         </td>
+         <td style="width: 100%; text-align: left;">
+          <table id="ctl00_ctl00_tableMainHeader" style="width: 100%;">
+           <tbody>
+            <tr>
+             <td style="width: 10px; position: absolute; padding-left: 15px; padding-top: 6px;">
+              <script src="/Javascript/highslide/highslide-full.js" type="text/javascript">
+              </script>
+              <link href="/App_Themes/Main/highslide/highslide.css" rel="stylesheet" type="text/css"/>
+              <script type="text/javascript">
+               hs.graphicsDir = '/App_Themes/Main/highslide/graphics/';
+    hs.outlineType = 'rounded-white';
+    hs.wrapperClassName = 'draggable-header';
+
+    function BilgiYardimMetniniWebMethodIleAl(sender, primaryKey) {
+        var dizin = ObjeDizini(sender.id);
+        var lblMetin = getObj(dizin + 'LabelMetin');
+        if (lblMetin.innerText == '') {
+            ShowProgress();
+            PageMethods.BilgiYardimMetniniWebMethodIleAl(primaryKey, sender.id, OnBilgiYardimMetniAlindi, OnBilgiYardimMetniAlinirkenHataOlustu, sender.id);
+        }
+        else
+            return hs.htmlExpand(sender);
+    }
+    
+    function BilgiYardimMetniniWebServiceIleAl(sender, primaryKey, modulAdi) {
+        var dizin = ObjeDizini(sender.id);
+        var lblMetin = getObj(dizin + 'LabelMetin');
+        if (lblMetin.innerText == '') {
+            ShowProgress();
+            BilgiYardimMetni.BilgiYardimMetniniWebServiceIleAl(primaryKey, sender.id, modulAdi, OnBilgiYardimMetniAlindi, OnBilgiYardimMetniAlinirkenHataOlustu, sender.id);
+        }
+        else
+            return hs.htmlExpand(sender);
+    }
+    function OnBilgiYardimMetniAlindi(result, userContext, methodName) {
+        var dizin = ObjeDizini(userContext);
+        var lblMetin = getObj(dizin + 'LabelMetin');
+        lblMetin.innerHTML = result;
+        var imgButton = getObj(userContext);
+        HideProgress();
+        return hs.htmlExpand(imgButton);
+    }
+    function OnBilgiYardimMetniAlinirkenHataOlustu(error, userContext, methodName) {
+        HideProgress();
+        var errMsg = "Bilgi yardım metni alınırken hata oluştu !";
+        var hdnObj = getObj(ObjeDizini(userContext) + 'HiddenFieldHataMesaji');
+        if (hdnObj.value != '') errMsg = hdnObj.value;
+        alert(errMsg);
+    }
+
+    function ShowProgress() {
+        $("#spanBilgiYardimYukleniyorGif").css("display", "block");
+    }
+
+    function HideProgress() {
+        $("#spanBilgiYardimYukleniyorGif").css("display", "none");
+    }
+              </script>
+              <input id="ctl00_ctl00_BilgiYardimAciklama_HiddenFieldHataMesaji" name="ctl00$ctl00$BilgiYardimAciklama$HiddenFieldHataMesaji" type="hidden"/>
+              <span id="spanBilgiYardimYukleniyorGif" style="display: none; text-align: center;
+    position: absolute; margin-top: 2px;">
+               <img alt="Yukleniyor" src="../../App_Themes/Main/Images/Ortak/yukleniyor.gif"/>
+              </span>
+              <div class="highslide-maincontent" style="display: none;">
+              </div>
+             </td>
+             <td style="width: 10px; position: absolute; padding-left: 40px; padding-top: 6px;">
+             </td>
+             <th colspan="3">
+              <div class="MasterBaslikTile">
+               <div class="MasterBaslikSol">
+                <div class="MasterBaslikSag">
+                 Postalanacak evrak listesi
+                </div>
+               </div>
+              </div>
+              <br/>
+             </th>
+            </tr>
+           </tbody>
+          </table>
+          <div>
+           <table class="AnaTablo" width="100%">
+            <tbody>
+             <tr>
+              <td align="left" valign="top" width="15%">
+               <table cellpadding="0" cellspacing="0" style="width: 100%">
+                <tbody>
+                 <tr>
+                  <td>
+                   <a class="EvrakAnasayfa" href="../EvrakAnaSayfa/EvrakAnaSayfa.aspx" id="ctl00_ctl00_cph1_HyperLinkEvrakAnaSayfa">
+                    EVRAK ANASAYFA
+                   </a>
+                  </td>
+                 </tr>
+                 <tr>
+                  <td>
+                   <div class="RadPanelBar RadPanelBar_Web20" id="ctl00_ctl00_cph1_RadPanelBarGelenGiden" style="width:100%;">
+                    <!-- 2009.3.1314.35 -->
+                    <ul class="rpRootGroup">
+                     <li class="rpItem rpFirst">
+                      <a class="rpLink MainItem rpExpandable rpExpanded" href="#" title="İşlem Yapmanızı Bekleyen Evraklar Listesi">
+                       <span class="rpOut">
+                        <span class="rpText">
+                         İşlem Yapacaklarım
+                        </span>
+                       </span>
+                      </a>
+                      <div class="rpSlide" style="display:block;">
+                       <ul class="rpGroup rpLevel1 " style="display: block; width: 100%;">
+                        <li class="rpItem rpFirst">
+                         <a class="rpLink" href="/Evrak/Gelen/IslemiSuren.aspx" title="Gelen Evraklar Listesi">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Gelen Evrak (3)
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem">
+                         <a class="rpLink" href="/Evrak/Giden/YeniHazirlanan.aspx" title="Taslak Evraklarım">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Taslak (0)
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem">
+                         <a class="rpLink" href="/Evrak/Giden/IslemiSuren.aspx" title="Paraf Bekleyen Evraklar Listesi">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Paraf Bekleyen (0)
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem">
+                         <a class="rpLink" href="/Evrak/Giden/ImzaBekleyen.aspx" title="İmza Bekleyen Evraklar Listesi">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            İmza Bekleyen (0)
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem">
+                         <a class="rpLink" href="/Evrak/Giden/SayiAlmisImzaBekleyen.aspx" title="Sayı Almış e-İmza Bekleyen Evraklar Listesi">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            e-İmza Bekleyen (0)
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem rpLast">
+                         <a class="rpLink" href="/Evrak/EvrakKlasor/EvrakKlasorum.aspx" title="Klasörümdeki evrak listesi">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Evrak Klasörüm
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                       </ul>
+                      </div>
+                     </li>
+                     <li class="rpItem">
+                      <a class="rpLink MainItem rpExpandable rpExpanded" href="#" title="Kayıt İşlemleri">
+                       <span class="rpOut">
+                        <span class="rpText">
+                         Kayıt İşlemleri
+                        </span>
+                       </span>
+                      </a>
+                      <div class="rpSlide" style="display:block;">
+                       <ul class="rpGroup rpLevel1 " style="display: block; width: 100%;">
+                        <li class="rpItem rpFirst">
+                         <a class="rpLink" href="/Evrak/XMLEditor/XMLEditor.aspx?Durum=I" title="Evrak Oluştur">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Evrak Oluştur
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem">
+                         <a class="rpLink" href="/Evrak/Kayit/GelenEvrakHizliKayit.aspx?Durum=I" title="Gelen Evrak Hızlı Kayıt">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Gelen Evrak Hızlı Kayıt
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem">
+                         <a class="rpLink" href="/Evrak/Kayit/GelenEvrakKayit.aspx?Durum=I" title="Gelen Evrak Detaylı Kayıt">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Gelen Evrak Detaylı Kayıt
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem rpLast">
+                         <a class="rpLink" href="/Evrak/XMLEditor/XMLEditor.aspx?Durum=Onay" title="Onay Oluştur">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Onay Oluştur
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                       </ul>
+                      </div>
+                     </li>
+                     <li class="rpItem">
+                      <a class="rpLink MainItem rpExpandable" href="#" title="Birim Adına İşlem Yapılacak Evraklar Listesi">
+                       <span class="rpOut">
+                        <span class="rpText">
+                         Birim Evrak İşlemleri
+                        </span>
+                       </span>
+                      </a>
+                      <div class="rpSlide">
+                       <ul class="rpGroup rpLevel1 ">
+                        <li class="rpItem rpFirst">
+                         <a class="rpLink" href="/Evrak/Birim/BirimdeKayitBekleyen.aspx" title="Birimde Kayıt Bekleyen Evraklar Listesi">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Birimde Kayıt Bekleyen (0)
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem">
+                         <a class="rpLink" href="/Evrak/Birim/BirimdeKayitBekleyenDisKurumElektronikGelen.aspx" title="Birimde Dış Kurumdan Elektronik Olarak Gelmiş Kayıt Bekleyen Evraklar Listesi">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Dış Kurumdan Elektronik Gelen (0)
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem">
+                         <a class="rpLink" href="/Evrak/Birim/BirimdeKaydedilmis.aspx" title="Birimde Kaydedilmiş Evraklar Listesi">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Birimde Kaydedilmiş (0)
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem rpLast">
+                         <a class="rpLink" href="/Evrak/Birim/BirimdenTeslimAldigim.aspx" title="Birimden Teslim Aldığım Evraklar Listesi">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Birimden Teslim Aldığım (0)
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                       </ul>
+                      </div>
+                     </li>
+                     <li class="rpItem">
+                      <a class="rpLink MainItem rpExpandable rpExpanded" href="#" title="Postalama İşlemi Yapılacak Evraklar Listesi">
+                       <span class="rpOut">
+                        <span class="rpText">
+                         Postalama İşlemleri
+                        </span>
+                       </span>
+                      </a>
+                      <div class="rpSlide" style="display:block;">
+                       <ul class="rpGroup rpLevel1 " style="display: block; width: 100%;">
+                        <li class="rpItem rpFirst">
+                         <a class="rpLink SelectedCssClass" href="/Evrak/Posta/PostalanmayiBekleyen.aspx" title="Postalanacak Evraklar Listesi">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Postalanacak (2)
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem">
+                         <a class="rpLink" href="/Evrak/Posta/Postaladiklarim.aspx" title="Son On Beş Gün İçerisinde Postaladığım Evraklar Listesi">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Postaladıklarım (0)
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem">
+                         <a class="rpLink" href="/Evrak/Posta/TeslimAldiklarim.aspx" title="Teslim Alınan Postalanacak Evraklar">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Teslim Alınanlar (0)
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem rpLast">
+                         <a class="rpLink" href="/Evrak/Posta/PostaIadeBekleyenEvraklar.aspx" title="İade Edilen Postalanmış Evrak Listesi">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            İade Edilmiş Postalar  (0)
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                       </ul>
+                      </div>
+                     </li>
+                     <li class="rpItem">
+                      <a class="rpLink MainItem rpExpandable" href="#" title="Süreli/Süresiz Kapatma İşlemlerindeki Evrak Listesi">
+                       <span class="rpOut">
+                        <span class="rpText">
+                         Kapatma İşlemleri
+                        </span>
+                       </span>
+                      </a>
+                      <div class="rpSlide">
+                       <ul class="rpGroup rpLevel1 ">
+                        <li class="rpItem rpFirst">
+                         <a class="rpLink" href="/Evrak/EvrakKapatma/KapatmaOnayiOnayaSunduklarimListesi.aspx" title="Kapatma Onayında Süreci Devam Eden Evrak Listesi">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Onaya Sunduklarım (0)
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem">
+                         <a class="rpLink" href="/Evrak/EvrakKapatma/KapatmaOnayiParaflanacakListesi.aspx" title="Kapatma Onayında Paraflanması Bekleyen Evrak Listesi">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Paraflayacaklarım (0)
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem">
+                         <a class="rpLink" href="/Evrak/EvrakKapatma/KapatmaOnayiImzalanacakListesi.aspx" title="Kapatma Onayı Bekleyen Evrak Listesi">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Kapatma Onaylayacaklarım (1)
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem">
+                         <a class="rpLink" href="/Evrak/EvrakKapatma/EvrakDolabinaKaldirdigim.aspx" title="Son On Beş Gün İçerisinde Evrak Dolabına Kaldırdığım Evraklar Listesi">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Evrak Dolabına Kaldırdıklarım
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem rpLast">
+                         <a class="rpLink" href="/Evrak/EvrakKapatma/TakipliEvrakListesi.aspx" title="Süreli Kapatılan Evrak Listesi">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Süreli Kapatılanlar (0)
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                       </ul>
+                      </div>
+                     </li>
+                     <li class="rpItem">
+                      <a class="rpLink MainItem rpExpandable" href="#" title="Daha Önce İşlem Yapmış Olduğunuz Evraklar Listesi">
+                       <span class="rpOut">
+                        <span class="rpText">
+                         İşlem Yaptıklarım
+                        </span>
+                       </span>
+                      </a>
+                      <div class="rpSlide">
+                       <ul class="rpGroup rpLevel1 ">
+                        <li class="rpItem rpFirst">
+                         <a class="rpLink" href="/Evrak/Gelen/TakipEttiklerim.aspx" title="Takip Ettiğim Evraklar Listesi">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Takip Ettiklerim
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem">
+                         <a class="rpLink" href="/Evrak/IslemYaptiklarim/Hazirladiklarim.aspx" title="Son On Beş Gün İçerisinde Hazırladığım Evraklar Listesi">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Hazırladıklarım
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem">
+                         <a class="rpLink" href="/Evrak/IslemYaptiklarim/Parafladiklarim.aspx" title="Son On Beş Gün İçerisinde Parafladığım Evraklar Listesi">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Parafladıklarım
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem">
+                         <a class="rpLink" href="/Evrak/IslemYaptiklarim/Imzaladiklarim.aspx" title="Son On Beş Gün İçerisinde İmzaladığım Evraklar Listesi">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            İmzaladıklarım
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem">
+                         <a class="rpLink" href="/Evrak/IslemYaptiklarim/HavaleEttiklerim.aspx" title="Son On Beş Gün İçerisinde Havale Ettiğim Evraklar Listesi">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Havale Ettiklerim
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem">
+                         <a class="rpLink" href="/Evrak/IslemYaptiklarim/HavaleOnayinaGonderdiklerim.aspx" title="Son On Beş Gün İçerisinde Havale Onayına Gönderdiğım Evraklar Listesi">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Havale Onayına Gönderdiklerim
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem">
+                         <a class="rpLink" href="/Evrak/IslemYaptiklarim/CevapYazdiklarim.aspx" title="Son On Beş Gün İçerisinde Cevap Yazdığım Evraklar Listesi">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Cevap Yazdıklarım
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem rpLast">
+                         <a class="rpLink" href="/Evrak/IslemYaptiklarim/GeriGonderdiklerim.aspx" title="Son On Beş Gün İçerisinde Geri Gönderdiğim Evraklar Listesi">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Geri Gönderdiklerim
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                       </ul>
+                      </div>
+                     </li>
+                     <li class="rpItem rpLast">
+                      <a class="rpLink MainItem rpExpandable rpExpanded" href="#" title="Arama İşlemleri">
+                       <span class="rpOut">
+                        <span class="rpText">
+                         Arama İşlemleri
+                        </span>
+                       </span>
+                      </a>
+                      <div class="rpSlide" style="display:block;">
+                       <ul class="rpGroup rpLevel1 " style="display: block; width: 100%;">
+                        <li class="rpItem rpFirst">
+                         <a class="rpLink" href="/Evrak/Arama/HizliEvrakAra.aspx" title="Evrak Arama">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Evrak Arama
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem">
+                         <a class="rpLink" href="/Evrak/Arama/GelismisEvrakAra.aspx" title="Gelişmiş Evrak Arama">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Gelişmiş Evrak Arama
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem">
+                         <a class="rpLink" href="/Evrak/Arama/ArsivdenEvrakAra.aspx" title="Arşivden Evrak Arama">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Arşivden Evrak Arama
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem">
+                         <a class="rpLink" href="/Evrak/EvrakGorebilmeOzelDurum/OzelDurumTakip.aspx" title="İstisnai durum belirlenerek görebildiğiniz ve engellendiğiniz evrakların takibi">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Evrak Görebilme İstisna Takip
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem">
+                         <a class="rpLink" href="/Evrak/EvrakGorebilmeOzelDurum/EvrakGorebilmeTalep.aspx" title="Birim aramalarından ulaşamadığınız, İdari Birim genelindeki evrakları görebilmek için talepte bulunma">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Evrak Görebilme Talebi
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                        <li class="rpItem rpLast">
+                         <a class="rpLink" href="/Evrak/EvrakArsivGorebilmeTalep/EvrakArsivGorebilmeTakip.aspx" title="Arşivden Evrak Görebilme İstisna Takip">
+                          <span class="rpOut">
+                           <span class="rpText">
+                            Arşiv Evrak Görebilme İstisna Takip
+                           </span>
+                          </span>
+                         </a>
+                        </li>
+                       </ul>
+                      </div>
+                     </li>
+                    </ul>
+                    <input autocomplete="off" id="ctl00_ctl00_cph1_RadPanelBarGelenGiden_ClientState" name="ctl00_ctl00_cph1_RadPanelBarGelenGiden_ClientState" type="hidden" value='{"expandedItems":["0","1","3","6"],"logEntries":[],"selectedItems":["3:0"]}'/>
+                   </div>
+                  </td>
+                 </tr>
+                </tbody>
+               </table>
+              </td>
+              <td align="left" style="width: 85%" valign="top">
+               <table width="100%">
+                <tbody>
+                 <tr>
+                  <td style="height: 299px" valign="top">
+                   <style>
+                    .Bold {
+        font-weight: bold;
+    }
+                   </style>
+                   <script src="/Javascript/Evrak.js" type="text/javascript">
+                   </script>
+                   <script src="/Evrak/XMLEditor/JS/WebEditor.js?v=4.4.26.12122722" type="text/javascript">
+                   </script>
+                   <table class="AnaAltTablo" style="width: 100%">
+                    <tbody>
+                     <tr>
+                      <th align="left" class="ThBaslikRenk1Serbest">
+                       <table cellpadding="0" cellspacing="0" style="border-collapse: collapse">
+                        <tbody>
+                         <tr>
+                          <td style="padding-left: 5px; padding-right: 5px">
+                           <span id="ctl00_ctl00_cph1_cphGelenGiden_EvrakNo" style="color:White;">
+                            Evrak No:
+                           </span>
+                          </td>
+                          <td style="padding-left: 5px; padding-right: 5px">
+                           <link href="/App_Themes/Main/Main.css" rel="stylesheet" type="text/css"/>
+                           <span id="ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_GenelEtiket" style="color:Black;font-family:Segoe UI;font-size:Small;font-weight:normal;font-style:normal;">
+                           </span>
+                           <span id="ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_LabelKalanKarakterSayisi" style="color:Gray;background-color:White;font-size:X-Small;position: absolute;
+    margin-top: -5px; z-index: 99;" title="Kalan karakter sayısı">
+                           </span>
+                           <input id="ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_GenelMetinKutusu" name="ctl00$ctl00$cph1$cphGelenGiden$uciEvrakSayi$GenelMetinKutusu" onblur="SetBluredStyle(this);" onfocus="TextBoxFocused(this);" onkeydown="CheckIfKeyEnter(this,event);" onkeypress="return SetTextFormat(this,event);" onkeyup="return SetYazimSekli(this,event);" style="border-color:LightSteelBlue;border-width:1px;border-style:Solid;font-family:Verdana;font-size:Small;width:100px;" type="text"/>
+                           <span id="ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_LabelOrnek" style="color:Gray;font-size:X-Small;" title="Örnek veri">
+                           </span>
+                           <span id="ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_RegularExpressionValidatorGenelMetinKutusu" style="color:Red;display:none;" title="Girilen değer formata uygun değil ! Örnek Format: 10">
+                            Hatalı Değer!
+                           </span>
+                           <span id="ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_RangeValidatorGenelMetinKutusu" style="color:Red;display:none;" title="Bu alana 0 ile 1000000 arasında bir değer girilmelidir !">
+                            Hatalı Değer!
+                           </span>
+                           <input id="ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_HiddenFieldMaskelemeTipi" name="ctl00$ctl00$cph1$cphGelenGiden$uciEvrakSayi$HiddenFieldMaskelemeTipi" type="hidden" value="1"/>
+                           <input id="ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_HiddenFieldYazimSekli" name="ctl00$ctl00$cph1$cphGelenGiden$uciEvrakSayi$HiddenFieldYazimSekli" type="hidden" value="0"/>
+                           <input id="ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_HiddenFieldFocusBackColor" name="ctl00$ctl00$cph1$cphGelenGiden$uciEvrakSayi$HiddenFieldFocusBackColor" type="hidden"/>
+                           <input id="ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_HiddenFieldFocusForeColor" name="ctl00$ctl00$cph1$cphGelenGiden$uciEvrakSayi$HiddenFieldFocusForeColor" type="hidden"/>
+                           <input id="ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_HiddenFieldBlurBackColor" name="ctl00$ctl00$cph1$cphGelenGiden$uciEvrakSayi$HiddenFieldBlurBackColor" type="hidden"/>
+                           <input id="ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_HiddenFieldBlurForeColor" name="ctl00$ctl00$cph1$cphGelenGiden$uciEvrakSayi$HiddenFieldBlurForeColor" type="hidden"/>
+                           <input id="ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_HiddenFieldText" name="ctl00$ctl00$cph1$cphGelenGiden$uciEvrakSayi$HiddenFieldText" type="hidden"/>
+                           <input id="ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_HiddenFieldAutoPostback" name="ctl00$ctl00$cph1$cphGelenGiden$uciEvrakSayi$HiddenFieldAutoPostback" type="hidden"/>
+                           <input id="ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_HiddenFieldMaxLength" name="ctl00$ctl00$cph1$cphGelenGiden$uciEvrakSayi$HiddenFieldMaxLength" type="hidden"/>
+                           <input id="ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_HiddenFieldMinLength" name="ctl00$ctl00$cph1$cphGelenGiden$uciEvrakSayi$HiddenFieldMinLength" type="hidden"/>
+                           <input id="ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_HiddenFieldMultiLine" name="ctl00$ctl00$cph1$cphGelenGiden$uciEvrakSayi$HiddenFieldMultiLine" type="hidden"/>
+                           <input id="ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_HiddenFieldValidationGroup" name="ctl00$ctl00$cph1$cphGelenGiden$uciEvrakSayi$HiddenFieldValidationGroup" type="hidden"/>
+                           <input id="ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_HiddenFieldUseEnterKeyPressedEventHandler" name="ctl00$ctl00$cph1$cphGelenGiden$uciEvrakSayi$HiddenFieldUseEnterKeyPressedEventHandler" type="hidden" value="0"/>
+                           <input id="ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_HiddenFieldInjectionKontroluYap" name="ctl00$ctl00$cph1$cphGelenGiden$uciEvrakSayi$HiddenFieldInjectionKontroluYap" type="hidden" value="True"/>
+                           <input id="ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_ButtonForPostback" name="ctl00$ctl00$cph1$cphGelenGiden$uciEvrakSayi$ButtonForPostback" onclick='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$cph1$cphGelenGiden$uciEvrakSayi$ButtonForPostback", "", true, "", "", false, false))' style="display: none;" type="submit" value=""/>
+                          </td>
+                          <td style="padding-left: 5px; padding-right: 5px">
+                           <a href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$cph1$cphGelenGiden$linkButtonFiltrele", "", true, "", "", false, true))' id="ctl00_ctl00_cph1_cphGelenGiden_linkButtonFiltrele" jqueryclass="jLinkButton">
+                            Filtrele
+                           </a>
+                           <span style="color: White">
+                            /
+                           </span>
+                           <a href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$cph1$cphGelenGiden$LinkButtonKagitOrtamindaOlmayanlariGetir", "", true, "", "", false, true))' id="ctl00_ctl00_cph1_cphGelenGiden_LinkButtonKagitOrtamindaOlmayanlariGetir" jqueryclass="jLinkButton">
+                            Kağıt Ortamında Gönderilmeyecek Evraklarla Çalış
+                           </a>
+                          </td>
+                         </tr>
+                        </tbody>
+                       </table>
+                       <table cellpadding="0" cellspacing="0" style="border-collapse: collapse">
+                        <tbody>
+                         <tr>
+                          <td style="padding-left: 5px; padding-right: 5px; padding-top: 15px; padding-bottom: 5px">
+                           <span id="ctl00_ctl00_cph1_cphGelenGiden_LabelEvrakGonderenTipi" style="color:White;">
+                            Postalanacak Evraklar:
+                           </span>
+                          </td>
+                          <td style="padding-left: 5px; padding-right: 5px; padding-top: 15px; padding-bottom: 5px">
+                           <table border="0" id="ctl00_ctl00_cph1_cphGelenGiden_RadioButtonListGidecegiYerTipi" style="color:White;">
+                            <tbody>
+                             <tr>
+                              <td>
+                               <input checked="checked" id="ctl00_ctl00_cph1_cphGelenGiden_RadioButtonListGidecegiYerTipi_0" name="ctl00$ctl00$cph1$cphGelenGiden$RadioButtonListGidecegiYerTipi" type="radio" value="0"/>
+                               <label for="ctl00_ctl00_cph1_cphGelenGiden_RadioButtonListGidecegiYerTipi_0">
+                                Hepsi
+                               </label>
+                              </td>
+                              <td>
+                               <input id="ctl00_ctl00_cph1_cphGelenGiden_RadioButtonListGidecegiYerTipi_1" name="ctl00$ctl00$cph1$cphGelenGiden$RadioButtonListGidecegiYerTipi" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ctl00$cph1$cphGelenGiden$RadioButtonListGidecegiYerTipi$1\',\'\')', 0)" type="radio" value="1"/>
+                               <label for="ctl00_ctl00_cph1_cphGelenGiden_RadioButtonListGidecegiYerTipi_1">
+                                İç-Dış Dağıtımlı
+                               </label>
+                              </td>
+                              <td>
+                               <input id="ctl00_ctl00_cph1_cphGelenGiden_RadioButtonListGidecegiYerTipi_2" name="ctl00$ctl00$cph1$cphGelenGiden$RadioButtonListGidecegiYerTipi" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ctl00$cph1$cphGelenGiden$RadioButtonListGidecegiYerTipi$2\',\'\')', 0)" type="radio" value="2"/>
+                               <label for="ctl00_ctl00_cph1_cphGelenGiden_RadioButtonListGidecegiYerTipi_2">
+                                Sadece İç Birimlere
+                               </label>
+                              </td>
+                              <td>
+                               <input id="ctl00_ctl00_cph1_cphGelenGiden_RadioButtonListGidecegiYerTipi_3" name="ctl00$ctl00$cph1$cphGelenGiden$RadioButtonListGidecegiYerTipi" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ctl00$cph1$cphGelenGiden$RadioButtonListGidecegiYerTipi$3\',\'\')', 0)" type="radio" value="3"/>
+                               <label for="ctl00_ctl00_cph1_cphGelenGiden_RadioButtonListGidecegiYerTipi_3">
+                                Sadece Dış Birimlere
+                               </label>
+                              </td>
+                              <td>
+                               <input id="ctl00_ctl00_cph1_cphGelenGiden_RadioButtonListGidecegiYerTipi_4" name="ctl00$ctl00$cph1$cphGelenGiden$RadioButtonListGidecegiYerTipi" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ctl00$cph1$cphGelenGiden$RadioButtonListGidecegiYerTipi$4\',\'\')', 0)" type="radio" value="4"/>
+                               <label for="ctl00_ctl00_cph1_cphGelenGiden_RadioButtonListGidecegiYerTipi_4">
+                                Sadece Entegre Kurumlara
+                               </label>
+                              </td>
+                              <td>
+                               <input id="ctl00_ctl00_cph1_cphGelenGiden_RadioButtonListGidecegiYerTipi_5" name="ctl00$ctl00$cph1$cphGelenGiden$RadioButtonListGidecegiYerTipi" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ctl00$cph1$cphGelenGiden$RadioButtonListGidecegiYerTipi$5\',\'\')', 0)" type="radio" value="5"/>
+                               <label for="ctl00_ctl00_cph1_cphGelenGiden_RadioButtonListGidecegiYerTipi_5">
+                                Sadece KEP Servisine
+                               </label>
+                              </td>
+                             </tr>
+                            </tbody>
+                           </table>
+                          </td>
+                         </tr>
+                        </tbody>
+                       </table>
+                      </th>
+                     </tr>
+                    </tbody>
+                   </table>
+                   <table align="center" cellpadding="0" cellspacing="0" class="AnaTablo" id="ctl00_ctl00_cph1_cphGelenGiden_tblMain" style="display:block" width="100%">
+                    <tbody>
+                     <tr>
+                      <td align="center" style="width: 100%" valign="top">
+                       <table class="AnaAltTablo" style="width: 100%">
+                        <tbody>
+                         <tr>
+                          <td align="center" valign="top">
+                           <table id="ctl00_ctl00_cph1_cphGelenGiden_TablePostalanmayiBekleyenEvraklarGenel" style="width: 100%">
+                            <tbody>
+                             <tr>
+                              <td align="center" style="width: 100%">
+                               <div>
+                                <table border="1" cellpadding="4" cellspacing="0" class="grid1" id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen" rules="all" style="width:100%;border-collapse:collapse;">
+                                 <tbody>
+                                  <tr>
+                                   <th scope="col">
+                                    <table>
+                                     <tbody>
+                                      <tr>
+                                       <td>
+                                        <img id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl02_arrowEvrakNo" src="../../App_Themes/Main/Images/Ikonlar/yukariokth.jpg" style="border-width:0px;"/>
+                                       </td>
+                                       <td>
+                                        <a href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$cph1$cphGelenGiden$grvPostalanmayiBekleyen$ctl02$LinkButtonEvrakNo", "", true, "", "", false, true))' id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl02_LinkButtonEvrakNo" jqueryclass="jLinkButton">
+                                         Evrak No
+                                        </a>
+                                       </td>
+                                      </tr>
+                                     </tbody>
+                                    </table>
+                                   </th>
+                                   <th scope="col">
+                                    <table>
+                                     <tbody>
+                                      <tr>
+                                       <td>
+                                       </td>
+                                       <td>
+                                        <a href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$cph1$cphGelenGiden$grvPostalanmayiBekleyen$ctl02$LinkButtonKonu", "", true, "", "", false, true))' id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl02_LinkButtonKonu" jqueryclass="jLinkButton">
+                                         Konu/Gideceği Yer
+                                        </a>
+                                       </td>
+                                      </tr>
+                                     </tbody>
+                                    </table>
+                                   </th>
+                                   <th scope="col">
+                                    <table>
+                                     <tbody>
+                                      <tr>
+                                       <td>
+                                       </td>
+                                       <td>
+                                        <a href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$cph1$cphGelenGiden$grvPostalanmayiBekleyen$ctl02$LinkButtonHazirlayanTeskilatUzunAd", "", true, "", "", false, true))' id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl02_LinkButtonHazirlayanTeskilatUzunAd" jqueryclass="jLinkButton">
+                                         Birimi
+                                        </a>
+                                       </td>
+                                      </tr>
+                                     </tbody>
+                                    </table>
+                                   </th>
+                                   <th scope="col">
+                                    <table>
+                                     <tbody>
+                                      <tr>
+                                       <td>
+                                       </td>
+                                       <td>
+                                        <a href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$cph1$cphGelenGiden$grvPostalanmayiBekleyen$ctl02$LinkButtonEvrakTar", "", true, "", "", false, true))' id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl02_LinkButtonEvrakTar" jqueryclass="jLinkButton">
+                                         Kişiye Özel Durum/Tarih
+                                        </a>
+                                       </td>
+                                      </tr>
+                                     </tbody>
+                                    </table>
+                                   </th>
+                                   <th scope="col">
+                                    <table>
+                                     <tbody>
+                                      <tr>
+                                       <td>
+                                       </td>
+                                       <td>
+                                        <a href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$cph1$cphGelenGiden$grvPostalanmayiBekleyen$ctl02$LinkButtonBekledigiGun", "", true, "", "", false, true))' id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl02_LinkButtonBekledigiGun" jqueryclass="jLinkButton">
+                                         Beklediği Gün
+                                        </a>
+                                       </td>
+                                      </tr>
+                                     </tbody>
+                                    </table>
+                                   </th>
+                                   <th scope="col">
+                                    <table>
+                                     <tbody>
+                                      <tr>
+                                       <td>
+                                       </td>
+                                       <td>
+                                        <a href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$cph1$cphGelenGiden$grvPostalanmayiBekleyen$ctl02$LinkButtonMiat", "", true, "", "", false, true))' id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl02_LinkButtonMiat" jqueryclass="jLinkButton">
+                                         Miat
+                                        </a>
+                                       </td>
+                                      </tr>
+                                     </tbody>
+                                    </table>
+                                   </th>
+                                   <th scope="col">
+                                    Kağıt Ortamında Gidecek Mi?
+                                   </th>
+                                   <th scope="col">
+                                   </th>
+                                   <th scope="col">
+                                   </th>
+                                  </tr>
+                                  <tr>
+                                   <td align="right" class="columnborder" style="width:75px;">
+                                    <table cellpadding="0" cellspacing="0" style="border-collapse: collapse; width: 100%">
+                                     <tbody>
+                                      <tr>
+                                       <td style="width: 33%; text-align: left">
+                                        <img id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl03_imageImzalimi" src="../../App_Themes/Main/Images/Ikonlar/eimzaikon.jpg" style="border-width:0px;" title="Bu evrak sayısal imzalıdır."/>
+                                       </td>
+                                       <td style="width: 33%; text-align: left">
+                                       </td>
+                                       <td style="width: 33%; text-align: right">
+                                        <span id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl03_LabelEvrakNo" style="color:Red;font-size:10pt;font-weight:bold;">
+                                         114183
+                                        </span>
+                                       </td>
+                                      </tr>
+                                     </tbody>
+                                    </table>
+                                   </td>
+                                   <td class="columnborder">
+                                    <table cellpadding="0" cellspacing="0" width="100%">
+                                     <tbody>
+                                      <tr>
+                                       <td align="left">
+                                        <span id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl03_lblKonu" maxlength="200" title="NES Başvuru Formları">
+                                         NES Başvuru Formları
+                                        </span>
+                                       </td>
+                                      </tr>
+                                      <tr>
+                                       <td align="left">
+                                        <span id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl03_lblGidecegiYer" maxlength="200" title="İçişleri&amp;nbsp;Bakanlığına&amp;nbsp;&lt;br&gt;(Bilgi&amp;nbsp;İşlem&amp;nbsp;Dairesi&amp;nbsp;Başkanlığı), Tübitak&amp;nbsp;Yerleşkesi&amp;nbsp;Kamu&amp;nbsp;Sertifikasyon&amp;nbsp;Merkezi&amp;nbsp;Yeni&amp;nbsp;İdari&amp;nbsp;Bina&amp;nbsp;P.k.&amp;nbsp;74&amp;nbsp;Gebze&amp;nbsp;41470&amp;nbsp;Kocaeli">
+                                         İçişleri Bakanlığına
+                                         <br/>
+                                         (Bilgi İşlem Dairesi Başkanlığı), Tübitak Yerleşkesi Kamu Sertifikasyon Merkezi Yeni İdari Bina P.k. 74 Gebze 41470 Kocaeli
+                                        </span>
+                                       </td>
+                                      </tr>
+                                     </tbody>
+                                    </table>
+                                   </td>
+                                   <td class="columnborder">
+                                    <table cellpadding="0" cellspacing="0" width="100%">
+                                     <tbody>
+                                      <tr>
+                                       <td align="left">
+                                        İstanbul Valiliği İstanbul Bilgi İşlem Şube Müdürlüğü
+                                       </td>
+                                      </tr>
+                                     </tbody>
+                                    </table>
+                                   </td>
+                                   <td class="columnborder">
+                                    <table cellpadding="0" cellspacing="0" width="100%">
+                                     <tbody>
+                                      <tr>
+                                       <td align="center" style="color: Red">
+                                        <span id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl03_labelKisiyeOzelUzunAd">
+                                         Dağıtımlı
+                                        </span>
+                                       </td>
+                                      </tr>
+                                      <tr>
+                                       <td align="center">
+                                        11.11.2019
+                                       </td>
+                                      </tr>
+                                     </tbody>
+                                    </table>
+                                   </td>
+                                   <td align="center" class="columnborder">
+                                    <span id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl03_LabelBekledigiGun">
+                                     2
+                                    </span>
+                                   </td>
+                                   <td align="center" class="columnborder">
+                                    <table cellpadding="0" cellspacing="0" width="100%">
+                                     <tbody>
+                                      <tr>
+                                       <td align="center">
+                                        <span id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl03_Label3">
+                                         0
+                                        </span>
+                                       </td>
+                                      </tr>
+                                      <tr>
+                                       <td align="center" style="color: Red">
+                                        <span id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl03_lblGizlilikTipAdi">
+                                        </span>
+                                       </td>
+                                      </tr>
+                                     </tbody>
+                                    </table>
+                                   </td>
+                                   <td align="center" class="columnborder" style="color:Red;">
+                                    Evet
+                                   </td>
+                                   <td class="columnborder" valign="top">
+                                    <a href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$cph1$cphGelenGiden$grvPostalanmayiBekleyen$ctl03$lnkDetay", "", true, "", "", false, true))' id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl03_lnkDetay" jqueryclass="jLinkButton">
+                                     Detay
+                                    </a>
+                                   </td>
+                                   <td class="columnborder" style="width:100px;" valign="top">
+                                    <a href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$cph1$cphGelenGiden$grvPostalanmayiBekleyen$ctl03$lnkHizliPostala", "", true, "", "", false, true))' id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl03_lnkHizliPostala" jqueryclass="jLinkButton">
+                                     Teslim Al ve Postala
+                                    </a>
+                                   </td>
+                                  </tr>
+                                  <tr class="alternatifrow">
+                                   <td align="right" class="columnborder" style="width:75px;">
+                                    <table cellpadding="0" cellspacing="0" style="border-collapse: collapse; width: 100%">
+                                     <tbody>
+                                      <tr>
+                                       <td style="width: 33%; text-align: left">
+                                        <img id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl04_imageImzalimi" src="../../App_Themes/Main/Images/Ikonlar/eimzaikon.jpg" style="border-width:0px;" title="Bu evrak sayısal imzalıdır."/>
+                                       </td>
+                                       <td style="width: 33%; text-align: left">
+                                       </td>
+                                       <td style="width: 33%; text-align: right">
+                                        <span id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl04_LabelEvrakNo" style="color:Red;font-size:10pt;font-weight:bold;">
+                                         114187
+                                        </span>
+                                       </td>
+                                      </tr>
+                                     </tbody>
+                                    </table>
+                                   </td>
+                                   <td class="columnborder">
+                                    <table cellpadding="0" cellspacing="0" width="100%">
+                                     <tbody>
+                                      <tr>
+                                       <td align="left">
+                                        <span id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl04_lblKonu" maxlength="200" title="Suna DEMİRCİ ve Erol Akdeniz' İn NES Başvuru Formu">
+                                         Suna DEMİRCİ ve Erol Akdeniz' İn NES Başvuru Formu
+                                        </span>
+                                       </td>
+                                      </tr>
+                                      <tr>
+                                       <td align="left">
+                                        <span id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl04_lblGidecegiYer" maxlength="200" title="İçişleri&amp;nbsp;Bakanlığına&amp;nbsp;&lt;br&gt;(Bilgi&amp;nbsp;İşlem&amp;nbsp;Dairesi&amp;nbsp;Başkanlığı), Tübitak&amp;nbsp;Yerleşkesi&amp;nbsp;&lt;br&gt;kamu&amp;nbsp;Sertifikasyon&amp;nbsp;Merkezi&amp;nbsp;&lt;br&gt;yeni&amp;nbsp;İdari&amp;nbsp;Bina&amp;nbsp;Pk&amp;nbsp;74&amp;nbsp;&lt;br&gt;gebze&amp;nbsp;41470&amp;nbsp;Kocaeli">
+                                         İçişleri Bakanlığına
+                                         <br/>
+                                         (Bilgi İşlem Dairesi Başkanlığı), Tübitak Yerleşkesi
+                                         <br/>
+                                         kamu Sertifikasyon Merkezi
+                                         <br/>
+                                         yeni İdari Bina Pk 74
+                                         <br/>
+                                         gebze 41470 Kocaeli
+                                        </span>
+                                       </td>
+                                      </tr>
+                                     </tbody>
+                                    </table>
+                                   </td>
+                                   <td class="columnborder">
+                                    <table cellpadding="0" cellspacing="0" width="100%">
+                                     <tbody>
+                                      <tr>
+                                       <td align="left">
+                                        İstanbul Valiliği İstanbul Bilgi İşlem Şube Müdürlüğü
+                                       </td>
+                                      </tr>
+                                     </tbody>
+                                    </table>
+                                   </td>
+                                   <td class="columnborder">
+                                    <table cellpadding="0" cellspacing="0" width="100%">
+                                     <tbody>
+                                      <tr>
+                                       <td align="center" style="color: Red">
+                                        <span id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl04_labelKisiyeOzelUzunAd">
+                                         Dağıtımlı
+                                        </span>
+                                       </td>
+                                      </tr>
+                                      <tr>
+                                       <td align="center">
+                                        11.11.2019
+                                       </td>
+                                      </tr>
+                                     </tbody>
+                                    </table>
+                                   </td>
+                                   <td align="center" class="columnborder">
+                                    <span id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl04_LabelBekledigiGun">
+                                     2
+                                    </span>
+                                   </td>
+                                   <td align="center" class="columnborder">
+                                    <table cellpadding="0" cellspacing="0" width="100%">
+                                     <tbody>
+                                      <tr>
+                                       <td align="center">
+                                        <span id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl04_Label3">
+                                         0
+                                        </span>
+                                       </td>
+                                      </tr>
+                                      <tr>
+                                       <td align="center" style="color: Red">
+                                        <span id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl04_lblGizlilikTipAdi">
+                                        </span>
+                                       </td>
+                                      </tr>
+                                     </tbody>
+                                    </table>
+                                   </td>
+                                   <td align="center" class="columnborder" style="color:Red;">
+                                    Evet
+                                   </td>
+                                   <td class="columnborder" valign="top">
+                                    <a href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$cph1$cphGelenGiden$grvPostalanmayiBekleyen$ctl04$lnkDetay", "", true, "", "", false, true))' id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl04_lnkDetay" jqueryclass="jLinkButton">
+                                     Detay
+                                    </a>
+                                   </td>
+                                   <td class="columnborder" style="width:100px;" valign="top">
+                                    <a href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$cph1$cphGelenGiden$grvPostalanmayiBekleyen$ctl04$lnkHizliPostala", "", true, "", "", false, true))' id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen_ctl04_lnkHizliPostala" jqueryclass="jLinkButton">
+                                     Teslim Al ve Postala
+                                    </a>
+                                   </td>
+                                  </tr>
+                                 </tbody>
+                                </table>
+                               </div>
+                              </td>
+                             </tr>
+                             <tr>
+                              <td>
+                               <input id="ctl00_ctl00_cph1_cphGelenGiden_LinkButtonTopluPostala_UcImgButtonOnay" name="ctl00$ctl00$cph1$cphGelenGiden$LinkButtonTopluPostala$UcImgButtonOnay" onclick='return CheckValidationUcImgButtonOnay(this);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$cph1$cphGelenGiden$LinkButtonTopluPostala$UcImgButtonOnay", "", true, "", "", false, false))' src="../../App_Themes/Main/Images/Buttons/btnsecilievraklaripostala.jpg" style="border-width:0px;display:none;" title="Seçtiğiniz kağıt ortamında gitmeyecek evrakları postalar" type="image"/>
+                               <input id="ctl00_ctl00_cph1_cphGelenGiden_LinkButtonTopluPostala_ButtonHidden" name="ctl00$ctl00$cph1$cphGelenGiden$LinkButtonTopluPostala$ButtonHidden" onclick="null" style="display: none;" type="submit" value=""/>
+                               <input id="ctl00_ctl00_cph1_cphGelenGiden_LinkButtonTopluPostala_HiddenFieldImgBtnOnayVldgrp" name="ctl00$ctl00$cph1$cphGelenGiden$LinkButtonTopluPostala$HiddenFieldImgBtnOnayVldgrp" type="hidden"/>
+                               <input id="ctl00_ctl00_cph1_cphGelenGiden_LinkButtonTopluPostala_HiddenFieldImgBtnOnayCausVld" name="ctl00$ctl00$cph1$cphGelenGiden$LinkButtonTopluPostala$HiddenFieldImgBtnOnayCausVld" type="hidden"/>
+                               <script type="text/javascript">
+                                var submitcount = 0;
+
+    function GetHiddenFieldsAsObjectUcImgButtonOnay(sender, hdnFld) {
+        var sndrID = sender.id;
+        var parca = sndrID.split('_');
+        var kntrl = parca[parca.length - 1];
+        var dizin = sndrID.replace(kntrl, "");
+        var hdnName = dizin + hdnFld;
+        var hdnObj = document.getElementsByName(hdnName)[0];
+        return hdnObj;
+    }
+    function CheckValidationUcImgButtonOnay(sender) {
+        var objVldGrp = GetHiddenFieldsAsObjectUcImgButtonOnay(sender, 'HiddenFieldImgBtnOnayVldgrp');
+        var objCausVld = GetHiddenFieldsAsObjectUcImgButtonOnay(sender, 'HiddenFieldImgBtnOnayCausVld');
+
+        if (objVldGrp.value != '') return DisableSubmitUcImgButtonOnayWithVldGrp(sender, objVldGrp.value);
+        if (objCausVld.value == 'True' || objCausVld.value == '') return DisableSubmitUcImgButtonOnay(sender);
+        return CheckSubmitUcImgButtonOnay(sender);
+    }
+
+    function DisableSubmitUcImgButtonOnayWithVldGrp(sender, vldGrpName) {
+
+        if (typeof (Page_ClientValidate) == 'function') {
+            if (Page_ClientValidate(vldGrpName) == true) {
+                return CheckSubmitUcImgButtonOnay(sender);
+            }
+            else {
+                return false;
+            }
+        }
+        else {
+            return CheckSubmitUcImgButtonOnay(sender);
+        }
+    }
+    
+    function DisableSubmitUcImgButtonOnay(sender) {        
+        if (typeof (Page_ClientValidate) == 'function') {
+            if (Page_ClientValidate() == true) {
+                return CheckSubmitUcImgButtonOnay(sender);
+            }
+            else {
+                return false;
+            }
+        }
+        else {
+            return CheckSubmitUcImgButtonOnay(sender);
+        }
+    }
+
+    function CheckSubmitUcImgButtonOnay(sender) {
+        var ImageConfirmButton = $find('ImageConfirmButton');
+
+        if (submitcount > 0) {
+            alert('İşleminiz yapılıyor, lütfen bekleyiniz !');
+            return false;
+        }
+
+        if (ImageConfirmButton._displayConfirmDialog()) {
+            if (submitcount == 0) {
+                submitcount++;
+                return true;
+            }
+        }
+        else {
+            return false;
+        }
+    }
+
+    function LoadAfterAjaxHandler() {
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(EndRequestHandler);
+    }
+
+    function EndRequestHandler(sender, eArgs) {
+        if (eArgs.get_error() == null) {
+            submitcount = 0;
+        }
+    }
+                               </script>
+                              </td>
+                             </tr>
+                            </tbody>
+                           </table>
+                          </td>
+                         </tr>
+                        </tbody>
+                       </table>
+                      </td>
+                     </tr>
+                    </tbody>
+                   </table>
+                  </td>
+                 </tr>
+                </tbody>
+               </table>
+              </td>
+             </tr>
+            </tbody>
+           </table>
+           <link href="/App_Themes/Main/Main.css" rel="stylesheet" type="text/css"/>
+           <script language="javascript" src="/Javascript/UserControlTextBox.js" type="text/javascript">
+           </script>
+           <script language="javascript" type="text/javascript">
+            function MsgBoxKapatModal(sender) {
+        var objDivModal = getObj("ctl00_ctl00_cph1_MessageBoxModalInstance_DivMessageBoxModal");
+        objDivModal.style.display = 'none';
+        return false;
+    }
+
+    $(document).ready(function () { ResizeDivMsgBoxModal(); })
+    window.onresize = function () { ResizeDivMsgBoxModal(); }
+    function ResizeDivMsgBoxModal() {
+        var objDivMsgBoxModal = getObj("ctl00_ctl00_cph1_MessageBoxModalInstance_DivMessageBoxModal");
+        if (objDivMsgBoxModal.style.display == 'block') {
+            objDivMsgBoxModal.style.width = GetPageWidth();
+            objDivMsgBoxModal.style.height = GetPageHeight();
+        }
+    }
+   
+    /* Iframe Shim (Iframe perdeleme) - START */
+    /* Gönderilen objenin boyutlarında ve koordinatlarında bir Iframe oluşturup, ondan sonra 
+    parametre olarak gönderilen objeyi Iframe in üzerinde görüntülenecek şekilde yerleştirir. */
+    function IframeShim(objID) {
+        if ($("#" + objID).length) {
+            var obj = $("#" + objID);
+            var w = obj.width();
+            var h = obj.height();
+            var l = obj.offset().left;
+            var t = obj.offset().top;
+            obj.css("position", "absolute");
+            obj.css("left", l + "px");
+            obj.css("top", t + "px");
+            obj.css("z-index", "1");
+            $("<iframe style='position:absolute; z-index:0' frameborder='0' scrolling='no'></iframe>").css("left", l + "px").css("top", t + "px").css("width", w + "px").css("height", h + "px").insertAfter(obj);
+        }
+    }
+    /* Iframe Shim (Iframe perdeleme) - END */
+           </script>
+           <div id="ctl00_ctl00_cph1_MessageBoxModalInstance_DivMessageBoxModal" style="height: 100%; position: fixed; top: 291px; left: 391px; width: 100%; z-index: 97; display: none;">
+            <table style="height: 100%; width: 100%; opacity: 0.5; filter: alpha(opacity=50); background-color: #000;">
+             <tbody>
+              <tr align="center">
+               <td>
+                <table id="TableMessageBoxModal">
+                 <tbody>
+                  <tr>
+                   <td>
+                    <div id="ctl00_ctl00_cph1_MessageBoxModalInstance_PanelMsgBoxModal">
+                     <table border="0" cellpadding="0" cellspacing="0" class="uyarimesajlari">
+                      <tbody>
+                       <tr>
+                        <td class="mesajkutusubaslik">
+                         <div class="mesajkutusubasliksol">
+                          <div class="mesajkutusubasliksolsag">
+                           <div>
+                            <span id="ctl00_ctl00_cph1_MessageBoxModalInstance_LabelBaslik">
+                            </span>
+                           </div>
+                           <div style="text-align:right; margin-top:-15px;margin-right:3px;">
+                            <input id="ctl00_ctl00_cph1_MessageBoxModalInstance_ButtonBasariClose" name="ctl00$ctl00$cph1$MessageBoxModalInstance$ButtonBasariClose" onclick="return MsgBoxKapatModal(this);" src="../../App_Themes/Main/Images/Ikonlar/kapat.gif" style="border-width:0px;" title="Kapat" type="image"/>
+                           </div>
+                          </div>
+                         </div>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td id="ctl00_ctl00_cph1_MessageBoxModalInstance_tdMesaj">
+                         <table align="center" border="0" cellpadding="0" cellspacing="0">
+                          <tbody>
+                           <tr>
+                            <td>
+                             <div id="ctl00_ctl00_cph1_MessageBoxModalInstance_PanelMesaj" style="height:15px;overflow:auto;padding-right: 10px;">
+                              <span id="ctl00_ctl00_cph1_MessageBoxModalInstance_LabelMesaj">
+                              </span>
+                             </div>
+                            </td>
+                           </tr>
+                           <tr>
+                            <td align="center" style="padding-right:20px;">
+                             <br/>
+                             <input id="ctl00_ctl00_cph1_MessageBoxModalInstance_ButtonTamam" name="ctl00$ctl00$cph1$MessageBoxModalInstance$ButtonTamam" onclick="return MsgBoxKapatModal(this);" type="submit" value="Tamam"/>
+                            </td>
+                           </tr>
+                          </tbody>
+                         </table>
+                        </td>
+                       </tr>
+                      </tbody>
+                     </table>
+                    </div>
+                   </td>
+                  </tr>
+                 </tbody>
+                </table>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </div>
+          </div>
+         </td>
+        </tr>
+        <tr>
+         <td>
+         </td>
+         <td style="width: 100%; text-align: center;">
+          <div>
+          </div>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div id="divBosluk" style="height: 50px; width: 100%;">
+    </div>
+    <div id="divFooter" style="background: url(/App_Themes/Main/Images/Master/2011/masterfooterbg.jpg) #273649 repeat-x; color: White; width: 100%; height: 50px; text-align: center; font-family: Segoe UI; position: fixed; bottom: 0;">
+     <div style="width: 100%;">
+      <center>
+       <link href="/App_Themes/Main/Main.css" rel="stylesheet" type="text/css"/>
+       <table style="color: White; font-size: smaller;">
+        <tbody>
+         <tr>
+          <td>
+           <a class="FooterMenuCss" href="javascript:CreateWnd('/Anasayfa/MulkiIdariBolumleri.aspx?popup=Qo1B7YPyD6nGU6iDqj|deg==', 800, 600, true);" id="ctl00_ctl00_FooterMenuControl1_ButtonMulkiIdari">
+            Mülki İdare Birimleri
+           </a>
+           |
+           <a class="FooterMenuCss" href="javascript:CreateWnd('/Anasayfa/YazismaKodlari.aspx?popup=Qo1B7YPyD6nGU6iDqj|deg==', 800, 600, true);" id="ctl00_ctl00_FooterMenuControl1_ButtonHaberlesmeKodlari">
+            Haberleşme Kodları
+           </a>
+           |
+           <a class="FooterMenuCss" href="javascript:CreateWnd('/Anasayfa/BirimTelefonDefteri/BirimTelefonDefteriArama.aspx?popup=Qo1B7YPyD6nGU6iDqj|deg==', 950, 600, true);" id="ctl00_ctl00_FooterMenuControl1_ButtonTelefonRehberi">
+            Telefon Rehberi
+           </a>
+           |
+           <a class="FooterMenuCss" href="javascript:CreateWnd('https://www.e-icisleri.gov.tr/IBYetki/BirimYetkiDurumuPopUp.aspx', 1024, 600, true);" id="ctl00_ctl00_FooterMenuControl1_ButtonBirimSecimi">
+            Birim Seçimi
+           </a>
+           |
+           <a class="FooterMenuCss" href="javascript:CreateWnd('/Iletisim.aspx?popup=Qo1B7YPyD6nGU6iDqj|deg==', 800, 600, true);" id="ctl00_ctl00_FooterMenuControl1_ButtonIletisim" style="color:AliceBlue;">
+            İletişim
+           </a>
+           |
+          </td>
+          <td>
+           <img alt="Dipnot Sakla" id="imgHideFooter" onclick="HideMainMasterFooter();" src="../../App_Themes/Main/Images/Genel/crossblue.ico" style="cursor: pointer; padding-top: 3px;"/>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </center>
+     </div>
+     <div style="height: 5px;">
+     </div>
+     <div style="width: 100%;">
+      <font style="color: #3caadd; font-weight: bold; font-size: small; font-stretch: wider;">
+       T.C. İçişleri Bakanlığı
+      </font>
+      - Bilgi İşlem Dairesi Başkanlığı - © 2011
+                  -
+      <font style="color: #a4cbf6;">
+       Sürüm:
+                    4.4.26.12122722
+      </font>
+     </div>
+    </div>
+   </div>
+   <input id="ctl00_ctl00_hdnEvrakYetkiDurum" name="ctl00$ctl00$hdnEvrakYetkiDurum" type="hidden"/>
+   <div id="ctl00_ctl00_SayiKontrolPanel">
+    <a href='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$ButonSayilariKontrolEt", "", true, "", "", false, true))' id="ctl00_ctl00_ButonSayilariKontrolEt" jqueryclass="jLinkButton">
+    </a>
+    <input id="ctl00_ctl00_HiddenFieldDegisiklikOlduMu" name="ctl00$ctl00$HiddenFieldDegisiklikOlduMu" type="hidden"/>
+    <input id="ctl00_ctl00_HiddenFieldUyariGoruntulemeSuresi" name="ctl00$ctl00$HiddenFieldUyariGoruntulemeSuresi" type="hidden"/>
+    <input id="ctl00_ctl00_HiddenFieldSonucHtml" name="ctl00$ctl00$HiddenFieldSonucHtml" type="hidden"/>
+    <input id="ctl00_ctl00_HiddenFieldTimerTimeout" name="ctl00$ctl00$HiddenFieldTimerTimeout" type="hidden"/>
+   </div>
+   <div id="divMesajGetir" style="display: none; width: 452px; height: 102px;">
+   </div>
+   <input id="ctl00_ctl00_HiddenFieldOnEk" name="ctl00$ctl00$HiddenFieldOnEk" type="hidden" value="ctl00_"/>
+   <input id="ctl00_ctl00_HiddenFieldInnerHtml" name="ctl00$ctl00$HiddenFieldInnerHtml" type="hidden"/>
+   <input id="ctl00_ctl00_HiddenFieldPageOrientation" name="ctl00$ctl00$HiddenFieldPageOrientation" type="hidden"/>
+   <input id="ctl00_ctl00_HiddenFieldSetBodyMinSize" name="ctl00$ctl00$HiddenFieldSetBodyMinSize" type="hidden"/>
+   <input id="ctl00_ctl00_HiddenFieldResizeScreenWidth" name="ctl00$ctl00$HiddenFieldResizeScreenWidth" type="hidden"/>
+   <script type="text/javascript">
+    //<![CDATA[
+var Page_Validators =  new Array(document.getElementById("ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_RegularExpressionValidatorGenelMetinKutusu"), document.getElementById("ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_RangeValidatorGenelMetinKutusu"));
+//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+var ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_RegularExpressionValidatorGenelMetinKutusu = document.all ? document.all["ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_RegularExpressionValidatorGenelMetinKutusu"] : document.getElementById("ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_RegularExpressionValidatorGenelMetinKutusu");
+ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_RegularExpressionValidatorGenelMetinKutusu.controltovalidate = "ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_GenelMetinKutusu";
+ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_RegularExpressionValidatorGenelMetinKutusu.errormessage = "Girilen değer formata uygun değil !";
+ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_RegularExpressionValidatorGenelMetinKutusu.display = "Dynamic";
+ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_RegularExpressionValidatorGenelMetinKutusu.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_RegularExpressionValidatorGenelMetinKutusu.validationexpression = "(\\d+)(\\ )?";
+var ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_RangeValidatorGenelMetinKutusu = document.all ? document.all["ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_RangeValidatorGenelMetinKutusu"] : document.getElementById("ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_RangeValidatorGenelMetinKutusu");
+ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_RangeValidatorGenelMetinKutusu.controltovalidate = "ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_GenelMetinKutusu";
+ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_RangeValidatorGenelMetinKutusu.errormessage = "Bu alana 0 ile 1000000 arasında bir değer girilmelidir !";
+ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_RangeValidatorGenelMetinKutusu.display = "Dynamic";
+ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_RangeValidatorGenelMetinKutusu.type = "Integer";
+ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_RangeValidatorGenelMetinKutusu.evaluationfunction = "RangeValidatorEvaluateIsValid";
+ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_RangeValidatorGenelMetinKutusu.maximumvalue = "1000000";
+ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_RangeValidatorGenelMetinKutusu.minimumvalue = "0";
+//]]>
+   </script>
+   <script type="text/javascript">
+    //<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":"ctl00_ctl00_DropDownSayfaAra_UpdatePanelGenelDropDown","displayAfter":50,"dynamicLayout":true}, null, null, $get("ctl00_ctl00_DropDownSayfaAra_UpdateProgressGenelDropDown"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.AlwaysVisibleControlBehavior, {"HorizontalSide":1,"id":"ctl00_ctl00_MasterHeader_AlwaysVisibleControlExtender"}, null, null, $get("ctl00_ctl00_divMasterHeader"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.AlwaysVisibleControlBehavior, {"HorizontalSide":1,"VerticalSide":1,"id":"ctl00_ctl00_PanelProgressMain_AlwaysVisibleControlExtender"}, null, null, $get("ctl00_ctl00_PanelProgressMain"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":10,"dynamicLayout":true}, null, null, $get("ctl00_ctl00_UpdateProgressMain"));
+});
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadPanelBar, {"_skin":"Web20","clientStateFieldID":"ctl00_ctl00_cph1_RadPanelBarGelenGiden_ClientState","collapseAnimation":"{\"type\":0,\"duration\":100}","expandAnimation":"{\"duration\":450}","itemData":[{"items":[{"postBack":0,"value":"101"},{"postBack":0,"value":"106"},{"postBack":0,"value":"102"},{"postBack":0,"value":"103"},{"postBack":0,"value":"104"},{"postBack":0,"value":"108"}],"postBack":0,"value":"1","expanded":true,"cssClass":"MainItem"},{"items":[{"postBack":0,"value":"602"},{"postBack":0,"value":"601"},{"postBack":0,"value":"601"},{"postBack":0,"value":"603"}],"postBack":0,"value":"6","expanded":true,"cssClass":"MainItem"},{"items":[{"postBack":0,"value":"202"},{"postBack":0,"value":"205"},{"postBack":0,"value":"203"},{"postBack":0,"value":"201"}],"postBack":0,"value":"2","cssClass":"MainItem"},{"items":[{"postBack":0,"value":"301","selected":true,"selectedCssClass":"SelectedCssClass"},{"postBack":0,"value":"302"},{"postBack":0,"value":"304"},{"postBack":0,"value":"303"}],"postBack":0,"value":"3","expanded":true,"cssClass":"MainItem"},{"items":[{"postBack":0,"value":"703"},{"postBack":0,"value":"702"},{"postBack":0,"value":"701"},{"postBack":0,"value":"704"},{"postBack":0,"value":"705"}],"postBack":0,"value":"7","cssClass":"MainItem"},{"items":[{"postBack":0,"value":"404"},{"postBack":0,"value":"405"},{"postBack":0,"value":"401"},{"postBack":0,"value":"402"},{"postBack":0,"value":"403"},{"postBack":0,"value":"408"},{"postBack":0,"value":"406"},{"postBack":0,"value":"410"}],"postBack":0,"value":"4","cssClass":"MainItem"},{"items":[{"postBack":0,"value":"501"},{"postBack":0,"value":"502"},{"postBack":0,"value":"503"},{"postBack":0,"value":"505"},{"postBack":0,"value":"506"},{"postBack":0,"value":"507"}],"postBack":0,"value":"5","expanded":true,"cssClass":"MainItem"}]}, null, null, $get("ctl00_ctl00_cph1_RadPanelBarGelenGiden"));
+});
+
+document.getElementById('ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_RegularExpressionValidatorGenelMetinKutusu').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_RegularExpressionValidatorGenelMetinKutusu'));
+}
+
+document.getElementById('ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_RangeValidatorGenelMetinKutusu').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ctl00_cph1_cphGelenGiden_uciEvrakSayi_RangeValidatorGenelMetinKutusu'));
+}
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.ConfirmButtonBehavior, {"ConfirmOnFormSubmit":true,"ConfirmText":"Seçilen evrakları postalamak istiyor musunuz?","id":"ImageConfirmButton"}, null, null, $get("ctl00_ctl00_cph1_cphGelenGiden_LinkButtonTopluPostala_ButtonHidden"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.AlwaysVisibleControlBehavior, {"HorizontalSide":1,"VerticalSide":1,"id":"ctl00_ctl00_cph1_MessageBoxModalInstance_MsgBoxModal_AlwaysVisibleControlExtender"}, null, null, $get("ctl00_ctl00_cph1_MessageBoxModalInstance_DivMessageBoxModal"));
+});
+Sys.Application.add_init(function() {
+    $create(AjaxControlToolkit.ModalPopupBehavior, {"BackgroundCssClass":"ModalPopupBackground","CancelControlID":"ctl00_ctl00_ImageButtonKapatSikKullanilanlar","DropShadow":true,"PopupControlID":"ctl00_ctl00_PanelSikKullanilanlar","dynamicServicePath":"/Evrak/Posta/PostalanmayiBekleyen.aspx","id":"ctl00_ctl00_ModalPopupExtenderHyperLinkSikKullanilanlar"}, null, null, $get("ctl00_ctl00_HyperLinkSikKullanilanlar"));
+});
+//]]>
+   </script>
+   <div id="ctl00_ctl00_ModalPopupExtenderHyperLinkSikKullanilanlar_foregroundElement" style="display: none; position: fixed; z-index: 100001;">
+    <div id="ctl00_ctl00_PanelSikKullanilanlar" style="background-color:AliceBlue;border-color:RoyalBlue;border-width:2px;border-style:Solid;width:500px;">
+     <table class="AnaTablo" style="width: 100%">
+      <tbody>
+       <tr>
+        <td style="text-align: right; background-color: #99b4d1;">
+         <input id="ctl00_ctl00_ImageButtonKapatSikKullanilanlar" name="ctl00$ctl00$ImageButtonKapatSikKullanilanlar" onclick='javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions("ctl00$ctl00$ImageButtonKapatSikKullanilanlar", "", true, "", "", false, false))' src="../../Resim/Ortak/kapat.gif" style="border-width:0px;" title="Kapat" type="image"/>
+        </td>
+       </tr>
+       <tr>
+        <td align="left" style="font-size: medium; font-weight: bold; color: Black;">
+         Sık Kullanılan Sayfalarım
+         <hr style="height: 1px; color: Navy"/>
+        </td>
+       </tr>
+       <tr>
+        <td align="center" style="width: 80%;">
+         <span id="ctl00_ctl00_LabelSikKullanilanlar" style="background-color:White;">
+          Sık kullanılan sayfanız bulunmamaktadır
+         </span>
+         <hr style="height: 1px; color: Navy"/>
+        </td>
+       </tr>
+       <tr>
+        <td align="right" style="padding-right: 5px; padding-bottom: 5px;">
+         <img align="absmiddle" id="ctl00_ctl00_ImageSikKullanilanlarDuzenle" src="../../App_Themes/Main/Images/Genel/list_bullets.ico" style="border-width:0px;cursor: pointer;" title="Sık kullanılan sayfalarınızı düzenlemek için tıklayınız"/>
+         <a class="LinkHover" id="ctl00_ctl00_HyperLinkSikKullanilanlarDuzenle" title="Sık kullanılan sayfalarınızı düzenlemek için tıklayınız">
+          Düzenle
+         </a>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+   </div>
+   <div class="ModalPopupBackground" id="ctl00_ctl00_ModalPopupExtenderHyperLinkSikKullanilanlar_backgroundElement" style="display: none; position: fixed; left: 0px; top: 0px; z-index: 10000;">
+   </div>
+  </form>
+  <script type="text/javascript">
+   $(document).ready(function () {
+            document.getElementById("aspnetForm").disabled = false;
+            RunOtherNecessaryJsFunctionsOnLoad();
+            SetPageSize();
+        })
+        $(document).mousemove(function () {
+            window.status = 'e-icisleri';
+            return true;
+        });
+
+        function RunOtherNecessaryJsFunctionsOnLoad() {
+            /* Bu JS fonksiyonu istemci tarafında gösterilen uyarı penceresi için kullanılıyordu. 
+            Ama performansı olumsuz etkilediği için şimdilik kapatıldı
+            */
+            //uyariTimeoutSetle();
+
+            /* Buraya yazılan fonksiyon isimleri bu masterdan türeyen sayfalara JS fonksiyonu olarak konulur 
+            ve sayfa yüklendiğinde devereye girer. Sayfada bu fonksiyon yoksa hataya düşer ve catch bloğunda hata yutulur.
+            */
+            try { SetTimersOnLoad(); } catch (exception) { /*Do Nothing*/ }
+            try { RunOnPageLoad(); } catch (exception) { /*Do Nothing*/ }
+        }
+
+        function HideMainMasterFooter() {
+            GetFooterObject().style.display = "none";
+        }
+        function ShowMainMasterFooter() {
+            GetFooterObject().style.display = "block";
+        }
+        function GetFooterObject() {
+            var obj = getObj('divFooter');
+            return obj;
+        }
+  </script>
+  <div class="highslide-container" style="padding: 0px; border: none; margin: 0px; position: absolute; left: 0px; top: 0px; width: 100%; z-index: 1001; direction: ltr;">
+   <a class="highslide-loading" href="javascript:;" style="position: absolute; top: -9999px; opacity: 0.75; z-index: 1;" title="İptal etmek için tıklayın">
+    Yükleniyor...
+   </a>
+   <div style="display: none;">
+   </div>
+   <div class="highslide-viewport highslide-viewport-size" style="padding: 0px; border: none; margin: 0px; visibility: hidden;">
+   </div>
+   <table cellspacing="0" style="padding: 0px; border: none; margin: 0px; visibility: hidden; position: absolute; border-collapse: collapse; width: 0px;">
+    <tbody style="padding: 0px; border: none; margin: 0px;">
+     <tr style="padding: 0px; border: none; margin: 0px; height: auto;">
+      <td style='padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url("https://www.e-icisleri.gov.tr/App_Themes/Main/highslide/graphics/outlines/rounded-white.png") 0px 0px; height: 20px; width: 20px;'>
+      </td>
+      <td style='padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url("https://www.e-icisleri.gov.tr/App_Themes/Main/highslide/graphics/outlines/rounded-white.png") 0px -40px; height: 20px; width: 20px;'>
+      </td>
+      <td style='padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url("https://www.e-icisleri.gov.tr/App_Themes/Main/highslide/graphics/outlines/rounded-white.png") -20px 0px; height: 20px; width: 20px;'>
+      </td>
+     </tr>
+     <tr style="padding: 0px; border: none; margin: 0px; height: auto;">
+      <td style='padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url("https://www.e-icisleri.gov.tr/App_Themes/Main/highslide/graphics/outlines/rounded-white.png") 0px -80px; height: 20px; width: 20px;'>
+      </td>
+      <td class="rounded-white highslide-outline" style="padding: 0px; border: none; margin: 0px; position: relative;">
+      </td>
+      <td style='padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url("https://www.e-icisleri.gov.tr/App_Themes/Main/highslide/graphics/outlines/rounded-white.png") -20px -80px; height: 20px; width: 20px;'>
+      </td>
+     </tr>
+     <tr style="padding: 0px; border: none; margin: 0px; height: auto;">
+      <td style='padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url("https://www.e-icisleri.gov.tr/App_Themes/Main/highslide/graphics/outlines/rounded-white.png") 0px -20px; height: 20px; width: 20px;'>
+      </td>
+      <td style='padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url("https://www.e-icisleri.gov.tr/App_Themes/Main/highslide/graphics/outlines/rounded-white.png") 0px -60px; height: 20px; width: 20px;'>
+      </td>
+      <td style='padding: 0px; border: none; margin: 0px; line-height: 0; font-size: 0px; background: url("https://www.e-icisleri.gov.tr/App_Themes/Main/highslide/graphics/outlines/rounded-white.png") -20px -20px; height: 20px; width: 20px;'>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+   <img src="/App_Themes/Main/highslide/graphics/outlines/rounded-white.png" style="padding: 0px; border: none; margin: 0px; position: absolute; top: -9999px;"/>
+  </div>
+ </body>
+</html>
+
+Process finished with exit code 0

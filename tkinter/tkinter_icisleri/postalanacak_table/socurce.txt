@@ -1,0 +1,12 @@
+https://www.e-icisleri.gov.tr/Evrak/Posta/PostalanmayiBekleyen.aspx
+
+kaðýt ortamýnda gidecekmi: xpath
+ //*@id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen"]/tbody/tr[2]/td[7]
+
+
+postalanacak table:
+
+//*[@id="ctl00_ctl00_cph1_cphGelenGiden_grvPostalanmayiBekleyen"]
+
+
+

@@ -1,0 +1,5 @@
+﻿KEYWORD                                           =TRANSLATED
+_____________________________________________________________
+
+flags at once in Python                                                    =bir kerede Python bayrakları,en
+Different ways to test multiple flags at once in Python                                                    =Python&#39;da aynı anda birden fazla bayrağı test etmenin farklı yolları,en
